@@ -1,15 +1,10 @@
 :root {
   // fonte
-  --title: bebas neue;
-  --body: chivo mono;
-  // cores
-  --text: hsb(240, 35, 31);
-  --highlight: hsb(240, 10, 65);
-  --primary: hsb(259, 57, 91);
-  --secondary: hsb(240, 2, 100);
+  --title: BebasNeue;
+  --body: ChivoMono;
 }
 
 body {
-  max-width: 1024px;
+  max-width: 1440px;
   margin: 0px auto !important;
 }
