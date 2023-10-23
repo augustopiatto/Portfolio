@@ -12,8 +12,11 @@ export default {
         divider: "rgba(0, 0, 0, 0.25)",
       },
       fontFamily: {
-        bebas: ["BebasNeue", "sans-serif"],
-        chivo: ["ChivoMono", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+        chivo: ["Chivo Mono", "sans-serif"],
+      },
+      borderRadius: {
+        large: "50px",
       },
     },
   },
