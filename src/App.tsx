@@ -1,15 +1,13 @@
-import { useState } from "react";
+import Header from "./components/Header.tsx";
+import Content from "./components/Content.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div className="m-2">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Header />
+      <Content />
+      <Footer />
     </>
   );
 }
