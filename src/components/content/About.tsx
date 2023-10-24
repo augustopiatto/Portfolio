@@ -7,17 +7,17 @@ function About() {
 
   return (
     <>
-      <div className="flex justify-between mt-14">
+      <div className="flex justify-between mt-14 mb-16">
         <ExpandableCard place={place}>
           <div className="flex">
-            <h1 className="font-bebas text-4xl capitalize">
+            <h1 className="font-bebas text-4xl capitalize leading-tight">
               Olá! Bem-vindo(a) <br />
               Sou <span className="text-highlight">Augusto</span>, desenvolvedor
               web full stack
             </h1>
             <svg></svg>
           </div>
-          <p className="font-chivo text-paragraph text-base mt-8 mb-6">
+          <p className="font-chivo text-paragraph text-base my-6">
             Tenho 2 anos de experiência como full stack e venho aprimorando
             minhas habilidades de front end. Em meus projetos, meu principal
             foco é a experiência do usuário e sua interação com o sistema.
