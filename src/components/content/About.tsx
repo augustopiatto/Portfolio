@@ -1,11 +1,31 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import Picture from "../cards/Picture";
+import PartialDivider from "../dividers/PartialDivider";
 
 function About() {
+  const place = "São José dos Campos";
+
   return (
     <>
-      <ExpandableCard />
-      <Picture />
+      <div className="flex justify-between mt-14">
+        <ExpandableCard place={place}>
+          <div className="flex">
+            <h1 className="font-bebas text-4xl capitalize">
+              Olá! Bem-vindo(a) <br />
+              Sou <span className="text-highlight">Augusto</span>, desenvolvedor
+              web full stack
+            </h1>
+            <svg></svg>
+          </div>
+          <p className="font-chivo text-paragraph text-base mt-8 mb-6">
+            Tenho 2 anos de experiência como full stack e venho aprimorando
+            minhas habilidades de front end. Em meus projetos, meu principal
+            foco é a experiência do usuário e sua interação com o sistema.
+          </p>
+        </ExpandableCard>
+        <Picture />
+      </div>
+      <PartialDivider />
     </>
   );
 }

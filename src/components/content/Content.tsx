@@ -5,7 +5,7 @@ import Courses from "./Courses.tsx";
 
 function Content() {
   return (
-    <div className="bg-background">
+    <div className="flex flex-col">
       <About />
       <Projects />
       <div>
