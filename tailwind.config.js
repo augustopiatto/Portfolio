@@ -11,7 +11,7 @@ export default {
         highlight: "rgb(149, 149, 166)",
         primary: "rgb(143, 101, 233)",
         secondary: "rgb(250, 250, 255)",
-        divider: "rgba(0, 0, 0, 0.25)",
+        "light-grey": "rgba(0, 0, 0, 0.25)",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
@@ -21,7 +21,7 @@ export default {
         large: "50px",
       },
       boxShadow: {
-        card: "0px 3px 10px 0px rgb(0, 0, 0, 0, 0.25)",
+        card: "0px 3px 10px 0px",
       },
     },
   },

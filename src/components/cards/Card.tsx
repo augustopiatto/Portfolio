@@ -7,7 +7,7 @@ interface Card {
 
 function Card({ place, children }: Card) {
   return (
-    <div className="bg-card rounded-large shadow-card max-w-screen-sm p-7">
+    <div className="bg-card rounded-large shadow-card shadow-light-grey max-w-screen-sm p-7">
       {children}
       {place && (
         <div className="flex items-center gap-7">

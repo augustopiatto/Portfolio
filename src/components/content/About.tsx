@@ -1,6 +1,7 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import Picture from "../cards/Picture";
 import PartialDivider from "../dividers/PartialDivider";
+import Ornament1 from "../../assets/svg/ornament_1.svg";
 
 function About() {
   const place = "São José dos Campos";
@@ -15,7 +16,7 @@ function About() {
               Sou <span className="text-highlight">Augusto</span>, desenvolvedor
               web full stack
             </h1>
-            <svg></svg>
+            <img src={Ornament1} alt="ornament1" className="h-14 w-24 mt-3" />
           </div>
           <p className="font-chivo text-paragraph text-base my-6">
             Tenho 2 anos de experiência como full stack e venho aprimorando
