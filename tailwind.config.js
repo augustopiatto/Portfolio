@@ -19,9 +19,11 @@ export default {
       },
       borderRadius: {
         large: "50px",
+        card: "50px 50px 50px 0px",
       },
       boxShadow: {
-        card: "0px 3px 10px 0px",
+        card: "0px 3px 4px 0px",
+        expansion: "0px 4px 4px 0px",
       },
     },
   },
