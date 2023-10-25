@@ -9,7 +9,11 @@ function About() {
   return (
     <>
       <div className="flex justify-between mt-14 mb-16">
-        <ExpandableCard place={place}>
+        <ExpandableCard
+          borderRadius={"rounded-card"}
+          maxWidth={"max-w-screen-sm"}
+          place={place}
+        >
           <div className="flex">
             <h1 className="font-bebas text-4xl capitalize leading-tight">
               Olá! Bem-vindo(a) <br />

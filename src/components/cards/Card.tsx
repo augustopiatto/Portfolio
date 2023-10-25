@@ -1,15 +1,21 @@
 import { ReactNode } from "react";
 
 interface Card {
-  place?: string;
+  borderRadius?: string;
   children: ReactNode;
+  maxWidth?: string;
+  place?: string;
 }
 
-function Card({ place, children }: Card) {
+function Card({
+  borderRadius = "rounded-3xl",
+  children,
+  maxWidth = "max-w-screen-sm",
+  place,
+}: Card) {
   return (
     <div
-      id="teste"
-      className="bg-card rounded-card max-w-screen-sm p-7 relative shadow-card shadow-light-grey"
+      className={`${borderRadius} ${maxWidth} bg-card p-7 relative shadow-card shadow-light-grey`}
     >
       {children}
       {place && (
