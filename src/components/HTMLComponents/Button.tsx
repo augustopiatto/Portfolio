@@ -6,7 +6,9 @@ interface Button {
 
 function Button({ children }: Button) {
   return (
-    <button className="bg-primary rounded-large px-32 py-4">{children}</button>
+    <button className="bg-primary rounded-large shadow-expansion shadow-light-grey px-32 py-4">
+      {children}
+    </button>
   );
 }
 

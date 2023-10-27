@@ -25,6 +25,9 @@ export default {
         card: "0px 3px 4px 0px",
         expansion: "0px 4px 4px 0px",
       },
+      width: {
+        "project-image": "832px",
+      },
     },
   },
   plugins: [],

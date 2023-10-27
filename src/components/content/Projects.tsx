@@ -1,15 +1,16 @@
 import Button from "../HTMLComponents/Button";
 import ExpandableCard from "../cards/ExpandableCard";
 import Tag from "./Tag";
+import expansionBottom from "../../assets/svg/expansion-bottom.svg";
 
 function Projects() {
   const tags = ["HTML", "Vue", "CSS"];
 
   return (
     <div className="mt-16 mx-auto">
-      <ExpandableCard maxWidth="max-w-4xl">
+      <ExpandableCard maxWidth="max-w-4xl" projectFlag>
         <h1 className="font-bebas text-3xl text-title">React - Origamid</h1>
-        <div>Imagens aqui</div>
+        <div className="w-project-image">Imagens aqui</div>
         <div className="flex items-center my-5 gap-5">
           <h2 className="font-bebas text-xl">Descrição</h2>
           <p className="font-chivo text-sm text-paragraph">
@@ -19,11 +20,19 @@ function Projects() {
         <div className="flex items-center gap-5">
           <h2 className="font-bebas text-xl text-title">Tecnologias</h2>
           <div className="flex gap-5">
-            {tags && tags.map((tag) => <Tag text={tag} />)}
+            {tags && tags.map((tag) => <Tag text={tag} key={tag} />)}
           </div>
         </div>
       </ExpandableCard>
-      <Button>svg aqui</Button>
+      <div className="mt-12 mb-16 flex justify-center">
+        <Button>
+          <img
+            src={expansionBottom}
+            alt="expansion-bottom"
+            className="h-6 w-8"
+          />
+        </Button>
+      </div>
     </div>
   );
 }

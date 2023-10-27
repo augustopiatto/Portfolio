@@ -1,7 +1,6 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import Picture from "../cards/Picture";
-import PartialDivider from "../dividers/PartialDivider";
-import Ornament1 from "../../assets/svg/ornament_1.svg";
+import Ornament1 from "../../assets/svg/ornament-1.svg";
 
 function About() {
   const place = "São José dos Campos";
@@ -30,7 +29,6 @@ function About() {
         </ExpandableCard>
         <Picture />
       </div>
-      <PartialDivider />
     </>
   );
 }

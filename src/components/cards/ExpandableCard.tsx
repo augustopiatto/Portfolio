@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Card from "./Card.tsx";
-import expansion from "../../assets/svg/expansion.svg";
+import expansionRight from "../../assets/svg/expansion-right.svg";
 
 interface ExpandableCard {
   borderRadius?: string;
@@ -17,24 +17,20 @@ function ExpandableCard({
   children,
   maxWidth,
   place,
-  projectFlag = true,
+  projectFlag = false,
 }: ExpandableCard) {
-  const projectCSS = "";
+  const projectCSS = "absolute bottom-7 right-7 cursor-pointer";
   const generalCSS =
-    "bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative";
+    "bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer";
 
   return (
-    <div>
+    <div className="relative">
       <Card borderRadius={borderRadius} maxWidth={maxWidth} place={place}>
         {children}
       </Card>
-      {projectFlag ? (
-        <div className={generalCSS}>
-          <img src={expansion} alt="expansion" className="h-4 w-6" />
-        </div>
-      ) : (
-        <div className={projectCSS}></div>
-      )}
+      <div className={projectFlag ? projectCSS : generalCSS}>
+        <img src={expansionRight} alt="expansion-right" className="h-4 w-6" />
+      </div>
     </div>
   );
 }
