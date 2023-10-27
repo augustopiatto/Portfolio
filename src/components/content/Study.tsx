@@ -1,6 +1,6 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import { majors } from "../../../src/infos.tsx";
-import { Major } from "../../helpers/interfaces.tsx";
+import { Major } from "../../helpers/types/types.tsx";
 
 function Study() {
   return (

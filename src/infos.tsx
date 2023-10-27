@@ -13,4 +13,14 @@ const majors = [
   },
 ];
 
-export { majors };
+const courses = [
+  {
+    name: "React",
+    institution: "Origamid",
+    institutionSVG: "aaaa",
+    certificationLink: "aaa",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
+];
+
+export { courses, majors };
