@@ -7,7 +7,7 @@ function About() {
 
   return (
     <>
-      <div className="flex justify-between mt-14 mb-16">
+      <div className="flex justify-between mt-14">
         <ExpandableCard
           borderRadius={"rounded-card"}
           maxWidth={"max-w-screen-sm"}

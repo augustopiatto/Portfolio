@@ -7,7 +7,7 @@ function Projects() {
   const tags = ["HTML", "Vue", "CSS"];
 
   return (
-    <div className="mt-16 mx-auto">
+    <div className="mx-auto">
       <ExpandableCard maxWidth="max-w-4xl" projectFlag>
         <h1 className="font-bebas text-3xl text-title">React - Origamid</h1>
         <div className="w-project-image">Imagens aqui</div>
@@ -24,7 +24,7 @@ function Projects() {
           </div>
         </div>
       </ExpandableCard>
-      <div className="mt-12 mb-16 flex justify-center">
+      <div className="mt-12 flex justify-center">
         <Button>
           <img
             src={expansionBottom}
