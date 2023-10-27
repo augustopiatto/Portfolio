@@ -20,6 +20,7 @@ export default {
       borderRadius: {
         large: "50px",
         card: "50px 50px 50px 0px",
+        "ordinary-expansion": "24px 24px 24px 0px",
       },
       boxShadow: {
         card: "0px 3px 4px 0px",
