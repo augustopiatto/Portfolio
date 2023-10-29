@@ -13,4 +13,10 @@ type Course = {
   technologies: string[];
 };
 
-export type { Course, Major };
+type Contact = {
+  name: string;
+  link: string;
+  svg: string;
+};
+
+export type { Contact, Course, Major };

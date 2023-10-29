@@ -1,12 +1,12 @@
 import { courses } from "../../infos";
 import Card from "../cards/Card";
 import { Course } from "../../helpers/types/types.tsx";
-import Tag from "./Tag.tsx";
+import Tag from "../Tag.tsx";
 import Link from "../../assets/svg/link.svg";
 
 function Courses() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col flex-1 gap-12">
       {courses.length &&
         courses.map((course: Course) => (
           <Card key={course.name}>

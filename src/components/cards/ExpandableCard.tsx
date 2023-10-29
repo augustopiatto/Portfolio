@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Card from "./Card.tsx";
-import expansionRight from "../../assets/svg/expansion-right.svg";
+import ExpansionRight from "../../assets/svg/expansion-right.svg";
 
 interface ExpandableCard {
   borderRadius?: string;
@@ -29,7 +29,7 @@ function ExpandableCard({
         {children}
       </Card>
       <div className={projectFlag ? projectCSS : generalCSS}>
-        <img src={expansionRight} alt="expansion-right" className="h-4 w-6" />
+        <img src={ExpansionRight} alt="expansion-right" className="h-4 w-6" />
       </div>
     </div>
   );

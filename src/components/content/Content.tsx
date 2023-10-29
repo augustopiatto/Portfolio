@@ -11,7 +11,7 @@ function Content() {
       <PartialDivider marginBottom={"mb-[72px]"} marginTop={"mt-[72px]"} />
       <Projects />
       <PartialDivider marginBottom={"mb-[72px]"} marginTop={"mt-[72px]"} />
-      <div className="flex gap-10">
+      <div className="flex gap-10 mb-16">
         <Study />
         <Courses />
       </div>

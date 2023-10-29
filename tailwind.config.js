@@ -7,6 +7,7 @@ export default {
         background: "rgb(241, 241, 246)",
         card: "rgb(228, 228, 233)",
         title: "rgb(52, 52, 80)",
+        "title-lighter": "rgb(52, 52, 80, 0.65)",
         paragraph: "rgb(87, 87, 116)",
         highlight: "rgb(149, 149, 166)",
         primary: "rgb(143, 101, 233)",

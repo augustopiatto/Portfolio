@@ -37,4 +37,32 @@ const courses = [
   },
 ];
 
-export { courses, majors };
+const contacts = [
+  {
+    name: "LinkedIn",
+    link: "",
+    svg: "src/assets/svg/linked-in.svg",
+  },
+  {
+    name: "GitHub",
+    link: "",
+    svg: "src/assets/svg/github.svg",
+  },
+  {
+    name: "Email",
+    link: "",
+    svg: "src/assets/svg/email.svg",
+  },
+  {
+    name: "Phone",
+    link: "",
+    svg: "src/assets/svg/phone.svg",
+  },
+  {
+    name: "Download",
+    link: "",
+    svg: "src/assets/svg/download.svg",
+  },
+];
+
+export { contacts, courses, majors };

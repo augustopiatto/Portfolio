@@ -1,6 +1,6 @@
 import Button from "../HTMLComponents/Button";
 import ExpandableCard from "../cards/ExpandableCard";
-import Tag from "./Tag";
+import Tag from "../Tag";
 import expansionBottom from "../../assets/svg/expansion-bottom.svg";
 
 function Projects() {
