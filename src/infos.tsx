@@ -17,9 +17,23 @@ const courses = [
   {
     name: "React",
     institution: "Origamid",
-    institutionSVG: "aaaa",
+    institutionSVG: "src/assets/svg/origamid.svg",
     certificationLink: "aaa",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    name: "Vue.js 2",
+    institution: "Origamid",
+    institutionSVG: "src/assets/svg/origamid.svg",
+    certificationLink: "aaa",
+    technologies: ["HTML", "CSS", "JavaScript", "Vue"],
+  },
+  {
+    name: "WordPress REST API",
+    institution: "Origamid",
+    institutionSVG: "src/assets/svg/origamid.svg",
+    certificationLink: "aaa",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
   },
 ];
 

@@ -4,7 +4,7 @@ import { Major } from "../../helpers/types/types.tsx";
 
 function Study() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col flex-1 gap-12">
       {majors.length &&
         majors.map((major: Major) => (
           <ExpandableCard
