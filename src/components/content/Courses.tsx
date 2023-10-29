@@ -1,6 +1,6 @@
 import { courses } from "../../infos";
-import Card from "../cards/Card";
 import { Course } from "../../helpers/types/types.tsx";
+import Card from "../cards/Card";
 import Tag from "../Tag.tsx";
 import Link from "../../assets/svg/link.svg";
 

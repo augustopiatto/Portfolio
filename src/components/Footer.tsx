@@ -1,6 +1,6 @@
-import Icon from "./Icon";
 import { contacts } from "../infos";
 import { Contact } from "../helpers/types/types";
+import Icon from "./Icon";
 
 function Footer() {
   return (
@@ -20,10 +20,11 @@ function Footer() {
       <div className="flex flex-1 gap-4 justify-center">
         {contacts.length &&
           contacts.map((contact: Contact) => (
+            // <img src={contact.svg} alt={contact.name} />
             <Icon
               link={contact.link}
               name={contact.name}
-              svg={contact.name}
+              svg={contact.svg}
               key={contact.name}
             />
           ))}
