@@ -45,6 +45,7 @@ O projeto possui as seguintes funcionalidades:
 - Espaçamento entre faculdade, tipo de graduação e nota fianl (ver maneira melhor de se fazer isso)
 - Desenhar a parte de expansão dos cards
 - Montar os testes
+- Montar a pipeline de CI/CD
 - Corrigir os cursos antigos que estão incompletos
 
 # React + TypeScript + Vite
