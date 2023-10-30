@@ -14,9 +14,11 @@ type Course = {
 };
 
 type Contact = {
+  copy?: boolean;
+  download?: boolean;
   name: string;
-  link: string;
-  svg: string;
+  href: string;
+  src: string;
 };
 
 export type { Contact, Course, Major };

@@ -1,16 +1,28 @@
 interface Icon {
-  link: string;
+  copy?: boolean;
+  download?: boolean;
+  href: string;
   name: string;
-  svg: string;
+  src: string;
 }
 
-function Icon({ link, name, svg }: Icon) {
+function Icon({ copy = false, download = false, href, name, src }: Icon) {
+  const copyURI = (event: React.MouseEvent<HTMLElement>) => {
+    if (copy) {
+      event.preventDefault();
+      navigator.clipboard.writeText(href);
+    }
+  };
+
   return (
     <a
       className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
-      href={link}
+      href={href}
+      download={download}
+      target={copy ? "disabled" : "_blank"}
+      onClick={copyURI}
     >
-      <img src={svg} alt={name} />
+      <img src={src} alt={name} />
     </a>
   );
 }

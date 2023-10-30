@@ -20,11 +20,12 @@ function Footer() {
       <div className="flex flex-1 gap-4 justify-center">
         {contacts.length &&
           contacts.map((contact: Contact) => (
-            // <img src={contact.svg} alt={contact.name} />
             <Icon
-              link={contact.link}
+              copy={contact?.copy}
+              download={contact?.download}
+              href={contact.href}
               name={contact.name}
-              svg={contact.svg}
+              src={contact.src}
               key={contact.name}
             />
           ))}

@@ -40,28 +40,31 @@ const courses = [
 const contacts = [
   {
     name: "LinkedIn",
-    link: "",
-    svg: "src/assets/svg/linked-in.svg",
+    href: import.meta.env.VITE_LINKEDIN,
+    src: "src/assets/svg/linked-in.svg",
   },
   {
     name: "GitHub",
-    link: "",
-    svg: "src/assets/svg/github.svg",
+    href: import.meta.env.VITE_GITHUB,
+    src: "src/assets/svg/github.svg",
   },
   {
     name: "Email",
-    link: "",
-    svg: "src/assets/svg/email.svg",
+    href: import.meta.env.VITE_EMAIL,
+    src: "src/assets/svg/email.svg",
+    copy: true,
   },
   {
     name: "Phone",
-    link: "",
-    svg: "src/assets/svg/phone.svg",
+    href: import.meta.env.VITE_PHONE,
+    src: "src/assets/svg/phone.svg",
+    copy: true,
   },
   {
     name: "Download",
-    link: "",
-    svg: "src/assets/svg/download.svg",
+    href: import.meta.env.VITE_CV,
+    src: "src/assets/svg/download.svg",
+    download: true,
   },
 ];
 
