@@ -1,3 +1,6 @@
+import React from "react";
+import { WarningContext } from "../contexts/WarningContext";
+
 interface Icon {
   copy?: boolean;
   download?: boolean;
@@ -7,10 +10,13 @@ interface Icon {
 }
 
 function Icon({ copy = false, download = false, href, name, src }: Icon) {
+  const { activateWarning } = React.useContext(WarningContext);
+
   const copyURI = (event: React.MouseEvent<HTMLElement>) => {
     if (copy) {
       event.preventDefault();
       navigator.clipboard.writeText(href);
+      activateWarning(event, "Copiado");
     }
   };
 

@@ -1,12 +1,19 @@
-interface Warning {
-  text: string;
-}
+import React from "react";
+import { WarningContext } from "../contexts/WarningContext";
 
-function Warning({ text }: Warning) {
+function Warning() {
+  const { active, coords, text } = React.useContext(WarningContext);
+  const warningDiv = document.getElementById("warning-position");
+  if (warningDiv) {
+    warningDiv.style.left = `${coords.pageX - 30}px`;
+    warningDiv.style.top = `${coords.pageY - 100}px`;
+  }
+
+  if (!active) return;
   return (
-    <div>
+    <div id="warning-position" className="absolute">
       <div className="bg-warning rounded-xl h-8 w-36 flex items-center justify-center">
-        <p className="font-bebas text-background text-lg tracking-wide">
+        <p className="font-bebas text-background text-lg tracking-wide capitalize">
           {text}
         </p>
       </div>
