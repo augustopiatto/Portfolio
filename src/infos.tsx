@@ -61,7 +61,7 @@ const contacts = [
     copy: true,
   },
   {
-    name: "Download",
+    name: "Download CV",
     href: import.meta.env.VITE_CV,
     src: "src/assets/svg/download.svg",
     download: true,

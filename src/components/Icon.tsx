@@ -21,15 +21,20 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   };
 
   return (
-    <a
-      className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
-      href={href}
-      download={download}
-      target={copy ? "" : "_blank"}
-      onClick={copyURI}
-    >
-      <img src={src} alt={name} />
-    </a>
+    <div className="group relative">
+      <a
+        className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
+        href={href}
+        download={download}
+        target={copy ? "" : "_blank"}
+        onClick={copyURI}
+      >
+        <p className="bg-warning rounded-xl px-5 py-1 font-chivo text-background absolute bottom-[90px] invisible group-hover:visible">
+          {name}
+        </p>
+        <img src={src} alt={name} />
+      </a>
+    </div>
   );
 }
 
