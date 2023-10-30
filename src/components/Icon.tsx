@@ -19,7 +19,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
       className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
       href={href}
       download={download}
-      target={copy ? "disabled" : "_blank"}
+      target={copy ? "" : "_blank"}
       onClick={copyURI}
     >
       <img src={src} alt={name} />
