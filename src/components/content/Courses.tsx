@@ -3,6 +3,7 @@ import { Course } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";
 import Link from "../../assets/svg/link.svg";
+import Tooltip from "../UIComponents/Tooltip.tsx";
 
 function Courses() {
   return (
@@ -16,9 +17,12 @@ function Courses() {
                 <h1 className="font-bebas text-4xl capitalize">
                   {course.name} - {course.institution}
                 </h1>
-                <a href={course.certificationLink}>
-                  <img src={Link} alt="course-link" />
-                </a>
+                <Tooltip>
+                  <a href={course.certificationLink}>
+                    <p>Link do curso</p>
+                    <img src={Link} alt="course-link" />
+                  </a>
+                </Tooltip>
               </div>
               <div className="flex gap-5">
                 {course.technologies.length &&
