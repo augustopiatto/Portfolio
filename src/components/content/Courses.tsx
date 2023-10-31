@@ -13,7 +13,7 @@ function Courses() {
   function copyURI(event: React.MouseEvent<HTMLElement>, href: string) {
     event.preventDefault();
     navigator.clipboard.writeText(href);
-    activateWarning(event.pageX, event.pageY, "Copiado");
+    activateWarning("Copiado! O link está no CTRL + V");
   }
 
   return (

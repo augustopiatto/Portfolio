@@ -9,7 +9,7 @@ function App() {
     <>
       <WarningStorage>
         <Header />
-        <div className="px-40 bg-background">
+        <div className="px-40 bg-background relative">
           <Warning />
           <Content />
         </div>

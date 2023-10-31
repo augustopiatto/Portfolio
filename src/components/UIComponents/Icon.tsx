@@ -17,7 +17,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
     if (copy) {
       event.preventDefault();
       navigator.clipboard.writeText(href);
-      activateWarning(event.pageX, event.pageY, "Copiado");
+      activateWarning("Copiado! O link está no CTRL + V");
     }
   }
 

@@ -14,6 +14,10 @@ export default {
         secondary: "rgb(250, 250, 255)",
         "light-grey": "rgba(0, 0, 0, 0.25)",
         warning: "rgba(72, 72, 72, 0.5)",
+        // verde forte
+        success: "rgb(4, 218, 0)",
+        // vermelho forte
+        error: "rgb(232, 28, 0)",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],

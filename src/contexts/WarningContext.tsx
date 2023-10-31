@@ -1,14 +1,8 @@
 import React, { ReactNode } from "react";
 
-interface Coords {
-  pageX: number;
-  pageY: number;
-}
-
 type WarningContextType = {
   active: boolean;
-  activateWarning: (pageX: number, pageY: number, message: string) => void;
-  coords: Coords;
+  activateWarning: (message: string) => void;
   text: string;
 };
 
@@ -19,21 +13,12 @@ export const WarningContext = React.createContext<WarningContextType>(
 export const WarningStorage = ({ children }: { children: ReactNode[] }) => {
   const [active, setActive] = React.useState<boolean>(false);
   const [text, setText] = React.useState<string>("");
-  const [coords, setCoords] = React.useState<Coords>({ pageX: 0, pageY: 0 });
   const [timeoutId, setTimeoutId] = React.useState<NodeJS.Timeout | null>(null);
 
-  async function activateWarning(
-    pageX: number,
-    pageY: number,
-    message: string
-  ) {
+  async function activateWarning(message: string) {
     if (timeoutId) clearTimeout(timeoutId);
     await setActive(true);
     setText(message);
-    setCoords({
-      pageX: pageX,
-      pageY: pageY,
-    });
     const id = setTimeout(() => {
       setActive(false);
     }, 3000);
@@ -41,7 +26,7 @@ export const WarningStorage = ({ children }: { children: ReactNode[] }) => {
   }
 
   return (
-    <WarningContext.Provider value={{ active, activateWarning, coords, text }}>
+    <WarningContext.Provider value={{ active, activateWarning, text }}>
       {children}
     </WarningContext.Provider>
   );
