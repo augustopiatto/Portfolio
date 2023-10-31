@@ -8,3 +8,25 @@ body {
   max-width: 1440px;
   margin: 0px auto !important;
 }
+
+#tooltip {
+  position: relative;
+}
+
+#tooltip > *p,
+#tooltip > *span {
+  visibility: hidden;
+  background-color: rgba(72, 72, 72, 0.5);
+  position: absolute;
+  bottom: 90px;
+  border-radius: 12px;
+  padding: 4px 20px;
+  font-family: chivo-mono;
+  font-size: 20px;
+  color: rgb(241, 241, 246);
+}
+
+#tooltip:hover > *p,
+#tooltip:hover > *span {
+  visibility: visible;
+}

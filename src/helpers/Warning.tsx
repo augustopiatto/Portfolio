@@ -11,7 +11,7 @@ function Warning() {
 
   if (!active) return;
   return (
-    <div id="warning-position" className="absolute">
+    <div id="warning-position" className="absolute z-10">
       <div className="bg-warning rounded-xl h-8 w-36 flex items-center justify-center">
         <p className="font-bebas text-background text-lg tracking-wide capitalize">
           {text}

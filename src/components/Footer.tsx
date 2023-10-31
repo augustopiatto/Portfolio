@@ -1,6 +1,6 @@
 import { contacts } from "../infos";
 import { Contact } from "../helpers/types/types";
-import Icon from "./Icon";
+import Icon from "./UIComponents/Icon";
 
 function Footer() {
   return (

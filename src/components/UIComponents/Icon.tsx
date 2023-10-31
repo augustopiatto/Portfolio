@@ -1,5 +1,6 @@
 import React from "react";
-import { WarningContext } from "../contexts/WarningContext";
+import { WarningContext } from "../../contexts/WarningContext";
+import Tooltip from "./Tooltip.tsx";
 
 interface Icon {
   copy?: boolean;
@@ -21,7 +22,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   };
 
   return (
-    <div className="group relative">
+    <Tooltip>
       <a
         className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
         href={href}
@@ -29,12 +30,10 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
         target={copy ? "" : "_blank"}
         onClick={copyURI}
       >
-        <p className="bg-warning rounded-xl px-5 py-1 font-chivo text-background absolute bottom-[90px] invisible group-hover:visible">
-          {name}
-        </p>
+        <p>{name}</p>
         <img src={src} alt={name} />
       </a>
-    </div>
+    </Tooltip>
   );
 }
 

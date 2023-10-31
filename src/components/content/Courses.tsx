@@ -1,7 +1,7 @@
 import { courses } from "../../infos";
 import { Course } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
-import Tag from "../Tag.tsx";
+import Tag from "../UIComponents/Tag.tsx";
 import Link from "../../assets/svg/link.svg";
 
 function Courses() {
