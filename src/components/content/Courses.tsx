@@ -29,7 +29,7 @@ function Courses() {
     const moreCourses = courses.filter((course) => {
       return !visibleCoursesNames.includes(course.name);
     });
-    const loadedCourses = visibleCourses.concat(moreCourses);
+    const loadedCourses = visibleCourses.concat(moreCourses.slice(0, 3));
     setVisibleCourses(loadedCourses);
   }
 
@@ -47,12 +47,13 @@ function Courses() {
                 <Tooltip>
                   <a
                     href={course.certificationLink}
+                    className="cursor-pointer"
                     onClick={(event) =>
                       copyURI(event, course.certificationLink)
                     }
                   >
                     <p>Link do curso</p>
-                    <img src={Link} alt="course-link" />
+                    <img src={Link} alt="course-link" className="h-6 w-7" />
                   </a>
                 </Tooltip>
               </div>
