@@ -39,7 +39,7 @@ function Courses() {
                   </a>
                 </Tooltip>
               </div>
-              <div className="flex gap-5">
+              <div className="flex gap-5 flex-wrap">
                 {course.technologies.length &&
                   course.technologies.map((tech) => (
                     <Tag text={tech} key={tech} />
