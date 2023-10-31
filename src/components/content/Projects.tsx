@@ -1,7 +1,6 @@
-import Button from "../HTMLComponents/Button";
 import ExpandableCard from "../cards/ExpandableCard";
 import Tag from "../UIComponents/Tag";
-import expansionBottom from "../../assets/svg/expansion-bottom.svg";
+import Carrousel from "../HTMLComponents/Carousel";
 
 function Projects() {
   const tags = ["HTML", "Vue", "CSS"];
@@ -24,15 +23,12 @@ function Projects() {
           </div>
         </div>
       </ExpandableCard>
-      <div className="mt-12 flex justify-center">
-        <Button>
-          <img
-            src={expansionBottom}
-            alt="expansion-bottom"
-            className="h-6 w-8"
-          />
-        </Button>
-      </div>
+      <Carrousel>
+        <div className="teste">1</div>
+        <div className="teste">2</div>
+        <div className="teste">3</div>
+        <div className="teste">4</div>
+      </Carrousel>
     </div>
   );
 }
