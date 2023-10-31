@@ -21,7 +21,7 @@ export const WarningStorage = ({ children }: { children: ReactNode[] }) => {
     setText(message);
     const id = setTimeout(() => {
       setActive(false);
-    }, 3000);
+    }, 5000);
     setTimeoutId(id);
   }
 

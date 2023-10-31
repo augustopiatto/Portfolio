@@ -4,9 +4,20 @@
   --body: ChivoMono;
 }
 
+#margin-left,
+#margin-right {
+  flex: 1;
+  z-index: 100;
+  background-color: white;
+}
+
 body {
+  display: flex;
+}
+
+#root {
   max-width: 1440px;
-  margin: 0px auto !important;
+  width: 1440px;
 }
 
 #tooltip {
@@ -30,4 +41,31 @@ body {
 #tooltip:hover > *p,
 #tooltip:hover > *span {
   visibility: visible;
+}
+
+#warning-position {
+  animation: warning-in 0.7s ease-in, warning-out 0.7s ease-out;
+  animation-delay: 0s, 4.4s;
+}
+
+@keyframes warning-in {
+  0% {
+    z-index: -1;
+    transform: translateX(580px);
+  }
+  100% {
+    z-index: 10;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes warning-out {
+  0% {
+    z-index: 10;
+    transform: translateX(0px);
+  }
+  100% {
+    z-index: -1;
+    transform: translateX(580px);
+  }
 }
