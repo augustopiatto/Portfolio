@@ -1,12 +1,16 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface Button {
   children?: ReactNode;
+  onClick: React.MouseEventHandler;
 }
 
-function Button({ children }: Button) {
+function Button({ children, ...props }: Button) {
   return (
-    <button className="bg-primary rounded-large shadow-expansion shadow-light-grey px-32 py-4">
+    <button
+      {...props}
+      className="bg-primary rounded-large shadow-expansion shadow-light-grey px-32 py-4"
+    >
       {children}
     </button>
   );
