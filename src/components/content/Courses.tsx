@@ -4,8 +4,18 @@ import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";
 import Link from "../../assets/svg/link.svg";
 import Tooltip from "../UIComponents/Tooltip.tsx";
+import React from "react";
+import { WarningContext } from "../../contexts/WarningContext.tsx";
 
 function Courses() {
+  const { activateWarning } = React.useContext(WarningContext);
+
+  function copyURI(event: React.MouseEvent<HTMLElement>, href: string) {
+    event.preventDefault();
+    navigator.clipboard.writeText(href);
+    activateWarning(event.pageX, event.pageY, "Copiado");
+  }
+
   return (
     <div className="flex flex-col flex-1 gap-12">
       {courses.length &&
@@ -18,7 +28,12 @@ function Courses() {
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>
-                  <a href={course.certificationLink}>
+                  <a
+                    href={course.certificationLink}
+                    onClick={(event) =>
+                      copyURI(event, course.certificationLink)
+                    }
+                  >
                     <p>Link do curso</p>
                     <img src={Link} alt="course-link" />
                   </a>

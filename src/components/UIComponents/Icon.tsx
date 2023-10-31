@@ -13,13 +13,13 @@ interface Icon {
 function Icon({ copy = false, download = false, href, name, src }: Icon) {
   const { activateWarning } = React.useContext(WarningContext);
 
-  const copyURI = (event: React.MouseEvent<HTMLElement>) => {
+  function copyURI(event: React.MouseEvent<HTMLElement>) {
     if (copy) {
       event.preventDefault();
       navigator.clipboard.writeText(href);
-      activateWarning(event, "Copiado");
+      activateWarning(event.pageX, event.pageY, "Copiado");
     }
-  };
+  }
 
   return (
     <Tooltip>
@@ -28,7 +28,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
         href={href}
         download={download}
         target={copy ? "" : "_blank"}
-        onClick={copyURI}
+        onClick={(event) => copyURI(event)}
       >
         <p>{name}</p>
         <img src={src} alt={name} />

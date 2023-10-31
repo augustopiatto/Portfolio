@@ -7,10 +7,7 @@ interface Coords {
 
 type WarningContextType = {
   active: boolean;
-  activateWarning: (
-    event: React.MouseEvent<HTMLElement>,
-    message: string
-  ) => void;
+  activateWarning: (pageX: number, pageY: number, message: string) => void;
   coords: Coords;
   text: string;
 };
@@ -26,15 +23,16 @@ export const WarningStorage = ({ children }: { children: ReactNode[] }) => {
   const [timeoutId, setTimeoutId] = React.useState<NodeJS.Timeout | null>(null);
 
   async function activateWarning(
-    event: React.MouseEvent<HTMLElement>,
+    pageX: number,
+    pageY: number,
     message: string
   ) {
     if (timeoutId) clearTimeout(timeoutId);
     await setActive(true);
     setText(message);
     setCoords({
-      pageX: event.pageX,
-      pageY: event.pageY,
+      pageX: pageX,
+      pageY: pageY,
     });
     const id = setTimeout(() => {
       setActive(false);
