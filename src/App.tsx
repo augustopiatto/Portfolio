@@ -2,7 +2,7 @@ import Header from "./components/Header.tsx";
 import Content from "./components/content/Content.tsx";
 import Footer from "./components/Footer.tsx";
 import { WarningStorage } from "./contexts/WarningContext.tsx";
-import Warning from "./helpers/Warning.tsx";
+import Warning from "./components/UIComponents/Warning.tsx";
 
 function App() {
   return (

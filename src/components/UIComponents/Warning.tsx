@@ -1,5 +1,5 @@
 import React from "react";
-import { WarningContext } from "../contexts/WarningContext";
+import { WarningContext } from "../../contexts/WarningContext";
 
 function Warning() {
   const { active, coords, text } = React.useContext(WarningContext);
