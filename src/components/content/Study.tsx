@@ -10,7 +10,7 @@ function Study() {
           <ExpandableCard
             borderRadius={"rounded-ordinary-expansion"}
             place={major.location}
-            key={major.name}
+            key={major.id}
           >
             <div className="flex flex-col gap-3">
               <h1 className="font-bebas text-4xl capitalize">{major.name}</h1>

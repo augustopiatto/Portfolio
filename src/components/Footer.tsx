@@ -26,7 +26,7 @@ function Footer() {
               href={contact.href}
               name={contact.name}
               src={contact.src}
-              key={contact.name}
+              key={contact.id}
             />
           ))}
       </div>

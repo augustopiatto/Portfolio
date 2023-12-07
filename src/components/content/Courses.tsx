@@ -1,13 +1,13 @@
+import React from "react";
 import { courses } from "../../infos";
 import { Course } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";
-import Link from "../../assets/svg/link.svg";
 import Tooltip from "../UIComponents/Tooltip.tsx";
-import React from "react";
 import { WarningContext } from "../../contexts/WarningContext.tsx";
 import Button from "../HTMLComponents/Button.tsx";
-import expansionBottom from "../../assets/svg/expansion-bottom.svg";
+import Link from "../../../public/svg/link.svg";
+import expansionBottom from "../../../public/svg/expansion-bottom.svg";
 
 function Courses() {
   const [visibleCourses, setVisibleCourses] = React.useState<Course[]>(
@@ -37,7 +37,7 @@ function Courses() {
     <div className="flex flex-col flex-1 gap-12">
       {visibleCourses.length &&
         visibleCourses.map((course: Course) => (
-          <Card key={course.name}>
+          <Card key={course.id}>
             <div className="flex flex-col gap-7">
               <div className="flex items-center gap-6">
                 <img src={course.institutionSVG} alt={course.institutionSVG} />

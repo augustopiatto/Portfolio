@@ -1,4 +1,5 @@
 type Major = {
+  id: number;
   name: string;
   college: string;
   term: string;
@@ -6,6 +7,7 @@ type Major = {
 };
 
 type Course = {
+  id: number;
   name: string;
   institution: string;
   institutionSVG: string;
@@ -14,6 +16,7 @@ type Course = {
 };
 
 type Contact = {
+  id: number;
   copy?: boolean;
   download?: boolean;
   name: string;
@@ -21,4 +24,13 @@ type Contact = {
   src: string;
 };
 
-export type { Contact, Course, Major };
+type Project = {
+  id: number;
+  name: string;
+  img: string;
+  description: string;
+  technologies: string[];
+  details: string;
+};
+
+export type { Contact, Course, Major, Project };

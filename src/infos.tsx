@@ -1,11 +1,13 @@
 const majors = [
   {
+    id: 1,
     name: "Engenharia de Materiais",
     college: "UNESP",
     term: "03/2013 - 12/2018",
     location: "Guaratinguetá, SP",
   },
   {
+    id: 2,
     name: "Materials Engineering",
     college: "Alfred University",
     term: "08/2015 - 05/2016",
@@ -15,9 +17,10 @@ const majors = [
 
 const courses = [
   {
+    id: 1,
     name: "React",
     institution: "Origamid",
-    institutionSVG: "src/assets/svg/origamid.svg",
+    institutionSVG: "/svg/origamid.svg",
     certificationLink: import.meta.env.VITE_REACT,
     technologies: [
       "HTML",
@@ -31,16 +34,18 @@ const courses = [
     ],
   },
   {
+    id: 2,
     name: "TypeScript para Iniciantes",
     institution: "Origamid",
-    institutionSVG: "src/assets/svg/origamid.svg",
+    institutionSVG: "/svg/origamid.svg",
     certificationLink: import.meta.env.VITE_TYPESCRIPT,
     technologies: ["HTML", "TypeScript", "Type", "Interface", "Generics"],
   },
   {
+    id: 3,
     name: "Vue.js 2",
     institution: "Origamid",
-    institutionSVG: "src/assets/svg/origamid.svg",
+    institutionSVG: "/svg/origamid.svg",
     certificationLink: import.meta.env.VITE_VUE,
     technologies: [
       "HTML",
@@ -54,16 +59,18 @@ const courses = [
     ],
   },
   {
+    id: 4,
     name: "UI Design para Iniciantes",
     institution: "Origamid",
-    institutionSVG: "src/assets/svg/origamid.svg",
+    institutionSVG: "/svg/origamid.svg",
     certificationLink: import.meta.env.VITE_UI_DESIGN,
     technologies: ["HTML", "CSS", "JavaScript", "Figma", "SVG", "Prototipação"],
   },
   {
+    id: 5,
     name: "WordPress REST API",
     institution: "Origamid",
-    institutionSVG: "src/assets/svg/origamid.svg",
+    institutionSVG: "/svg/origamid.svg",
     certificationLink: import.meta.env.VITE_WORDPRESS,
     technologies: ["WordPress", "PHP", "REST"],
   },
@@ -71,33 +78,57 @@ const courses = [
 
 const contacts = [
   {
+    id: 1,
     name: "LinkedIn",
     href: import.meta.env.VITE_LINKEDIN,
-    src: "src/assets/svg/linked-in.svg",
+    src: "/svg/linked-in.svg",
   },
   {
+    id: 2,
     name: "GitHub",
     href: import.meta.env.VITE_GITHUB,
-    src: "src/assets/svg/github.svg",
+    src: "/svg/github.svg",
   },
   {
+    id: 3,
     name: "Email",
     href: import.meta.env.VITE_EMAIL,
-    src: "src/assets/svg/email.svg",
+    src: "/svg/email.svg",
     copy: true,
   },
   {
+    id: 4,
     name: "Phone",
     href: import.meta.env.VITE_PHONE,
-    src: "src/assets/svg/phone.svg",
+    src: "/svg/phone.svg",
     copy: true,
   },
   {
+    id: 5,
     name: "Download CV",
     href: import.meta.env.VITE_CV,
-    src: "src/assets/svg/download.svg",
+    src: "/svg/download.svg",
     download: true,
   },
 ];
 
-export { contacts, courses, majors };
+const projects = [
+  {
+    id: 1,
+    name: "React - Origamid",
+    img: "",
+    description: "",
+    technologies: [""],
+    details: "",
+  },
+  {
+    id: 2,
+    name: "Vue 2 - Origamid",
+    img: "",
+    description: "",
+    technologies: [""],
+    details: "",
+  },
+];
+
+export { contacts, courses, majors, projects };

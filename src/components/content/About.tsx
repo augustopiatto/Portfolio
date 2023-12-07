@@ -1,6 +1,6 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import Picture from "../cards/Picture";
-import Ornament1 from "../../assets/svg/ornament-1.svg";
+import Ornament1 from "../../../public/svg/ornament-1.svg";
 
 function About() {
   const place = "São José dos Campos";

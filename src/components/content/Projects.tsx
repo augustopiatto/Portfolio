@@ -1,6 +1,8 @@
 import ExpandableCard from "../cards/ExpandableCard";
 import Tag from "../UIComponents/Tag";
 import Carrousel from "../HTMLComponents/Carousel";
+import { projects } from "../../infos";
+import { Project } from "../../helpers/types/types";
 
 function Projects() {
   const tags = ["HTML", "Vue", "CSS"];
@@ -24,10 +26,14 @@ function Projects() {
         </div>
       </ExpandableCard>
       <Carrousel>
-        <div className="teste">1</div>
-        <div className="teste">2</div>
-        <div className="teste">3</div>
-        <div className="teste">4</div>
+        {projects &&
+          !!projects.length &&
+          projects.map((project: Project) => (
+            <div key={project.id}>
+              <img src={project.img} alt={project.name} />
+              <p>Descrição: {project.description}</p>
+            </div>
+          ))}
       </Carrousel>
     </div>
   );
