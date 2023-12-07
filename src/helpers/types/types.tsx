@@ -24,13 +24,19 @@ type Contact = {
   src: string;
 };
 
+type ProjectDetails = {
+  objective: string;
+  link: string;
+  moreImages: string[];
+};
+
 type Project = {
   id: number;
   name: string;
   img: string;
   description: string;
   technologies: string[];
-  details: string;
+  details: ProjectDetails;
 };
 
 export type { Contact, Course, Major, Project };

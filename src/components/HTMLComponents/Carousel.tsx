@@ -33,7 +33,7 @@ function Carrousel({ children }: Carrousel) {
         return (
           <div
             id="carousel-item"
-            className="w-full min-w-full h-[200px] flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:bg-slate-400"
+            className="w-full min-w-full h-full flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:bg-slate-400"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >

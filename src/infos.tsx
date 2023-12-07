@@ -1,3 +1,5 @@
+const GITHUB_BASE_URL = "https://github.com/augustopiatto/";
+
 const majors = [
   {
     id: 1,
@@ -116,18 +118,45 @@ const projects = [
   {
     id: 1,
     name: "React - Origamid",
-    img: "",
-    description: "",
-    technologies: [""],
-    details: "",
+    img: "/images/react-origamid.png",
+    description: "Uma rede social para colocar as fotos de seus cachorros",
+    technologies: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React Router",
+      "Prop Types",
+      "Vite",
+    ],
+    details: {
+      objective: `Projeto feito para aprender React baseado no curso do site ${(
+        <a>https://www.origamid.com/</a>
+      )}. Neste site é possível se cadastrar, logar, recuperar a senha, adicionar fotos dos seus cachorros e ver as estatísticas de acesso aos seus posts.`,
+      link: GITHUB_BASE_URL + "Origamid-React",
+      moreImages: [""],
+    },
   },
   {
     id: 2,
-    name: "Vue 2 - Origamid",
-    img: "",
-    description: "",
-    technologies: [""],
-    details: "",
+    name: "Liga Magic - Processo Seletivo",
+    img: "/images/liga-magic.png",
+    description: "Formulário para se cadastrar em um campeonato de Magic",
+    technologies: [
+      "Vue3",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SASS",
+      "Vite",
+      "Vitest",
+    ],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa Liga Magic. Neste site é possível escolher opções de um formulário em um componente passo a passo e validar seus inputs",
+      link: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo",
+      moreImages: [""],
+    },
   },
 ];
 
