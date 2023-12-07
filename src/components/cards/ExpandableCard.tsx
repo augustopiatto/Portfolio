@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Card from "./Card.tsx";
-import ExpansionRight from "../../../public/svg/expansion-right.svg";
+import ExpansionRight from "/svg/expansion-right.svg";
 
 interface ExpandableCard {
   borderRadius?: string;

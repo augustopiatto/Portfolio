@@ -23,17 +23,17 @@ function Carrousel({ children }: Carrousel) {
   useEffect(() => {
     const interval = setInterval(() => {
       carouselInfiniteScroll();
-    }, 10000);
+    }, 3000);
     return () => clearInterval(interval);
   });
 
   return (
-    <div className="max-w-4xl flex flex-nowrap overflow-hidden rounded-3xl">
+    <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey flex flex-nowrap overflow-hidden rounded-3xl">
       {React.Children.map(childArray, (child, index) => {
         return (
           <div
             id="carousel-item"
-            className="w-full min-w-full h-full flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:bg-slate-400"
+            className="min-w-full h-[600px] flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >

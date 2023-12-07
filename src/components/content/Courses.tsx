@@ -6,8 +6,8 @@ import Tag from "../UIComponents/Tag.tsx";
 import Tooltip from "../UIComponents/Tooltip.tsx";
 import { WarningContext } from "../../contexts/WarningContext.tsx";
 import Button from "../HTMLComponents/Button.tsx";
-import Link from "../../../public/svg/link.svg";
-import expansionBottom from "../../../public/svg/expansion-bottom.svg";
+import Link from "/svg/link.svg";
+import expansionBottom from "/svg/expansion-bottom.svg";
 
 function Courses() {
   const [visibleCourses, setVisibleCourses] = React.useState<Course[]>(
