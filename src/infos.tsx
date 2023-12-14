@@ -158,6 +158,34 @@ const projects = [
       moreImages: [""],
     },
   },
+  {
+    id: 3,
+    name: "DNC - Processo Seletivo",
+    img: "/images/dnc.png",
+    description: "Sistema de cadastro de alunos, notas e exibição de rank",
+    technologies: [
+      "Vue3",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SASS",
+      "Vite",
+      "Vuetify",
+      "Axios",
+      "Django",
+      "Python",
+      "PostgreSQL",
+      "Pydantic",
+      "Docker",
+      "Pytest",
+    ],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa DNC. Neste site é possível realizar cadastro de usuário, associar notas ao usuário e o sistema gera uma listagem de top 3 melhores alunos e uma listagem de top 10 alunos por curso",
+      link: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
+      moreImages: [""],
+    },
+  },
 ];
 
 export { contacts, courses, majors, projects };

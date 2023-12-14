@@ -10,7 +10,9 @@ function Projects() {
         <Carrousel>
           {projects.map((project: Project) => (
             <div key={project.id} className="">
-              <h1 className="font-bebas text-3xl text-title">{project.name}</h1>
+              <h1 className="font-bebas text-3xl mt-5 text-title">
+                {project.name}
+              </h1>
               <img
                 src={project.img}
                 alt={project.name}
@@ -24,7 +26,7 @@ function Projects() {
               </div>
               <div className="w-full flex items-center gap-5 pl-10">
                 <h2 className="font-bebas text-xl text-title">Tecnologias</h2>
-                <div className="flex gap-5">
+                <div className="flex flex-wrap gap-5">
                   {project.technologies.map((tag) => (
                     <Tag text={tag} key={tag} />
                   ))}

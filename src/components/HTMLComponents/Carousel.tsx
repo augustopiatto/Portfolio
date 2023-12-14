@@ -33,6 +33,13 @@ function Carrousel({ children }: Carrousel) {
     return carouselInfiniteScroll();
   }
 
+  function idxBackgroundColor(idx: number) {
+    if (currentIndex >= idx) {
+      return "bg-primary";
+    }
+    return "bg-transparent";
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       console.log("interval");
@@ -43,7 +50,7 @@ function Carrousel({ children }: Carrousel) {
 
   return (
     <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey flex flex-nowrap overflow-hidden rounded-3xl relative">
-      <div className="absolute z-10 cursor-pointer [&>*]:h-[600px] [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute z-10 cursor-pointer [&>*]:h-[700px] [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
         <Button onClick={previous}>
           <img
             src={ExpansionRight}
@@ -52,11 +59,21 @@ function Carrousel({ children }: Carrousel) {
           />
         </Button>
       </div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 flex gap-10">
+        {childArray.map((_, index) => (
+          <div
+            className={`h-4 w-4 mt-5 rounded-full border-2 border-black ${idxBackgroundColor(
+              index
+            )}`}
+            key={index}
+          ></div>
+        ))}
+      </div>
       {React.Children.map(childArray, (child, index) => {
         return (
           <div
             id="carousel-item"
-            className="min-w-full h-[600px] flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
+            className="min-w-full h-[700px] flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
@@ -64,7 +81,7 @@ function Carrousel({ children }: Carrousel) {
           </div>
         );
       })}
-      <div className="absolute right-0 z-10 cursor-pointer [&>*]:h-[600px] [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute right-0 z-10 cursor-pointer [&>*]:h-[700px] [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none">
         <Button onClick={next}>
           <img
             src={ExpansionRight}
