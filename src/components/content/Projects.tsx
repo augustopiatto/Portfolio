@@ -1,6 +1,5 @@
 import Tag from "../UIComponents/Tag";
 import Carrousel from "../HTMLComponents/Carousel";
-import Button from "../HTMLComponents/Button";
 import { projects } from "../../infos";
 import { Project } from "../../helpers/types/types";
 
@@ -12,15 +11,11 @@ function Projects() {
           {projects.map((project: Project) => (
             <div key={project.id} className="">
               <h1 className="font-bebas text-3xl text-title">{project.name}</h1>
-              {/* voltar */}
-              <Button />
               <img
                 src={project.img}
                 alt={project.name}
                 className="max-w-full max-h-[400px] my-5"
               />
-              {/* avançar */}
-              <Button />
               <div className="w-full flex items-center mb-5 gap-5 pl-10">
                 <h2 className="font-bebas text-xl text-title">Descrição</h2>
                 <p className="font-chivo text-m text-paragraph">

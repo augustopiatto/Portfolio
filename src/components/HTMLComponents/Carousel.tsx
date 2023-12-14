@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Button from "../HTMLComponents/Button";
+import ExpansionRight from "/svg/expansion-right.svg";
 
 interface Carrousel {
   children: React.ReactElement | React.ReactElement[];
@@ -20,6 +22,14 @@ function Carrousel({ children }: Carrousel) {
     return setCurrentIndex(currentIndex + 1);
   }
 
+  function previous() {
+    return;
+  }
+
+  function next() {
+    return;
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       carouselInfiniteScroll();
@@ -28,7 +38,15 @@ function Carrousel({ children }: Carrousel) {
   });
 
   return (
-    <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey flex flex-nowrap overflow-hidden rounded-3xl">
+    <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey flex flex-nowrap overflow-hidden rounded-3xl relative">
+      <div className="absolute z-10 [&>*]:h-[600px] [&>*]:rounded-3xl [&>button]:opacity-0">
+        <Button onClick={previous} />
+        <img
+          src={ExpansionRight}
+          alt="expansion-right"
+          className="absolute top-0 left-[10%] h-4 w-6 cursor-pointer opacity-30 rotate-180"
+        />
+      </div>
       {React.Children.map(childArray, (child, index) => {
         return (
           <div
@@ -41,6 +59,14 @@ function Carrousel({ children }: Carrousel) {
           </div>
         );
       })}
+      <div className="absolute right-0 z-10 [&>*]:h-[600px] [&>*]:rounded-3xl [&>button]:opacity-0">
+        <Button onClick={next} />
+        <img
+          src={ExpansionRight}
+          alt="expansion-right"
+          className="absolute top-0 right-[10%] h-4 w-6 cursor-pointer opacity-30"
+        />
+      </div>
     </div>
   );
 }
