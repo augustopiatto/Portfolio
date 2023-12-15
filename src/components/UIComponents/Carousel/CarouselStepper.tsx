@@ -18,10 +18,10 @@ function CarouselStepper({ children, currentIndex }: CarouselStepper) {
   }
 
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 flex gap-10">
+    <div className="flex justify-center gap-10">
       {children.map((_, index) => (
         <div
-          className={`h-4 w-4 mt-5 rounded-full border-2 border-black ${idxBackgroundColor(
+          className={`h-4 w-4 rounded-full border-2 border-black ${idxBackgroundColor(
             index
           )}`}
           key={index}
