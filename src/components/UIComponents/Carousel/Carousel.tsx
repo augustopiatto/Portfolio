@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import CarouselHeader from "./CarouselHeader";
 import CarouselStepper from "./CarouselStepper";
-import CarouselDescription from "./CarouselDescription";
 import { Data } from "../../../helpers/interfaces/interfaces";
+import CarouselData from "./CarouselData";
 import CarouselImages from "./CarouselImages";
 
 interface Carrousel {
@@ -50,7 +50,7 @@ function Carrousel({ children, headers, data, stepper = false }: Carrousel) {
         setCurrentIndex={setCurrentIndex}
       />
       {data && !!data.length && (
-        <CarouselDescription data={data} currentIndex={currentIndex} />
+        <CarouselData data={data} currentIndex={currentIndex} />
       )}
     </div>
   );

@@ -34,7 +34,7 @@ function CarouselImages({
 
   return (
     <div className="flex relative overflow-hidden">
-      <div className="absolute z-10 cursor-pointer [&>*]:h-[400px] [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
         <Button onClick={previous}>
           <img
             src={ExpansionRight}
@@ -47,7 +47,7 @@ function CarouselImages({
         return (
           <div
             id="carousel-item"
-            className="min-w-full h-[400px] flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
+            className="min-w-full flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
@@ -55,7 +55,7 @@ function CarouselImages({
           </div>
         );
       })}
-      <div className="absolute right-0 z-10 cursor-pointer [&>*]:h-[400px] [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute right-0 z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none">
         <Button onClick={next}>
           <img
             src={ExpansionRight}

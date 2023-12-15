@@ -8,7 +8,7 @@ interface CarouselDescription {
 
 function CarouselDescription({ data, currentIndex }: CarouselDescription) {
   return (
-    <div className="">
+    <div className="flex flex-col justify-around h-36">
       <div className="w-full flex items-center mb-5 gap-5 pl-10">
         <h2 className="font-bebas text-xl text-title">Descrição</h2>
         <p className="font-chivo text-m text-paragraph">
