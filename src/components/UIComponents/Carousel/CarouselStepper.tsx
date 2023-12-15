@@ -2,7 +2,7 @@ interface CarouselStepper {
   children: (
     | string
     | number
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | React.ReactElement<string | string | React.JSXElementConstructor<string>>
     | Iterable<React.ReactNode>
     | React.ReactPortal
   )[];
