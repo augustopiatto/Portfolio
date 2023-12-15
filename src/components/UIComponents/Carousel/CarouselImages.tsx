@@ -43,7 +43,7 @@ function CarouselImages({
           />
         </Button>
       </div>
-      {React.Children.map(children, (child, index) => {
+      {children.map((child, index) => {
         return (
           <div
             id="carousel-item"

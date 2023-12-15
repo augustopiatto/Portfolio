@@ -3,13 +3,17 @@ import { projects } from "../../infos";
 import { Project } from "../../helpers/types/types";
 
 function Projects() {
-  const headers = projects.map((project) => project.name);
-  const data = projects.map((project) => {
-    return {
+  const headers = projects.reduce((acc, project) => {
+    acc[project.id - 1] = project.name;
+    return acc;
+  }, {} as { [key: number]: string });
+  const data = projects.reduce((acc, project) => {
+    acc[project.id - 1] = {
       description: project.description,
       technologies: project.technologies,
     };
-  });
+    return acc;
+  }, {} as { [key: number]: { description: string; technologies: string[] } });
 
   return (
     <div className="mx-auto">
@@ -20,7 +24,7 @@ function Projects() {
               <img
                 src={project.img}
                 alt={project.name}
-                className="max-w-full max-h-[400px] my-5"
+                className="max-w-full h-full"
               />
             </div>
           ))}

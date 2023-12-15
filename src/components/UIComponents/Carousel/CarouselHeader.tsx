@@ -1,5 +1,7 @@
+import { CarouselHeaderInterface } from "../../../helpers/interfaces/interfaces";
+
 interface CarouselHeader {
-  headers: string[];
+  headers: CarouselHeaderInterface;
   currentIndex: number;
 }
 
