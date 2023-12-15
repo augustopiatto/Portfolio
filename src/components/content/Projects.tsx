@@ -1,18 +1,17 @@
 import Tag from "../UIComponents/Tag";
-import Carrousel from "../HTMLComponents/Carousel";
+import Carrousel from "../UIComponents/Carousel/Carousel";
 import { projects } from "../../infos";
 import { Project } from "../../helpers/types/types";
 
 function Projects() {
+  const headers = projects.map((project) => project.name);
+
   return (
     <div className="mx-auto">
       {projects && !!projects.length && (
-        <Carrousel>
+        <Carrousel headers={headers} stepper={true}>
           {projects.map((project: Project) => (
             <div key={project.id} className="">
-              <h1 className="font-bebas text-3xl mt-5 text-title">
-                {project.name}
-              </h1>
               <img
                 src={project.img}
                 alt={project.name}

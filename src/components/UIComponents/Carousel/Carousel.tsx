@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
-import Button from "../HTMLComponents/Button";
+import Button from "../../HTMLComponents/Button";
 import ExpansionRight from "/svg/expansion-right.svg";
+import CarouselHeader from "./CarouselHeader";
+import CarouselStepper from "./CarouselStepper";
 
 interface Carrousel {
-  children: React.ReactElement | React.ReactElement[];
+  children: React.ReactElement[];
+  headers: string[];
+  stepper?: boolean;
 }
 
-function Carrousel({ children }: Carrousel) {
+function Carrousel({ children, headers, stepper = false }: Carrousel) {
   const childArray = React.Children.toArray(children);
   React.Children.map(childArray, (child) => {
     if (!React.isValidElement<Carrousel>(child)) {
@@ -33,16 +37,8 @@ function Carrousel({ children }: Carrousel) {
     return carouselInfiniteScroll();
   }
 
-  function idxBackgroundColor(idx: number) {
-    if (currentIndex >= idx) {
-      return "bg-primary";
-    }
-    return "bg-transparent";
-  }
-
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("interval");
       carouselInfiniteScroll();
     }, 10000);
     return () => clearInterval(interval);
@@ -50,6 +46,12 @@ function Carrousel({ children }: Carrousel) {
 
   return (
     <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey flex flex-nowrap overflow-hidden rounded-3xl relative">
+      {stepper && (
+        <CarouselStepper children={childArray} currentIndex={currentIndex} />
+      )}
+      {headers && !!headers.length && (
+        <CarouselHeader headers={headers} currentIndex={currentIndex} />
+      )}
       <div className="absolute z-10 cursor-pointer [&>*]:h-[700px] [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
         <Button onClick={previous}>
           <img
@@ -58,16 +60,6 @@ function Carrousel({ children }: Carrousel) {
             className="absolute top-1/2 left-[10%] h-4 w-6 opacity-30 rotate-180 visible"
           />
         </Button>
-      </div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 flex gap-10">
-        {childArray.map((_, index) => (
-          <div
-            className={`h-4 w-4 mt-5 rounded-full border-2 border-black ${idxBackgroundColor(
-              index
-            )}`}
-            key={index}
-          ></div>
-        ))}
       </div>
       {React.Children.map(childArray, (child, index) => {
         return (
