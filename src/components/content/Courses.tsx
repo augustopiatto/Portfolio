@@ -33,39 +33,37 @@ function Courses() {
     setVisibleCourses(loadedCourses);
   }
 
+  if (!visibleCourses.length) return;
   return (
     <div className="flex flex-col flex-1 gap-12">
-      {visibleCourses.length &&
-        visibleCourses.map((course: Course) => (
-          <Card key={course.id}>
-            <div className="flex flex-col gap-7">
-              <div className="flex items-center gap-6">
-                <img src={course.institutionSVG} alt={course.institutionSVG} />
-                <h1 className="font-bebas text-4xl capitalize">
-                  {course.name} - {course.institution}
-                </h1>
-                <Tooltip>
-                  <a
-                    href={course.certificationLink}
-                    className="cursor-pointer"
-                    onClick={(event) =>
-                      copyURI(event, course.certificationLink)
-                    }
-                  >
-                    <p>Link do curso</p>
-                    <img src={Link} alt="course-link" className="h-6 w-7" />
-                  </a>
-                </Tooltip>
-              </div>
-              <div className="flex gap-5 flex-wrap">
-                {course.technologies.length &&
-                  course.technologies.map((tech) => (
-                    <Tag text={tech} key={tech} />
-                  ))}
-              </div>
+      {visibleCourses.map((course: Course) => (
+        <Card key={course.id}>
+          <div className="flex flex-col gap-7">
+            <div className="flex items-center gap-6">
+              <img src={course.institutionSVG} alt={course.institutionSVG} />
+              <h1 className="font-bebas text-4xl capitalize">
+                {course.name} - {course.institution}
+              </h1>
+              <Tooltip>
+                <a
+                  href={course.certificationLink}
+                  className="cursor-pointer"
+                  onClick={(event) => copyURI(event, course.certificationLink)}
+                >
+                  <p>Link do curso</p>
+                  <img src={Link} alt="course-link" className="h-6 w-7" />
+                </a>
+              </Tooltip>
             </div>
-          </Card>
-        ))}
+            <div className="flex gap-5 flex-wrap">
+              {course.technologies.length &&
+                course.technologies.map((tech) => (
+                  <Tag text={tech} key={tech} />
+                ))}
+            </div>
+          </div>
+        </Card>
+      ))}
       {courses.length !== visibleCourses.length && (
         <div className="flex justify-center">
           <Button onClick={() => loadCourses()}>

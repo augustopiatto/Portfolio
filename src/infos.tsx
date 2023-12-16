@@ -189,9 +189,9 @@ const projects = [
 ];
 
 const languages = [
-  { name: "Português", level: "Nativo" },
-  { name: "Inglês", level: "Avançado" },
-  { name: "Espanhol", level: "Intermediário" },
+  { id: 1, name: "Português", level: "Nativo" },
+  { id: 2, name: "Inglês", level: "Avançado" },
+  { id: 3, name: "Espanhol", level: "Intermediário" },
 ];
 
 export { contacts, courses, majors, projects, languages };

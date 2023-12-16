@@ -39,4 +39,10 @@ type Project = {
   details: ProjectDetails;
 };
 
-export type { Contact, Course, Major, Project };
+type Language = {
+  id: number;
+  name: string;
+  level: string;
+};
+
+export type { Contact, Course, Major, Project, Language };
