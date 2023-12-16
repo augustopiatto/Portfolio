@@ -188,4 +188,10 @@ const projects = [
   },
 ];
 
-export { contacts, courses, majors, projects };
+const languages = [
+  { name: "Português", level: "Nativo" },
+  { name: "Inglês", level: "Avançado" },
+  { name: "Espanhol", level: "Intermediário" },
+];
+
+export { contacts, courses, majors, projects, languages };

@@ -1,8 +1,9 @@
 import About from "./About.tsx";
 import Projects from "./Projects.tsx";
-import Study from "./Study.tsx";
+import Studies from "./Studies.tsx";
 import Courses from "./Courses.tsx";
 import PartialDivider from "../dividers/PartialDivider.tsx";
+import Languages from "./Languages.tsx";
 
 function Content() {
   return (
@@ -12,7 +13,10 @@ function Content() {
       <Projects />
       <PartialDivider marginBottom={"mb-[72px]"} marginTop={"mt-[72px]"} />
       <div className="flex gap-10 mb-16">
-        <Study />
+        <div className="flex-1 flex flex-col gap-12">
+          <Studies />
+          <Languages />
+        </div>
         <Courses />
       </div>
     </div>
