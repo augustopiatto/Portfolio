@@ -9,9 +9,9 @@ function Content() {
   return (
     <div className="flex flex-col">
       <About />
-      <PartialDivider marginBottom={"mb-[72px]"} marginTop={"mt-[72px]"} />
+      <PartialDivider />
       <Projects />
-      <PartialDivider marginBottom={"mb-[72px]"} marginTop={"mt-[72px]"} />
+      <PartialDivider />
       <div className="flex gap-10 mb-16">
         <div className="flex-1 flex flex-col gap-12">
           <Studies />
