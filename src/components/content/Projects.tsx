@@ -1,5 +1,5 @@
 import Carrousel from "../UIComponents/Carousel/Carousel";
-import { projects } from "../../infos";
+import { projects } from "../../helpers/infos";
 import { Project } from "../../helpers/types/types";
 
 function Projects() {

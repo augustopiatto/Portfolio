@@ -1,5 +1,5 @@
 import ExpandableCard from "../cards/ExpandableCard.tsx";
-import { majors } from "../../infos.tsx";
+import { majors } from "../../helpers/infos.tsx";
 import { Major } from "../../helpers/types/types.tsx";
 import SeparatorDot from "../dividers/SeparatorDot.tsx";
 

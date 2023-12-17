@@ -1,5 +1,5 @@
 import { Language } from "../../helpers/types/types";
-import { languages } from "../../infos";
+import { languages } from "../../helpers/infos";
 import Card from "../cards/Card";
 import LanguageSVG from "/svg/language.svg";
 

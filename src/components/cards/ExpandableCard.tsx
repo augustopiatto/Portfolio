@@ -8,6 +8,7 @@ interface ExpandableCard {
   children: ReactNode;
   maxWidth?: string;
   place?: string;
+  openDialog: () => void;
 }
 
 // talvez usar injection direto no Card e nao precisar desses intermediarios
@@ -17,6 +18,7 @@ function ExpandableCard({
   children,
   maxWidth,
   place,
+  openDialog,
 }: ExpandableCard) {
   return (
     <div className="relative">
@@ -29,7 +31,10 @@ function ExpandableCard({
           </div>
         )}
       </Card>
-      <div className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer">
+      <div
+        className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer"
+        onClick={() => openDialog()}
+      >
         <img src={ExpansionRight} alt="expansion-right" className="h-4 w-6" />
       </div>
     </div>

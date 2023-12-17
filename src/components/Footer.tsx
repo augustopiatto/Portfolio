@@ -1,4 +1,4 @@
-import { contacts } from "../infos";
+import { contacts } from "../helpers/infos";
 import { Contact } from "../helpers/types/types";
 import Icon from "./UIComponents/Icon";
 

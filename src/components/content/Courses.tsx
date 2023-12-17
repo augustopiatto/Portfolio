@@ -1,5 +1,5 @@
 import React from "react";
-import { courses } from "../../infos";
+import { courses } from "../../helpers/infos.tsx";
 import { Course } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";

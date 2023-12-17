@@ -31,6 +31,7 @@ export default {
       boxShadow: {
         card: "0px 3px 4px 0px",
         expansion: "0px 4px 4px 0px",
+        focused: "0px 0px 10px 1000px rgba(0, 0, 0, 0.7)",
       },
       width: {
         "project-image": "832px",
