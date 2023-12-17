@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Card from "./Card.tsx";
 import ExpansionRight from "/svg/expansion-right.svg";
+import SeparatorLine from "../dividers/SeparatorLine.tsx";
 
 interface ExpandableCard {
   borderRadius?: string;
@@ -19,8 +20,14 @@ function ExpandableCard({
 }: ExpandableCard) {
   return (
     <div className="relative">
-      <Card borderRadius={borderRadius} maxWidth={maxWidth} place={place}>
+      <Card borderRadius={borderRadius} maxWidth={maxWidth}>
         {children}
+        {place && (
+          <div className="flex items-center gap-7 mt-7">
+            <SeparatorLine />
+            <span className="font-chivo text-paragraph text-lg">{place}</span>
+          </div>
+        )}
       </Card>
       <div className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer">
         <img src={ExpansionRight} alt="expansion-right" className="h-4 w-6" />

@@ -7,6 +7,8 @@ const majors = [
     college: "UNESP",
     term: "03/2013 - 12/2018",
     location: "Guaratinguetá, SP",
+    type: "Bacharelado",
+    grade: "7.1/10",
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ const majors = [
     college: "Alfred University",
     term: "08/2015 - 05/2016",
     location: "Alfred, NY",
+    type: "Graduação Sanduíche",
+    grade: "3.2/4",
   },
 ];
 

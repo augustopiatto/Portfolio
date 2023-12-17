@@ -8,7 +8,7 @@ interface CarouselHeader {
 function CarouselHeader({ headers, currentIndex }: CarouselHeader) {
   return (
     <div className="flex justify-center min-w-full">
-      <h1 className="font-bebas text-3xl text-title">
+      <h1 className="font-bebas text-4xl uppercase text-title">
         {headers[currentIndex]}
       </h1>
     </div>

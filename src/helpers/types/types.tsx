@@ -4,6 +4,8 @@ type Major = {
   college: string;
   term: string;
   location: string;
+  type: string;
+  grade: string;
 };
 
 type Course = {
