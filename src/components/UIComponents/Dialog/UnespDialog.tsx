@@ -48,7 +48,7 @@ function UnespDialog() {
         </p>
         <p>
           Em 2015 prestei e passei no Ciência sem Fronteiras, indo em agosto do
-          mesmo ano para os Estados Unidos, cursar Material's Engineering na
+          mesmo ano para os Estados Unidos, cursar Materials Engineering na
           universidade Alfred, em Nova Iorque. Cursei matérias referentes ao
           curso de Engenharia do Brasil e algumas adicionais que me chamaram o
           interesse.

@@ -7,11 +7,20 @@ import Dialog from "../UIComponents/Dialog/Dialog.tsx";
 import UnespDialog from "../UIComponents/Dialog/UnespDialog.tsx";
 import AlfredDialog from "../UIComponents/Dialog/AlfredDialog.tsx";
 
-function Study() {
-  const [openedDialog, setOpenedDialog] = React.useState(false);
+type Dialogs = {
+  [key: number]: () => void;
+};
 
-  function openDialog() {
-    setOpenedDialog(true);
+function Study() {
+  const [openedUnespDialog, setOpenedUnespDialog] = React.useState(false);
+  const [openedAlfredDialog, setOpenedAlfredDialog] = React.useState(false);
+
+  function openDialog(key: number) {
+    const dialogs: Dialogs = {
+      1: () => setOpenedUnespDialog(true),
+      2: () => setOpenedAlfredDialog(true),
+    };
+    dialogs[key as keyof Dialogs]();
   }
 
   if (!majors.length) return;
@@ -22,7 +31,7 @@ function Study() {
           borderRadius={"rounded-ordinary-expansion"}
           place={major.location}
           key={major.id}
-          openDialog={openDialog}
+          openDialog={() => openDialog(major.id)}
         >
           <div className="flex flex-col gap-3">
             <h1 className="font-bebas text-4xl capitalize">{major.name}</h1>
@@ -41,10 +50,16 @@ function Study() {
           </div>
         </ExpandableCard>
       ))}
-      <Dialog openedDialog={openedDialog} setOpenedDialog={setOpenedDialog}>
+      <Dialog
+        openedDialog={openedUnespDialog}
+        setOpenedDialog={setOpenedUnespDialog}
+      >
         <UnespDialog />
       </Dialog>
-      <Dialog openedDialog={openedDialog} setOpenedDialog={setOpenedDialog}>
+      <Dialog
+        openedDialog={openedAlfredDialog}
+        setOpenedDialog={setOpenedAlfredDialog}
+      >
         <AlfredDialog />
       </Dialog>
     </div>

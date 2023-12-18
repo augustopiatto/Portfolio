@@ -7,11 +7,10 @@ function AlfredDialog() {
 
   return (
     <>
-      <div className="flex justify-between items-end">
+      <div>
         <h1 className="font-bebas text-4xl uppercase leading-tight">
-          Graduação em Engenharia de Materiais
+          Graduação Sanduíche em Materials Engineering
         </h1>
-        <h2 className="font-bebas text-3xl uppercase">UNESP Guaratinguetá</h2>
       </div>
       <FullDivider />
       <section className="flex flex-col gap-3 mt-7 [&>p]:font-chivo [&>p]:text-lg">
@@ -48,7 +47,7 @@ function AlfredDialog() {
         </p>
         <p>
           Em 2015 prestei e passei no Ciência sem Fronteiras, indo em agosto do
-          mesmo ano para os Estados Unidos, cursar Material's Engineering na
+          mesmo ano para os Estados Unidos, cursar Materials Engineering na
           universidade Alfred, em Nova Iorque. Cursei matérias referentes ao
           curso de Engenharia do Brasil e algumas adicionais que me chamaram o
           interesse.

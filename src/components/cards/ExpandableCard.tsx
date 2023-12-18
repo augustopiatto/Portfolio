@@ -33,7 +33,7 @@ function ExpandableCard({
       </Card>
       <div
         className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer"
-        onClick={() => openDialog()}
+        onClick={openDialog}
       >
         <img src={ExpansionRight} alt="expansion-right" className="h-4 w-6" />
       </div>
