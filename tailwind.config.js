@@ -37,6 +37,9 @@ export default {
       width: {
         "project-image": "832px",
       },
+      maxWidth: {
+        inherit: "inherit",
+      },
       keyframes: {
         "fade-in": {
           "0%": { opacity: 0 },
