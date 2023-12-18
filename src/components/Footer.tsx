@@ -17,7 +17,7 @@ function Footer() {
           Vamos bater um papo!
         </p>
       </div>
-      <div className="flex flex-1 gap-4 justify-center">
+      <div id="contact" className="flex flex-1 gap-4 justify-center">
         {contacts.length &&
           contacts.map((contact: Contact) => (
             <Icon

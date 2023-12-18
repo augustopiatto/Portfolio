@@ -16,7 +16,7 @@ function Projects() {
   }, {} as { [key: number]: { description: string; technologies: string[] } });
 
   return (
-    <div className="mx-auto">
+    <div id="projects" className="mx-auto">
       {projects && !!projects.length && (
         <Carrousel headers={headers} data={data} stepper={true}>
           {projects.map((project: Project) => (
