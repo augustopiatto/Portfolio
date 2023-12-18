@@ -5,7 +5,7 @@ interface Dialog {
 }
 
 function Dialog({ children, openedDialog, setOpenedDialog }: Dialog) {
-  // Esse vídeo explica bem como fazer o fade-ou a partir de um display none
+  // Esse vídeo explica bem como fazer o fade-out a partir de um display none
   // https://www.youtube.com/watch?v=4prVdA7_6u0
   function closeDialog() {
     const dialog = document.getElementById("dialog");
