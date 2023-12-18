@@ -16,47 +16,30 @@ function AlfredDialog() {
       <section className="flex flex-col gap-3 mt-7 [&>p]:font-chivo [&>p]:text-lg">
         <p>
           <a
-            href="https://www.feg.unesp.br/#!/ensino/graduacao/cursos/graduacao-em-engenharia-de-materiais/"
+            href="https://www.alfred.edu/academics/graduate-programs/materials-science-engineering.cfm"
             target="_blank"
             onClick={clickedLink}
           >
             Curso
           </a>{" "}
-          lecionado pela UNESP de Guaratinguetá desde 2003. Oferece uma{" "}
-          <a
-            href="https://www.feg.unesp.br/#!/ensino/graduacao/cursos/graduacao-em-engenharia-de-materiais/matriz-curricular/ingressantes-ate-2022/"
-            target="_blank"
-            onClick={clickedLink}
-          >
-            grade curricular
-          </a>{" "}
-          com foco em pesquisas a partir de seu segundo ano letivo, o que a
-          torna renomada entre diversas outras faculdades e universidades do
-          país.
+          lecionado pela Alfred University, no vilarejo de Alfred. Oferece como
+          foco do curso o estudo em cerâmicas e vidros, sendo particularmente
+          famoso por seus alunos serem direcionados à grande indústria de vidros
+          presente em Buffalo, Nova Iorque.
         </p>
         <p>
-          Ingressei em 2013 no curso. Durante o primeiro ano cursei a matéria de
-          Programação de Computadores I, com média final de 8.6. Foi meu
-          primeiro contato com programação e vi que entendia conceitos que eram
-          apresentados ali.
+          Ingressei em agosto de 2015 no curso, com algumas matérias
+          equivalentes ao curso de Engenharia de Materiais do Brasil. Me
+          inscrevi também em matérias de cerâmicas e vidros, que atraíram minha
+          atenção durante meu segundo ano de faculdade no Brasil, além de aulas
+          de software de modelagem 3D e inglês.
         </p>
         <p>
-          Nos anos seguintes mantive nota maior que a média da universidade, e
-          sem pegar recuperação, enquanto focava em realizar as pesquisas da
-          grade de cada ano.
-        </p>
-        <p>
-          Em 2015 prestei e passei no Ciência sem Fronteiras, indo em agosto do
-          mesmo ano para os Estados Unidos, cursar Materials Engineering na
-          universidade Alfred, em Nova Iorque. Cursei matérias referentes ao
-          curso de Engenharia do Brasil e algumas adicionais que me chamaram o
-          interesse.
-        </p>
-        <p>
-          Retornei ao Brasil em maio de 2016 e concluí a faculdade em 2018, com
-          um ano após o prazo mínimo, devido ao intercâmbio. Mantive meu foco
-          nos estudos, fiz meu TCC relacionado ao tema de Metais e me graduei
-          com média de 7.1.
+          O intercâmbio foi patrocinado pelo programa Ciência sem Fronteiras do
+          governo brasileiro e eu concluí o meu ano letivo em maio de 2016, com
+          GPA de 3.2, algo similar à média 8.0. Consegui extender o intercâmbio
+          realizando um pesquisa subsequente em Chicago, Illinois, até julho,
+          retornando ao Brasil após 11 meses de intercâmbio.
         </p>
       </section>
     </>
