@@ -83,3 +83,15 @@ body {
   inset: 0;
   animation: fade-out 0.5s ease-out;
 }
+
+a {
+  text-decoration: underline !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(149, 149, 166) !important;
+  cursor: pointer;
+}
+
+a[activated] {
+  color: rgb(77, 55, 105) !important;
+}
