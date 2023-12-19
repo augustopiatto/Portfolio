@@ -2,20 +2,19 @@ import React, { useEffect } from "react";
 import CarouselHeader from "./CarouselHeader";
 import CarouselStepper from "./CarouselStepper";
 import {
-  DataInterface,
   CarouselHeaderInterface,
   CarouselImageInterface,
 } from "../../../helpers/interfaces/interfaces";
-import CarouselData from "./CarouselData";
 import CarouselImages from "./CarouselImages";
 
 interface Carousel {
+  children: React.ReactNode;
   headers: CarouselHeaderInterface;
-  data: DataInterface;
   images: CarouselImageInterface[];
+  onChangeIndex?: (value: number) => void;
 }
 
-function Carousel({ headers, data, images }: Carousel) {
+function Carousel({ children, headers, images, onChangeIndex }: Carousel) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   function carouselInfiniteScroll() {
@@ -32,6 +31,10 @@ function Carousel({ headers, data, images }: Carousel) {
     return () => clearInterval(interval);
   });
 
+  useEffect(() => {
+    if (onChangeIndex) onChangeIndex(currentIndex);
+  }, [currentIndex, onChangeIndex]);
+
   return (
     <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey rounded-3xl flex flex-col gap-5 py-5">
       <CarouselStepper images={images} currentIndex={currentIndex} />
@@ -44,7 +47,7 @@ function Carousel({ headers, data, images }: Carousel) {
         carouselInfiniteScroll={carouselInfiniteScroll}
         setCurrentIndex={setCurrentIndex}
       />
-      {data && <CarouselData data={data} currentIndex={currentIndex} />}
+      {children}
     </div>
   );
 }

@@ -18,7 +18,7 @@ function CarouselStepper({ images, currentIndex }: CarouselStepper) {
       {images.map((image) => (
         <div
           className={`h-4 w-4 rounded-full border-2 border-black ${idxBackgroundColor(
-            image.id
+            image.id - 1
           )}`}
           key={image.id}
         ></div>
