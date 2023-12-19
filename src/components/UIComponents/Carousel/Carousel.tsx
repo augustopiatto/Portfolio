@@ -4,28 +4,22 @@ import CarouselStepper from "./CarouselStepper";
 import {
   DataInterface,
   CarouselHeaderInterface,
+  CarouselImageInterface,
 } from "../../../helpers/interfaces/interfaces";
 import CarouselData from "./CarouselData";
 import CarouselImages from "./CarouselImages";
 
-interface Carrousel {
-  children: React.ReactElement[];
+interface Carousel {
   headers: CarouselHeaderInterface;
   data: DataInterface;
-  stepper?: boolean;
+  images: CarouselImageInterface[];
 }
 
-function Carrousel({ children, headers, data, stepper = false }: Carrousel) {
-  const childArray = React.Children.toArray(children);
-  childArray.map((child) => {
-    if (!React.isValidElement<Carrousel>(child)) {
-      return child;
-    }
-  });
+function Carousel({ headers, data, images }: Carousel) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   function carouselInfiniteScroll() {
-    if (childArray && currentIndex === childArray.length - 1) {
+    if (images && currentIndex === images.length - 1) {
       return setCurrentIndex(0);
     }
     return setCurrentIndex(currentIndex + 1);
@@ -40,14 +34,12 @@ function Carrousel({ children, headers, data, stepper = false }: Carrousel) {
 
   return (
     <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey rounded-3xl flex flex-col gap-5 py-5">
-      {stepper && (
-        <CarouselStepper children={childArray} currentIndex={currentIndex} />
-      )}
+      <CarouselStepper images={images} currentIndex={currentIndex} />
       {headers && (
         <CarouselHeader headers={headers} currentIndex={currentIndex} />
       )}
       <CarouselImages
-        children={childArray}
+        images={images}
         currentIndex={currentIndex}
         carouselInfiniteScroll={carouselInfiniteScroll}
         setCurrentIndex={setCurrentIndex}
@@ -57,4 +49,4 @@ function Carrousel({ children, headers, data, stepper = false }: Carrousel) {
   );
 }
 
-export default Carrousel;
+export default Carousel;

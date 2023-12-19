@@ -1,6 +1,6 @@
 import React from "react";
 import { courses } from "../../helpers/infos.tsx";
-import { Course } from "../../helpers/types/types.tsx";
+import { CourseType } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";
 import Tooltip from "../UIComponents/Tooltip.tsx";
@@ -10,7 +10,7 @@ import Link from "/svg/link.svg";
 import expansionBottom from "/svg/expansion-bottom.svg";
 
 function Courses() {
-  const [visibleCourses, setVisibleCourses] = React.useState<Course[]>(
+  const [visibleCourses, setVisibleCourses] = React.useState<CourseType[]>(
     courses.slice(0, 3)
   );
 
@@ -36,7 +36,7 @@ function Courses() {
   if (!visibleCourses.length) return;
   return (
     <div className="flex flex-col flex-1 gap-12">
-      {visibleCourses.map((course: Course) => (
+      {visibleCourses.map((course: CourseType) => (
         <Card key={course.id}>
           <div className="flex flex-col gap-7">
             <div className="flex items-center gap-6">

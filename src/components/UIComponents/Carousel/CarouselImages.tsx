@@ -1,29 +1,23 @@
-import React from "react";
+import { CarouselImageInterface } from "../../../helpers/interfaces/interfaces";
 import Button from "../../HTMLComponents/Button";
 import ExpansionRight from "/svg/expansion-right.svg";
 
 interface CarouselImages {
-  children: (
-    | string
-    | number
-    | React.ReactElement<string | React.JSXElementConstructor<string>>
-    | Iterable<React.ReactNode>
-    | React.ReactPortal
-  )[];
+  images: CarouselImageInterface[];
   currentIndex: number;
   carouselInfiniteScroll: () => void;
   setCurrentIndex: (value: number) => void;
 }
 
 function CarouselImages({
-  children,
+  images,
   currentIndex,
   carouselInfiniteScroll,
   setCurrentIndex,
 }: CarouselImages) {
   function previous() {
     if (currentIndex === 0) {
-      return setCurrentIndex(children.length - 1);
+      return setCurrentIndex(images.length - 1);
     }
     return setCurrentIndex(currentIndex - 1);
   }
@@ -43,15 +37,19 @@ function CarouselImages({
           />
         </Button>
       </div>
-      {children.map((child, index) => {
+      {images.map((image) => {
         return (
           <div
             id="carousel-item"
             className="min-w-full flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
-            key={index}
+            key={image.id}
           >
-            {child}
+            <img
+              src={image.src}
+              alt={image.name}
+              className="max-w-full h-full"
+            />
           </div>
         );
       })}

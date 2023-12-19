@@ -8,3 +8,9 @@ export interface DataInterface {
     technologies: string[];
   };
 }
+
+export interface CarouselImageInterface {
+  id: number;
+  name: string;
+  src: string;
+}

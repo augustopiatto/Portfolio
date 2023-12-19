@@ -1,6 +1,5 @@
-import Carrousel from "../UIComponents/Carousel/Carousel";
+import Carousel from "../UIComponents/Carousel/Carousel";
 import { projects } from "../../helpers/infos";
-import { Project } from "../../helpers/types/types";
 
 function Projects() {
   const headers = projects.reduce((acc, project) => {
@@ -14,21 +13,14 @@ function Projects() {
     };
     return acc;
   }, {} as { [key: number]: { description: string; technologies: string[] } });
+  const images = projects.map((project) => {
+    return { id: project.id, name: project.name, src: project.img };
+  });
 
   return (
     <div id="projects" className="mx-auto">
       {projects && !!projects.length && (
-        <Carrousel headers={headers} data={data} stepper={true}>
-          {projects.map((project: Project) => (
-            <div key={project.id}>
-              <img
-                src={project.img}
-                alt={project.name}
-                className="max-w-full h-full"
-              />
-            </div>
-          ))}
-        </Carrousel>
+        <Carousel headers={headers} data={data} images={images}></Carousel>
       )}
     </div>
   );

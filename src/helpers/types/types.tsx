@@ -1,4 +1,4 @@
-type Major = {
+type MajorType = {
   id: number;
   name: string;
   college: string;
@@ -8,7 +8,7 @@ type Major = {
   grade: string;
 };
 
-type Course = {
+type CourseType = {
   id: number;
   name: string;
   institution: string;
@@ -17,7 +17,7 @@ type Course = {
   technologies: string[];
 };
 
-type Contact = {
+type ContactType = {
   id: number;
   copy?: boolean;
   download?: boolean;
@@ -32,7 +32,7 @@ type ProjectDetails = {
   moreImages: string[];
 };
 
-type Project = {
+type ProjectType = {
   id: number;
   name: string;
   img: string;
@@ -41,10 +41,10 @@ type Project = {
   details: ProjectDetails;
 };
 
-type Language = {
+type LanguageType = {
   id: number;
   name: string;
   level: string;
 };
 
-export type { Contact, Course, Major, Project, Language };
+export type { ContactType, CourseType, MajorType, ProjectType, LanguageType };

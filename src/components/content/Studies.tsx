@@ -1,6 +1,6 @@
 import ExpandableCard from "../cards/ExpandableCard.tsx";
 import { majors } from "../../helpers/infos.tsx";
-import { Major } from "../../helpers/types/types.tsx";
+import { MajorType } from "../../helpers/types/types.tsx";
 import SeparatorDot from "../dividers/SeparatorDot.tsx";
 import React from "react";
 import Dialog from "../UIComponents/Dialog/Dialog.tsx";
@@ -26,7 +26,7 @@ function Study() {
   if (!majors.length) return;
   return (
     <div className="flex flex-col gap-12">
-      {majors.map((major: Major) => (
+      {majors.map((major: MajorType) => (
         <ExpandableCard
           borderRadius={"rounded-ordinary-expansion"}
           place={major.location}

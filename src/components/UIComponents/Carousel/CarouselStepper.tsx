@@ -1,15 +1,11 @@
+import { CarouselImageInterface } from "../../../helpers/interfaces/interfaces";
+
 interface CarouselStepper {
-  children: (
-    | string
-    | number
-    | React.ReactElement<string | string | React.JSXElementConstructor<string>>
-    | Iterable<React.ReactNode>
-    | React.ReactPortal
-  )[];
+  images: CarouselImageInterface[];
   currentIndex: number;
 }
 
-function CarouselStepper({ children, currentIndex }: CarouselStepper) {
+function CarouselStepper({ images, currentIndex }: CarouselStepper) {
   function idxBackgroundColor(idx: number) {
     if (currentIndex >= idx) {
       return "bg-primary";
@@ -19,12 +15,12 @@ function CarouselStepper({ children, currentIndex }: CarouselStepper) {
 
   return (
     <div className="flex justify-center gap-10">
-      {children.map((_, index) => (
+      {images.map((image) => (
         <div
           className={`h-4 w-4 rounded-full border-2 border-black ${idxBackgroundColor(
-            index
+            image.id
           )}`}
-          key={index}
+          key={image.id}
         ></div>
       ))}
     </div>

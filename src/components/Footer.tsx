@@ -1,5 +1,5 @@
 import { contacts } from "../helpers/infos";
-import { Contact } from "../helpers/types/types";
+import { ContactType } from "../helpers/types/types";
 import Icon from "./UIComponents/Icon";
 
 function Footer() {
@@ -19,7 +19,7 @@ function Footer() {
       </div>
       <div id="contact" className="flex flex-1 gap-4 justify-center">
         {contacts.length &&
-          contacts.map((contact: Contact) => (
+          contacts.map((contact: ContactType) => (
             <Icon
               copy={contact?.copy}
               download={contact?.download}

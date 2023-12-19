@@ -1,4 +1,4 @@
-import { Language } from "../../helpers/types/types";
+import { LanguageType } from "../../helpers/types/types";
 import { languages } from "../../helpers/infos";
 import Card from "../cards/Card";
 import LanguageSVG from "/svg/language.svg";
@@ -13,7 +13,7 @@ function Languages() {
           alt="language"
           className="absolute h-10 w-10 right-0"
         />
-        {languages.map((language: Language) => (
+        {languages.map((language: LanguageType) => (
           <div className="grid grid-cols-12 items-center" key={language.id}>
             <h2 className="col-span-4 font-bebas text-4xl capitalize">
               {language.name}
