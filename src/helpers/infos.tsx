@@ -134,11 +134,21 @@ const projects = [
       "Vite",
     ],
     details: {
-      objective: `Projeto feito para aprender React baseado no curso do site ${(
-        <a>https://www.origamid.com/</a>
-      )}. Neste site é possível se cadastrar, logar, recuperar a senha, adicionar fotos dos seus cachorros e ver as estatísticas de acesso aos seus posts.`,
-      link: GITHUB_BASE_URL + "Origamid-React",
-      moreImages: [""],
+      objective: (
+        <>
+          Projeto feito para aprender React baseado no curso do site{" "}
+          {
+            <a href="https://www.origamid.com/" target="_blank">
+              Origamid
+            </a>
+          }
+          . Neste site é possível se cadastrar, logar, recuperar a senha,
+          adicionar fotos dos seus cachorros e ver as estatísticas de acesso aos
+          seus posts.
+        </>
+      ),
+      href: GITHUB_BASE_URL + "Origamid-React",
+      moreImages: [{ name: "teste", src: "/images/react-origamid.png" }],
     },
   },
   {
@@ -158,8 +168,8 @@ const projects = [
     details: {
       objective:
         "Projeto feito para processo seletivo da empresa Liga Magic. Neste site é possível escolher opções de um formulário em um componente passo a passo e validar seus inputs",
-      link: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo",
-      moreImages: [""],
+      href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo",
+      moreImages: [{ name: "teste2", src: "/images/liga-magic.png" }],
     },
   },
   {
@@ -186,8 +196,8 @@ const projects = [
     details: {
       objective:
         "Projeto feito para processo seletivo da empresa DNC. Neste site é possível realizar cadastro de usuário, associar notas ao usuário e o sistema gera uma listagem de top 3 melhores alunos e uma listagem de top 10 alunos por curso",
-      link: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
-      moreImages: [""],
+      href: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
+      moreImages: [{ name: "teste3", src: "/images/dnc.png" }],
     },
   },
 ];

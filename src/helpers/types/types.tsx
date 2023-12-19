@@ -26,21 +26,6 @@ type ContactType = {
   src: string;
 };
 
-type ProjectDetails = {
-  objective: string;
-  link: string;
-  moreImages: string[];
-};
-
-type ProjectType = {
-  id: number;
-  name: string;
-  img: string;
-  description: string;
-  technologies: string[];
-  details: ProjectDetails;
-};
-
 type LanguageType = {
   id: number;
   name: string;
@@ -51,11 +36,4 @@ type Dialogs = {
   [key: number]: () => void;
 };
 
-export type {
-  ContactType,
-  CourseType,
-  MajorType,
-  ProjectType,
-  LanguageType,
-  Dialogs,
-};
+export type { ContactType, CourseType, MajorType, LanguageType, Dialogs };

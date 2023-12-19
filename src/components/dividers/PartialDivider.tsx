@@ -1,4 +1,4 @@
-interface PartialDivider {
+interface PartialDividerInterface {
   marginBottom?: string;
   marginTop?: string;
 }
@@ -6,7 +6,7 @@ interface PartialDivider {
 function PartialDivider({
   marginBottom = "mb-[72px]",
   marginTop = "mt-[72px]",
-}: PartialDivider) {
+}: PartialDividerInterface) {
   return (
     <div
       className={`${marginBottom} ${marginTop} bg-light-grey rounded h-px w-11/12 mx-auto`}
