@@ -8,10 +8,20 @@ interface Icon {
   href: string;
   name: string;
   src: string;
+  size?: number;
 }
 
-function Icon({ copy = false, download = false, href, name, src }: Icon) {
+function Icon({
+  copy = false,
+  download = false,
+  href,
+  name,
+  src,
+  size = 20,
+}: Icon) {
   const { activateWarning } = React.useContext(WarningContext);
+
+  const svgSize = `h-${size} w-${size}`;
 
   function copyURI(event: React.MouseEvent<HTMLElement>) {
     if (copy) {
@@ -24,7 +34,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   return (
     <Tooltip>
       <a
-        className="bg-secondary rounded-full h-20 w-20 flex items-center justify-center"
+        className={`bg-secondary rounded-full ${svgSize} flex items-center justify-center`}
         href={href}
         download={download}
         target={copy ? "" : "_blank"}

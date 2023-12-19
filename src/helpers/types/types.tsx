@@ -47,4 +47,15 @@ type LanguageType = {
   level: string;
 };
 
-export type { ContactType, CourseType, MajorType, ProjectType, LanguageType };
+type Dialogs = {
+  [key: number]: () => void;
+};
+
+export type {
+  ContactType,
+  CourseType,
+  MajorType,
+  ProjectType,
+  LanguageType,
+  Dialogs,
+};

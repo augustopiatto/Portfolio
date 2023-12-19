@@ -1,15 +1,11 @@
 import ExpandableCard from "../cards/ExpandableCard.tsx";
 import { majors } from "../../helpers/infos.tsx";
-import { MajorType } from "../../helpers/types/types.tsx";
+import { Dialogs, MajorType } from "../../helpers/types/types.tsx";
 import SeparatorDot from "../dividers/SeparatorDot.tsx";
 import React from "react";
 import Dialog from "../UIComponents/Dialog/Dialog.tsx";
 import UnespDialog from "../UIComponents/Dialog/UnespDialog.tsx";
 import AlfredDialog from "../UIComponents/Dialog/AlfredDialog.tsx";
-
-type Dialogs = {
-  [key: number]: () => void;
-};
 
 function Study() {
   const [openedUnespDialog, setOpenedUnespDialog] = React.useState(false);
