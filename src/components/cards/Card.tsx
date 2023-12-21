@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import React from "react";
 
 interface Card {
   borderRadius?: string;
-  children: ReactNode;
+  children: React.ReactNode;
   maxWidth?: string;
 }
 

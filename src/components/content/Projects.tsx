@@ -6,6 +6,7 @@ import {
   CarouselHeaderInterface,
   CarouselImageInterface,
 } from "../../helpers/interfaces/interfaces";
+import Select from "../HTMLComponents/Select";
 
 function Projects() {
   const [carouselIndex, setCarouselIndex] = React.useState<number>(0);
@@ -17,13 +18,28 @@ function Projects() {
   const images: CarouselImageInterface[] = projects.map((project) => {
     return { id: project.id, name: project.name, src: project.img };
   });
+  const items: string[] = projects.reduce((acc: string[], project) => {
+    project.technologies.forEach((tech) => {
+      if (!acc.includes(tech)) acc.push(tech);
+    });
+    return acc;
+  }, []);
 
   function onChangeIndex(currentIndex: number) {
     setCarouselIndex(currentIndex);
   }
 
+  function searchTech() {
+    console.log("oi");
+  }
+
   return (
     <div id="projects" className="mx-auto">
+      <Select
+        items={items}
+        placeholder="Selecione a tecnologia desejada"
+        onClick={searchTech}
+      />
       {projects && !!projects.length && (
         <Carousel
           headers={headers}

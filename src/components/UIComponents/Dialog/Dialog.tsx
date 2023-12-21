@@ -28,9 +28,10 @@ function Dialog({ children, openedDialog, setOpenedDialog }: Dialog) {
     >
       <div className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card w-2/3 rounded-dialog p-14">
         <button onClick={closeDialog} className="absolute top-5 right-9">
-          <span className="text-2xl font-bold">X</span>
+          <span className="text-2xl font-bold text-primary">X</span>
         </button>
         {children}
+        <div className="relative bottom-0 left-0 mt-16 h-2 w-[300px] rounded-full bg-highlight" />
       </div>
     </div>
   );

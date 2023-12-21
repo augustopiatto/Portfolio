@@ -28,7 +28,7 @@ function CarouselImages({
 
   return (
     <div className="flex relative overflow-hidden">
-      <div className="absolute z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none">
         <Button onClick={previous}>
           <img
             src={ExpansionRight}
@@ -53,7 +53,7 @@ function CarouselImages({
           </div>
         );
       })}
-      <div className="absolute right-0 z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="absolute right-0 z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none">
         <Button onClick={next}>
           <img
             src={ExpansionRight}
