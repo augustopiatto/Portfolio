@@ -19,9 +19,8 @@ function Icon({
   src,
   size = 20,
 }: Icon) {
+  const [svgSize, setSvgSize] = React.useState<string>("");
   const { activateWarning } = React.useContext(WarningContext);
-
-  const svgSize = `h-${size} w-${size}`;
 
   function copyURI(event: React.MouseEvent<HTMLElement>) {
     if (copy) {
@@ -30,6 +29,11 @@ function Icon({
       activateWarning("Copiado! O link está no CTRL + V");
     }
   }
+
+  React.useEffect(() => {
+    const svgSize = `h-${size} w-${size}`;
+    setSvgSize(svgSize);
+  }, [size]);
 
   return (
     <Tooltip>

@@ -51,7 +51,11 @@ function Courses() {
                   onClick={(event) => copyURI(event, course.certificationLink)}
                 >
                   <p>Link do curso</p>
-                  <img src={Link} alt="course-link" className="h-6 w-7" />
+                  <img
+                    src={Link}
+                    alt="course-link"
+                    className="h-6 w-7 hover:scale-[1.2]"
+                  />
                 </a>
               </Tooltip>
             </div>

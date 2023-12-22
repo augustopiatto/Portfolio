@@ -1,3 +1,5 @@
+import Ornament2 from "/svg/ornament-2.svg";
+
 interface Dialog {
   children: React.ReactNode;
   openedDialog: boolean;
@@ -31,7 +33,7 @@ function Dialog({ children, openedDialog, setOpenedDialog }: Dialog) {
           <span className="text-2xl font-bold text-primary">X</span>
         </button>
         {children}
-        <div className="relative bottom-0 left-0 mt-16 h-2 w-[300px] rounded-full bg-highlight" />
+        <img src={Ornament2} alt="ornament2" className="rotate-[-10deg]" />
       </div>
     </div>
   );

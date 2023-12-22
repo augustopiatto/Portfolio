@@ -43,7 +43,7 @@ function CarouselDescription({ data, currentIndex }: CarouselDescription) {
                 </div>
               </div>
               <div
-                className="absolute right-3 -bottom-2 h-12 w-12 rounded-full flex justify-center items-center cursor-pointer"
+                className="absolute right-3 -bottom-4 h-12 w-12 rounded-full flex justify-center items-center cursor-pointer hover:scale-[1.2]"
                 onClick={() => openDialog(info)}
               >
                 <img

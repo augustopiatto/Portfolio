@@ -35,7 +35,11 @@ function ExpandableCard({
         className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer"
         onClick={openDialog}
       >
-        <img src={ExpansionRight} alt="expansion-right" className="h-4 w-6" />
+        <img
+          src={ExpansionRight}
+          alt="expansion-right"
+          className="h-4 w-6 hover:scale-[1.2]"
+        />
       </div>
     </div>
   );
