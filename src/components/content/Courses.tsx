@@ -39,7 +39,7 @@ function Courses() {
       {visibleCourses.map((course: CourseType) => (
         <Card key={course.id}>
           <div className="flex flex-col gap-7">
-            <div className="flex items-center gap-6">
+            <div className="flex items-start gap-6">
               <img src={course.institutionSVG} alt={course.institutionSVG} />
               <h1 className="font-bebas text-4xl capitalize">
                 {course.name} - {course.institution}
