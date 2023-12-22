@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CarouselHeader from "./CarouselHeader";
 import CarouselStepper from "./CarouselStepper";
 import {
@@ -7,14 +7,19 @@ import {
 } from "../../../helpers/interfaces/interfaces";
 import CarouselImages from "./CarouselImages";
 
-interface Carousel {
+interface CarouselInterface {
   children: React.ReactNode;
   headers: CarouselHeaderInterface[];
   images: CarouselImageInterface[];
   onChangeIndex?: (value: number) => void;
 }
 
-function Carousel({ children, headers, images, onChangeIndex }: Carousel) {
+function Carousel({
+  children,
+  headers,
+  images,
+  onChangeIndex,
+}: CarouselInterface) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   function carouselInfiniteScroll() {
@@ -24,7 +29,7 @@ function Carousel({ children, headers, images, onChangeIndex }: Carousel) {
     return setCurrentIndex(currentIndex + 1);
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (images.length > 1) {
       const interval = setInterval(() => {
         carouselInfiniteScroll();
@@ -33,11 +38,11 @@ function Carousel({ children, headers, images, onChangeIndex }: Carousel) {
     }
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (onChangeIndex) onChangeIndex(currentIndex);
   }, [currentIndex, onChangeIndex]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (images && !!images.length) setCurrentIndex(0);
   }, [images]);
 

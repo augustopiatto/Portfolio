@@ -1,11 +1,11 @@
 import { CarouselImageInterface } from "../../../helpers/interfaces/interfaces";
 
-interface CarouselStepper {
+interface CarouselStepperInterface {
   images: CarouselImageInterface[];
   currentIndex: number;
 }
 
-function CarouselStepper({ images, currentIndex }: CarouselStepper) {
+function CarouselStepper({ images, currentIndex }: CarouselStepperInterface) {
   function idxBackgroundColor(idx: number) {
     if (currentIndex >= idx) {
       return "bg-primary";

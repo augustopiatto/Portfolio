@@ -2,7 +2,7 @@ import { CarouselImageInterface } from "../../../helpers/interfaces/interfaces";
 import Button from "../../HTMLComponents/Button";
 import ExpansionRight from "/svg/expansion-right.svg";
 
-interface CarouselImages {
+interface CarouselImagesInterface {
   images: CarouselImageInterface[];
   currentIndex: number;
   carouselInfiniteScroll: () => void;
@@ -14,7 +14,7 @@ function CarouselImages({
   currentIndex,
   carouselInfiniteScroll,
   setCurrentIndex,
-}: CarouselImages) {
+}: CarouselImagesInterface) {
   function previous() {
     if (currentIndex === 0) {
       return setCurrentIndex(images.length - 1);

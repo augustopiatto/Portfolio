@@ -5,12 +5,15 @@ import Dialog from "../Dialog/Dialog";
 import ProjectsDialog from "../Dialog/ProjectsDialog";
 import { ProjectInterface } from "../../../helpers/interfaces/interfaces";
 
-interface CarouselDescription {
+interface CarouselDescriptionInterface {
   data: ProjectInterface[];
   currentIndex: number;
 }
 
-function CarouselDescription({ data, currentIndex }: CarouselDescription) {
+function CarouselDescription({
+  data,
+  currentIndex,
+}: CarouselDescriptionInterface) {
   const [openedDialog, setOpenedDialog] = React.useState<boolean>(false);
   const [dialogInfo, setDialogInfo] = React.useState<ProjectInterface | null>(
     null
