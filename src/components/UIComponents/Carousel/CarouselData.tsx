@@ -21,11 +21,12 @@ function CarouselDescription({ data, currentIndex }: CarouselDescription) {
     setOpenedDialog(true);
   }
 
+  if (!data || !data.length) return;
   return (
     <div>
-      {data.map((info) => (
-        <div key={info.id}>
-          {info.id === currentIndex + 1 && (
+      {data.map((info, index) => (
+        <div key={index}>
+          {index === currentIndex && (
             <div className="flex flex-col justify-around h-40 pb-5 relative">
               <div className="w-full flex mb-5 gap-5 px-10">
                 <h2 className="font-bebas text-2xl text-title">Descrição</h2>

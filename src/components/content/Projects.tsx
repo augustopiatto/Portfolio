@@ -11,19 +11,17 @@ import Select from "../HTMLComponents/Select";
 
 function Projects() {
   const [carouselIndex, setCarouselIndex] = React.useState<number>(0);
-  const [headers, setHeaders] = React.useState<CarouselHeaderInterface>({});
+  const [headers, setHeaders] = React.useState<CarouselHeaderInterface[]>([]);
   const [images, setImages] = React.useState<CarouselImageInterface[]>([]);
   const [selectItems, setSelectItems] = React.useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] =
     React.useState<ProjectInterface[]>(projects);
 
   React.useEffect(() => {
-    const headers: CarouselHeaderInterface = filteredProjects.reduce(
-      (acc, project) => {
-        acc[project.id - 1] = project.name;
-        return acc;
-      },
-      {} as { [key: number]: string }
+    const headers: CarouselHeaderInterface[] = filteredProjects.map(
+      (project) => {
+        return { id: project.id, name: project.name };
+      }
     );
     setHeaders(headers);
 
@@ -31,18 +29,19 @@ function Projects() {
       return { id: project.id, name: project.name, src: project.img };
     });
     setImages(images);
-
-    const items: string[] = filteredProjects.reduce(
-      (acc: string[], project) => {
-        project.technologies.forEach((tech) => {
-          if (!acc.includes(tech)) acc.push(tech);
-        });
-        return acc;
-      },
-      []
-    );
-    setSelectItems(items);
+    // Esse index só serve para as informações do carousel, eu tenho que alterar o index das imagens também
+    setCarouselIndex(0);
   }, [filteredProjects]);
+
+  React.useEffect(() => {
+    const items: string[] = projects.reduce((acc: string[], project) => {
+      project.technologies.forEach((tech) => {
+        if (!acc.includes(tech)) acc.push(tech);
+      });
+      return acc;
+    }, []);
+    setSelectItems(items);
+  }, []);
 
   function onChangeIndex(currentIndex: number) {
     setCarouselIndex(currentIndex);
@@ -74,7 +73,7 @@ function Projects() {
           images={images}
           onChangeIndex={onChangeIndex}
         >
-          <CarouselData data={projects} currentIndex={carouselIndex} />
+          <CarouselData data={filteredProjects} currentIndex={carouselIndex} />
         </Carousel>
       )}
     </div>

@@ -1,7 +1,8 @@
 import React from "react";
 
 export interface CarouselHeaderInterface {
-  [key: number]: string;
+  id: number;
+  name: string;
 }
 
 export interface DataInterface {

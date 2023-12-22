@@ -9,7 +9,7 @@ import CarouselImages from "./CarouselImages";
 
 interface Carousel {
   children: React.ReactNode;
-  headers: CarouselHeaderInterface;
+  headers: CarouselHeaderInterface[];
   images: CarouselImageInterface[];
   onChangeIndex?: (value: number) => void;
 }
@@ -25,15 +25,21 @@ function Carousel({ children, headers, images, onChangeIndex }: Carousel) {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      carouselInfiniteScroll();
-    }, 10000);
-    return () => clearInterval(interval);
+    if (images.length > 1) {
+      const interval = setInterval(() => {
+        carouselInfiniteScroll();
+      }, 10000);
+      return () => clearInterval(interval);
+    }
   });
 
   useEffect(() => {
     if (onChangeIndex) onChangeIndex(currentIndex);
   }, [currentIndex, onChangeIndex]);
+
+  useEffect(() => {
+    if (images && !!images.length) setCurrentIndex(0);
+  }, [images]);
 
   return (
     <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey rounded-b-3xl rounded-t-md flex flex-col gap-5 py-5">

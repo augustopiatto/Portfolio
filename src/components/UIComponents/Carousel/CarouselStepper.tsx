@@ -15,14 +15,15 @@ function CarouselStepper({ images, currentIndex }: CarouselStepper) {
 
   return (
     <div className="flex justify-center gap-10">
-      {images.map((image) => (
-        <div
-          className={`h-4 w-4 rounded-full border-2 border-black ${idxBackgroundColor(
-            image.id - 1
-          )}`}
-          key={image.id}
-        ></div>
-      ))}
+      {!!images.length &&
+        images.map((_, index) => (
+          <div
+            className={`h-4 w-4 rounded-full border-2 border-black ${idxBackgroundColor(
+              index
+            )}`}
+            key={index}
+          ></div>
+        ))}
     </div>
   );
 }

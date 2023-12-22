@@ -39,13 +39,13 @@ function CarouselImages({
           </Button>
         )}
       </div>
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
           <div
             id="carousel-item"
             className="min-w-full flex items-center justify-center [&>*]:w-full [&>*]:h-full [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
-            key={image.id}
+            key={index}
           >
             <img
               src={image.src}

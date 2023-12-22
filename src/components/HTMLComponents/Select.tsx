@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 interface SelectInterface {
   items: string[];
@@ -58,9 +57,11 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
 
   return (
     <div className="flex">
-      {/* <Button secondary onClick={onChange}>
-        <img src="/svg/search.svg" alt="search" />
-      </Button> */}
+      <img
+        src="/svg/search.svg"
+        alt="search"
+        className="bg-secondary px-3 py-[6px] rounded-md border-2 border-black"
+      />
       <div className="w-full relative">
         <input
           id="dropdown-wrapper"
