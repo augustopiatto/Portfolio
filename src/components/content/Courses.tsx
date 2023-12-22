@@ -36,7 +36,7 @@ function Courses() {
 
   // if (!visibleCourses.length) return;
   return (
-    <div className="flex flex-col flex-1 gap-12">
+    <div className="flex flex-1">
       <Slider>
         {courses.map((course: CourseType) => (
           <Card key={course.id}>
@@ -73,7 +73,8 @@ function Courses() {
           </Card>
         ))}
       </Slider>
-      {/* {visibleCourses.map((course: CourseType) => (
+      {/* <div className="flex flex-col flex-1 gap-12">
+      {visibleCourses.map((course: CourseType) => (
         <Card key={course.id}>
           <div className="flex flex-col gap-7">
             <div className="flex items-start gap-6">
@@ -115,7 +116,8 @@ function Courses() {
             />
           </Button>
         </div>
-      )} */}
+      )}
+      </div> */}
     </div>
   );
 }
