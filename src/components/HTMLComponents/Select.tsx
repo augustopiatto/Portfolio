@@ -4,12 +4,35 @@ import Button from "./Button";
 interface SelectInterface {
   items: string[];
   placeholder: string;
-  onClick: React.MouseEventHandler;
+  onChange: (value: string) => void;
 }
 
 // Montei select próprio porque o nativo do HTML não deixa controlar tamanho do dropdown
-function Select({ items, placeholder, onClick }: SelectInterface) {
+function Select({ items, placeholder, onChange }: SelectInterface) {
   const [openedDropdown, setOpenedDropdown] = React.useState<boolean>(false);
+  const [selectedItem, setSelectedItem] = React.useState<string>("");
+
+  function closeDropdown() {
+    const arrowDown = document.getElementById("arrow-down");
+    arrowDown?.removeAttribute("opened");
+    setOpenedDropdown(false);
+  }
+
+  function toggleDropdown() {
+    const arrowDown = document.getElementById("arrow-down");
+    if (openedDropdown) {
+      arrowDown?.removeAttribute("opened");
+    } else {
+      arrowDown?.setAttribute("opened", "");
+    }
+    setOpenedDropdown(!openedDropdown);
+  }
+
+  function selectValue(value: string) {
+    setSelectedItem(value);
+    onChange(value);
+    closeDropdown();
+  }
 
   React.useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -22,9 +45,7 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
           .getElementById("dropdown")
           ?.contains(event.target as HTMLButtonElement)
       ) {
-        const arrowDown = document.getElementById("arrow-down");
-        arrowDown?.removeAttribute("opened");
-        setOpenedDropdown(false);
+        closeDropdown();
       }
     };
 
@@ -35,27 +56,17 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
     };
   }, [openedDropdown]);
 
-  function toggleDropdown() {
-    const arrowDown = document.getElementById("arrow-down");
-    if (openedDropdown) {
-      arrowDown?.removeAttribute("opened");
-    } else {
-      arrowDown?.setAttribute("opened", "");
-    }
-    setOpenedDropdown(!openedDropdown);
-  }
-
   return (
     <div className="flex">
-      <Button secondary onClick={onClick}>
+      {/* <Button secondary onClick={onChange}>
         <img src="/svg/search.svg" alt="search" />
-      </Button>
+      </Button> */}
       <div className="w-full relative">
         <input
           id="dropdown-wrapper"
           type="text"
           readOnly
-          placeholder={placeholder}
+          placeholder={selectedItem ? selectedItem : placeholder}
           className="w-full h-full max-h-10 px-3 border-r-[1px] border-y-[1px] rounded-r-md border-black"
           onClick={toggleDropdown}
         />
@@ -69,6 +80,7 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
               <div
                 className="bg-white py-1 px-2 font-chivo text-title text-l border-[1px] border-gray cursor-pointer hover:bg-highlight"
                 key={item}
+                onClick={() => selectValue(item)}
               >
                 {item}
               </div>

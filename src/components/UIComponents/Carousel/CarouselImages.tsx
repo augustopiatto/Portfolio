@@ -29,13 +29,15 @@ function CarouselImages({
   return (
     <div className="flex relative overflow-hidden">
       <div className="absolute z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none">
-        <Button onClick={previous}>
-          <img
-            src={ExpansionRight}
-            alt="expansion-right"
-            className="absolute top-1/2 left-[10%] h-4 w-6 opacity-30 rotate-180 visible"
-          />
-        </Button>
+        {images.length > 1 && (
+          <Button onClick={previous}>
+            <img
+              src={ExpansionRight}
+              alt="expansion-right"
+              className="absolute top-1/2 left-[10%] h-4 w-6 opacity-30 rotate-180 visible"
+            />
+          </Button>
+        )}
       </div>
       {images.map((image) => {
         return (
@@ -54,13 +56,15 @@ function CarouselImages({
         );
       })}
       <div className="absolute right-0 z-10 cursor-pointer h-full [&>*]:h-full [&>*]:rounded-3xl  [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none">
-        <Button onClick={next}>
-          <img
-            src={ExpansionRight}
-            alt="expansion-right"
-            className="absolute top-1/2 right-[10%] h-4 w-6 opacity-30 visible"
-          />
-        </Button>
+        {images.length > 1 && (
+          <Button onClick={next}>
+            <img
+              src={ExpansionRight}
+              alt="expansion-right"
+              className="absolute top-1/2 right-[10%] h-4 w-6 opacity-30 visible"
+            />
+          </Button>
+        )}
       </div>
     </div>
   );
