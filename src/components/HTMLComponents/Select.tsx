@@ -16,12 +16,14 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
       if (
         openedDropdown &&
         !document
-          .getElementById("dropdownWrapper")
+          .getElementById("dropdown-wrapper")
           ?.contains(event.target as HTMLButtonElement) &&
         !document
           .getElementById("dropdown")
           ?.contains(event.target as HTMLButtonElement)
       ) {
+        const arrowDown = document.getElementById("arrow-down");
+        arrowDown?.removeAttribute("opened");
         setOpenedDropdown(false);
       }
     };
@@ -33,7 +35,13 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
     };
   }, [openedDropdown]);
 
-  function openDropdown() {
+  function toggleDropdown() {
+    const arrowDown = document.getElementById("arrow-down");
+    if (openedDropdown) {
+      arrowDown?.removeAttribute("opened");
+    } else {
+      arrowDown?.setAttribute("opened", "");
+    }
     setOpenedDropdown(!openedDropdown);
   }
 
@@ -44,12 +52,14 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
       </Button>
       <div className="w-full relative">
         <input
-          id="dropdownWrapper"
+          id="dropdown-wrapper"
           type="text"
+          readOnly
           placeholder={placeholder}
           className="w-full h-full max-h-10 px-3 border-r-[1px] border-y-[1px] rounded-r-md border-black"
-          onClick={openDropdown}
+          onClick={toggleDropdown}
         />
+        <div id="arrow-down" />
         {openedDropdown && (
           <div
             id="dropdown"
@@ -57,7 +67,7 @@ function Select({ items, placeholder, onClick }: SelectInterface) {
           >
             {items.map((item) => (
               <div
-                className="bg-white py-1 px-2 text-xl border-[1px] border-gray cursor-pointer hover:bg-highlight"
+                className="bg-white py-1 px-2 font-chivo text-title text-l border-[1px] border-gray cursor-pointer hover:bg-highlight"
                 key={item}
               >
                 {item}

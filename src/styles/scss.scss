@@ -108,3 +108,20 @@ p > a[activated] {
     scale: 1.05;
   }
 }
+
+#arrow-down {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#arrow-down[opened] {
+  top: 16px;
+  transform: rotate(225deg);
+}
