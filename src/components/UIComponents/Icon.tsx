@@ -11,15 +11,7 @@ interface Icon {
   size?: number;
 }
 
-function Icon({
-  copy = false,
-  download = false,
-  href,
-  name,
-  src,
-  size = 20,
-}: Icon) {
-  const [svgSize, setSvgSize] = React.useState<string>("");
+function Icon({ copy = false, download = false, href, name, src }: Icon) {
   const { activateWarning } = React.useContext(WarningContext);
 
   function copyURI(event: React.MouseEvent<HTMLElement>) {
@@ -30,15 +22,10 @@ function Icon({
     }
   }
 
-  React.useEffect(() => {
-    const svgSize = `h-${size} w-${size}`;
-    setSvgSize(svgSize);
-  }, [size]);
-
   return (
     <Tooltip>
       <a
-        className={`bg-secondary rounded-full ${svgSize} flex items-center justify-center`}
+        className={`bg-secondary rounded-full h-20 w-20 flex items-center justify-center`}
         href={href}
         download={download}
         target={copy ? "" : "_blank"}
