@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "../../HTMLComponents/Button";
+import expansionRight from "/svg/expansion-right.svg";
 
 interface SliderInterface {
   children: React.ReactNode;
@@ -31,10 +33,21 @@ function Slider({ children }: SliderInterface) {
     }
   }
 
+  function previous() {
+    if (currentIndex === 0) {
+      return setCurrentIndex(0);
+    }
+    return setCurrentIndex(currentIndex - 1);
+  }
+
+  function next() {
+    return sliderInfiniteScroll();
+  }
+
   React.useEffect(() => {
     const interval = setInterval(() => {
       sliderInfiniteScroll();
-    }, 2000);
+    }, 5000);
     return () => clearInterval(interval);
   });
 
@@ -59,7 +72,16 @@ function Slider({ children }: SliderInterface) {
 
   if (!childrenArray || !childrenArray.length) return;
   return (
-    <div className="flex flex-col gap-10 overflow-hidden pr-1">
+    <div className="relative flex flex-col gap-10 overflow-hidden pr-1">
+      <div className="absolute z-10 cursor-pointer h-[7%] w-full [&>*]:w-full [&>*]:h-full [&>*]:rounded-b-3xl [&>*]:rounded-t-none [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
+        <Button onClick={previous}>
+          <img
+            src={expansionRight}
+            alt="expansion-right"
+            className="absolute left-1/2 h-4 w-6 opacity-30 -rotate-90 visible"
+          />
+        </Button>
+      </div>
       {childrenArray.map((child, index) => (
         <div
           id={`slider-item-${index}`}
@@ -72,6 +94,15 @@ function Slider({ children }: SliderInterface) {
           {child}
         </div>
       ))}
+      <div className="absolute bottom-0 z-10 cursor-pointer h-[7%] w-full [&>*]:w-full [&>*]:h-full [&>*]:rounded-b-3xl [&>*]:rounded-t-none [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
+        <Button onClick={next}>
+          <img
+            src={expansionRight}
+            alt="expansion-right"
+            className="absolute left-1/2 h-4 w-6 opacity-30 rotate-90 visible"
+          />
+        </Button>
+      </div>
     </div>
   );
 }
