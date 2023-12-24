@@ -9,19 +9,21 @@ function Slider({ children }: SliderInterface) {
   const [offsetHeight, setOffsetHeight] = React.useState<number>(0);
   const [sliderItemsHeight, setSliderItemsHeight] = React.useState<number>(0);
 
+  // 4 pixels a menos só pra aparecer o sombreado
+  const parentHeight = 820;
   const childrenArray = React.Children.toArray(children);
 
   function sliderInfiniteScroll() {
     const topElement = document.getElementById(`slider-item-${currentIndex}`);
     if (topElement) {
-      if (offsetHeight === sliderItemsHeight - 824) {
+      if (offsetHeight === sliderItemsHeight - parentHeight) {
         setOffsetHeight(0);
         return setCurrentIndex(0);
       } else if (
         sliderItemsHeight - (offsetHeight + topElement?.clientHeight + 40) <
-        824
+        parentHeight
       ) {
-        setOffsetHeight(sliderItemsHeight - 824);
+        setOffsetHeight(sliderItemsHeight - parentHeight);
       } else {
         setOffsetHeight(offsetHeight + topElement?.clientHeight + 40);
         return setCurrentIndex(currentIndex + 1);
@@ -32,7 +34,7 @@ function Slider({ children }: SliderInterface) {
   React.useEffect(() => {
     const interval = setInterval(() => {
       sliderInfiniteScroll();
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   });
 
@@ -57,13 +59,14 @@ function Slider({ children }: SliderInterface) {
 
   if (!childrenArray || !childrenArray.length) return;
   return (
-    <div className="flex flex-col gap-10 max-h-[824px] overflow-hidden">
+    <div className="flex flex-col gap-10 overflow-hidden pr-1">
       {childrenArray.map((child, index) => (
         <div
           id={`slider-item-${index}`}
           style={{
             transform: `translateY(-${offsetHeight}px)`,
           }}
+          className=""
           key={index}
         >
           {child}

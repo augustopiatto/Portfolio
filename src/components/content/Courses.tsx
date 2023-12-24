@@ -36,7 +36,7 @@ function Courses() {
 
   // if (!visibleCourses.length) return;
   return (
-    <div className="flex flex-1">
+    <div className="flex flex-1 max-h-[824px]">
       <Slider>
         {courses.map((course: CourseType) => (
           <Card key={course.id}>
