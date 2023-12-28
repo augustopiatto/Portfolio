@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../HTMLComponents/Button";
-import expansionRight from "/svg/expansion-right.svg";
+import expansionRightWhite from "/svg/expansion-right-white.svg";
 
 interface SliderInterface {
   children: React.ReactNode;
@@ -26,6 +26,7 @@ function Slider({ children }: SliderInterface) {
         parentHeight
       ) {
         setOffsetHeight(sliderItemsHeight - parentHeight);
+        return setCurrentIndex(currentIndex + 1);
       } else {
         setOffsetHeight(offsetHeight + topElement?.clientHeight + 40);
         return setCurrentIndex(currentIndex + 1);
@@ -37,7 +38,17 @@ function Slider({ children }: SliderInterface) {
     if (currentIndex === 0) {
       return setCurrentIndex(0);
     }
-    return setCurrentIndex(currentIndex - 1);
+    const previousElement = document.getElementById(
+      `slider-item-${currentIndex - 1}`
+    );
+    if (previousElement) {
+      if (offsetHeight - (previousElement?.clientHeight + 40) < 0) {
+        setOffsetHeight(0);
+        return setCurrentIndex(0);
+      }
+      setOffsetHeight(offsetHeight - (previousElement?.clientHeight + 40));
+      return setCurrentIndex(currentIndex - 1);
+    }
   }
 
   function next() {
@@ -73,12 +84,12 @@ function Slider({ children }: SliderInterface) {
   if (!childrenArray || !childrenArray.length) return;
   return (
     <div className="relative flex flex-col gap-10 overflow-hidden pr-1">
-      <div className="absolute z-10 cursor-pointer h-[7%] w-full [&>*]:w-full [&>*]:h-full [&>*]:rounded-b-3xl [&>*]:rounded-t-none [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
+      <div className="absolute z-10 cursor-pointer h-[7%] right-0 w-20 [&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-bl-2xl [&>*]:rounded-br-none [&>*]:rounded-t-none [&>button]:bg-primary [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
         <Button onClick={previous}>
           <img
-            src={expansionRight}
+            src={expansionRightWhite}
             alt="expansion-right"
-            className="absolute left-1/2 h-4 w-6 opacity-30 -rotate-90 visible"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-6 -rotate-90 visible"
           />
         </Button>
       </div>
@@ -94,12 +105,12 @@ function Slider({ children }: SliderInterface) {
           {child}
         </div>
       ))}
-      <div className="absolute bottom-0 z-10 cursor-pointer h-[7%] w-full [&>*]:w-full [&>*]:h-full [&>*]:rounded-b-3xl [&>*]:rounded-t-none [&>button]:bg-transparent [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
+      <div className="absolute bottom-0 z-10 cursor-pointer h-[7%] right-0 w-20 [&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-tl-3xl [&>*]:rounded-tr-none [&>*]:rounded-b-none [&>button]:bg-primary [&>button]:shadow-none [&>button]:border-none [&>button]:hover:shadow-button-inner">
         <Button onClick={next}>
           <img
-            src={expansionRight}
+            src={expansionRightWhite}
             alt="expansion-right"
-            className="absolute left-1/2 h-4 w-6 opacity-30 rotate-90 visible"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-6 rotate-90 visible"
           />
         </Button>
       </div>
