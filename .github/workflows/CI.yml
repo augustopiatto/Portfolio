@@ -15,4 +15,6 @@ jobs:
           node-version: '18.17.1'
           cache: 'npm'
       - run: npm ci
+  test:
+    steps:
       - run: npm test
