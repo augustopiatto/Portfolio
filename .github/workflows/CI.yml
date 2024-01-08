@@ -17,6 +17,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - run: npm test
