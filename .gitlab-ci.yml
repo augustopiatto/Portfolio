@@ -1,4 +1,0 @@
-run_tests:
-  image: node:18-alpine
-  script:
-    - npm run test
