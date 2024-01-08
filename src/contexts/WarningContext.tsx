@@ -10,7 +10,7 @@ export const WarningContext = React.createContext<WarningContextType>(
   {} as WarningContextType
 );
 
-export const WarningStorage = ({ children }: { children: ReactNode[] }) => {
+export const WarningStorage = ({ children }: { children: ReactNode }) => {
   const [active, setActive] = React.useState<boolean>(false);
   const [text, setText] = React.useState<string>("");
   const [timeoutId, setTimeoutId] = React.useState<NodeJS.Timeout | null>(null);
