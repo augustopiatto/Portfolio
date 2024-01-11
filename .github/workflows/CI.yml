@@ -42,24 +42,44 @@ jobs:
       - name: Run Tests
         run: npm run test
 
+  # deployment:
+  #   needs: tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Access by SSH
+  #       env:
+  #         SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+  #         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+  #       run: |
+  #         mkdir -p ~/.ssh
+  #         echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
+  #         chmod 600 ~/.ssh/deployment-key
+  #         ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
+  #           git clone https://github.com/augustopiatto/Portfolio.git
+  #           cd Portfolio
+  #           apt-get update
+  #           apt-get install npm
+  #           npm install
+  #           ls -la
+  #         "
+
   deployment:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - name: Access by SSH
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-          chmod 600 ~/.ssh/deployment-key
-          ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
-            sudo apt-get update
-            sudo apt-get install nodejs
-            sudo apt-get install npm
-            git clone https://github.com/augustopiatto/Portfolio.git
-            cd Portfolio
-            npm install
-            ls -la
-          "
+        with:
+            SSH_PRIVATE_KEY: ~/.ssh/deployment-key
+            ARGS: "-rlgoDzvc -i --delete"
+            SOURCE: "dist/"
+            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+            REMOTE_USER: ${{ secrets.REMOTE_USER }}
+            EXCLUDE: "/dist/, /node_modules/"
+            SCRIPT_BEFORE: |
+              mkdir -p ~/.ssh
+              echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
+              chmod 600 ~/.ssh/deployment-key
