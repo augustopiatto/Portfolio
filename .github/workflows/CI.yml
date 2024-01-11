@@ -51,4 +51,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
         run: |
-          ssh -i "$SSH_PRIVATE_KEY" -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
+          ssh -i $SSH_PRIVATE_KEY -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
