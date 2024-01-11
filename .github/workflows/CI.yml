@@ -46,9 +46,17 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - name: tenta por ssh
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Access by SSH
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
         run: |
-          ssh -i $SSH_PRIVATE_KEY -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
+          chmod 600 ~/.ssh/deployment-key
+          ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
+            ls -la
+          "
