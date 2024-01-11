@@ -42,26 +42,29 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-  # deployment:
-  #   needs: tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Access by SSH
-  #       env:
-  #         SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-  #         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-  #       run: |
-  #         mkdir -p ~/.ssh
-  #         echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-  #         chmod 600 ~/.ssh/deployment-key
-  #         ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
-  #           git clone https://github.com/augustopiatto/Portfolio.git
-  #           cd Portfolio
-  #           apt-get update
-  #           apt-get install npm
-  #           npm install
-  #           ls -la
-  #         "
+  deployment:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access by SSH
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
+          chmod 600 ~/.ssh/deployment-key
+          ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
+            git clone https://github.com/augustopiatto/Portfolio.git
+            cd Portfolio
+            apt-get update
+            apt-get install npm
+            npm install
+            npm run build
+            cd dist
+            npm install http-server
+            npx http-server
+          "
 
   # deployment:
   #   needs: tests
@@ -90,27 +93,27 @@ jobs:
   #             echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
   #             chmod 600 ~/.ssh/deployment-key
 
-  deployment:
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Change permissions
-        env:
-            SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-          chmod 600 ~/.ssh/deployment-key
+  # deployment:
+  #   needs: tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Change permissions
+  #       env:
+  #           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+  #       run: |
+  #         mkdir -p ~/.ssh
+  #         echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
+  #         chmod 600 ~/.ssh/deployment-key
 
-      - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@v1.0.3
-        env:
-          REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-          REMOTE_USER: ${{secrets.REMOTE_USER}}
-          REMOTE_PORT: ${{secrets.REMOTE_PORT}}
-        with:
-          host: ${{secrets.REMOTE_HOST}}
-          username: ${{secrets.REMOTE_USER}}
-          key: ~/.ssh/deployment-key
-          port: ${{secrets.REMOTE_PORT}}
-          script: whoami
+  #     - name: executing remote ssh commands using ssh key
+  #       uses: appleboy/ssh-action@v1.0.3
+  #       env:
+  #         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+  #         REMOTE_USER: ${{secrets.REMOTE_USER}}
+  #         REMOTE_PORT: ${{secrets.REMOTE_PORT}}
+  #       with:
+  #         host: $REMOTE_HOST
+  #         username: $REMOTE_USER
+  #         key: ~/.ssh/deployment-key
+  #         port: $REMOTE_PORT
+  #         script: whoami
