@@ -46,9 +46,6 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Access by SSH
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
@@ -58,5 +55,11 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
           chmod 600 ~/.ssh/deployment-key
           ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
+            sudo apt-get update
+            sudo apt-get install nodejs
+            sudo apt-get install npm
+            git clone https://github.com/augustopiatto/Portfolio.git
+            cd Portfolio
+            npm install
             ls -la
           "
