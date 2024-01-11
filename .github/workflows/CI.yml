@@ -63,8 +63,9 @@ jobs:
             rm -rf node_modules
             npm install
             cd dist
-            pkill -o -f "npx http-server"
+            npx http-server -p 80
           "
+# pkill -o -f "npx http-server"
 # npx http-server -p 80
 
   # deployment:
