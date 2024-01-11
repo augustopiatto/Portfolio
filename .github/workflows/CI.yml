@@ -54,4 +54,4 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
           chmod 600 ~/.ssh/deployment-key
-          ssh -i ~/.ssh/deployment-key -t -v root@$REMOTE_HOST
+          ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
