@@ -72,12 +72,13 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+          REMOTE_USER: ${{secrets.REMOTE_USER}}
         with:
             SSH_PRIVATE_KEY: ~/.ssh/deployment-key
             ARGS: "-rlgoDzvc -i --delete"
-            SOURCE: "dist/"
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
+            SOURCE: "src/"
+            REMOTE_HOST: $REMOTE_HOST
+            REMOTE_USER: $REMOTE_USER
             EXCLUDE: "/dist/, /node_modules/"
             SCRIPT_BEFORE: |
               mkdir -p ~/.ssh
