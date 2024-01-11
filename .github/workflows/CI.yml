@@ -63,57 +63,5 @@ jobs:
             rm -rf node_modules
             npm install
             cd dist
-            nohup npx http-server -p 80 &
+            nohup npx http-server -p 80 -a 0.0.0.0 &
           "
-
-  # deployment:
-  #   needs: tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-
-  #     - name: Deploy to Server
-  #       uses: easingthemes/ssh-deploy@main
-  #       env:
-  #         SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-  #         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-  #         REMOTE_USER: ${{secrets.REMOTE_USER}}
-  #         REMOTE_PORT: ${{secrets.REMOTE_PORT}}
-  #       with:
-  #           SSH_PRIVATE_KEY: ~/.ssh/deployment-key
-  #           ARGS: "-rlgoDzvc -i --delete"
-  #           SOURCE: "src/"
-  #           REMOTE_HOST: $REMOTE_HOST
-  #           REMOTE_USER: $REMOTE_USER
-  #           REMOTE_PORT: $REMOTE_PORT
-  #           EXCLUDE: "/dist/, /node_modules/"
-  #           SCRIPT_BEFORE: |
-  #             mkdir -p ~/.ssh
-  #             echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-  #             chmod 600 ~/.ssh/deployment-key
-
-  # deployment:
-  #   needs: tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Change permissions
-  #       env:
-  #           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-  #       run: |
-  #         mkdir -p ~/.ssh
-  #         echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-  #         chmod 600 ~/.ssh/deployment-key
-
-  #     - name: executing remote ssh commands using ssh key
-  #       uses: appleboy/ssh-action@v1.0.3
-  #       env:
-  #         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-  #         REMOTE_USER: ${{secrets.REMOTE_USER}}
-  #         REMOTE_PORT: ${{secrets.REMOTE_PORT}}
-  #       with:
-  #         host: $REMOTE_HOST
-  #         username: $REMOTE_USER
-  #         key: ~/.ssh/deployment-key
-  #         port: $REMOTE_PORT
-  #         script: whoami
