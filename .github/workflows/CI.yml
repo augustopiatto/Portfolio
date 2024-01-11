@@ -61,7 +61,6 @@ jobs:
             apt-get update
             apt-get install npm
             rm -rf node_modules
-            npm install http-server
             npm install
             cd dist
             pkill -f http-server
