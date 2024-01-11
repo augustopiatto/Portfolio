@@ -50,10 +50,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: fifsky/ssh-action@master
         with:
+          command: |
+            ls -a
           host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          user: ${{ secrets.REMOTE_USER }}
           port: ${{ secrets.REMOTE_PORT }}
-          script: ls -la
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
