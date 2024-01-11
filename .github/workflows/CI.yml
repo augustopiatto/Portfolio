@@ -53,4 +53,4 @@ jobs:
         env:
             SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
             REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        run: ssh -i "$SSH_PRIVATE_KEY" root@"$REMOTE_HOST"
+        run: ssh -i $SSH_PRIVATE_KEY root@$REMOTE_HOST
