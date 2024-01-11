@@ -109,8 +109,8 @@ jobs:
           REMOTE_USER: ${{secrets.REMOTE_USER}}
           REMOTE_PORT: ${{secrets.REMOTE_PORT}}
         with:
-          host: $REMOTE_HOST
-          username: $REMOTE_USER
+          host: ${{secrets.REMOTE_HOST}}
+          username: ${{secrets.REMOTE_USER}}
           key: ~/.ssh/deployment-key
-          port: $REMOTE_PORT
+          port: ${{secrets.REMOTE_PORT}}
           script: whoami
