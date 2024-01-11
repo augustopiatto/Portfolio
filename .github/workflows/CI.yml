@@ -51,7 +51,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deployment-key
-          chmod 600 ~/.ssh/deployment-key
-          ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
+          ssh -i "$SSH_PRIVATE_KEY" -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST
