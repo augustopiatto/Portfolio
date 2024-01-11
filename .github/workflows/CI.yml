@@ -60,9 +60,10 @@ jobs:
             git pull
             apt-get update
             apt-get install npm
+            rm -rf node_modules
+            npm install http-server
             npm install
             cd dist
-            npm install http-server
             pkill -f http-server
             npx http-server
           "
