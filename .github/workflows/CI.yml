@@ -49,8 +49,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Connect via SSH
-        env:
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        run: ssh -i $SSH_PRIVATE_KEY root@$REMOTE_HOST
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.REMOTE_PORT }}
+          script: ls -la
