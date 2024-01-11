@@ -41,3 +41,21 @@ jobs:
 
       - name: Run Tests
         run: npm run test
+
+  deployment:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@main
+      with:
+          SSH_KEY_PRIVATE: ${{ secrets.SSH_KEY_PRIVATE }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "src/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          EXCLUDE: "/dist/, /node_modules/"
