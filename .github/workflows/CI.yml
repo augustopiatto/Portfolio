@@ -56,8 +56,8 @@ jobs:
           chmod 600 ~/.ssh/deployment-key
           ssh -i ~/.ssh/deployment-key -t -o StrictHostKeyChecking=no -v root@$REMOTE_HOST "
             git clone https://github.com/augustopiatto/Portfolio.git
-            git pull
             cd Portfolio
+            git pull
             apt-get update
             apt-get install npm
             npm install
