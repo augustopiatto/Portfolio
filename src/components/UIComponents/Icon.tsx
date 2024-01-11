@@ -25,7 +25,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   return (
     <Tooltip>
       <a
-        className={`bg-secondary rounded-full h-20 w-20 flex items-center justify-center`}
+        className={`bg-secondary rounded-full h-20 w-20 flex items-center justify-center cursor-pointer`}
         href={href}
         download={download}
         target={copy ? "" : "_blank"}

@@ -40,14 +40,13 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
+- Opção de remover filtro aplicado no projeto
 - Deixar responsivo
 - Fechar modal ao clicar fora E também se clicar na tecla ESC, não só pelo botão
 - Modal está passando tamanho máximo da tela e não fica rolável
 - Colocar um respiro maior na parte de cima e debaixo dentro do modal
-- Links não estão funcionando
-- Opção de remover filtro aplicado no projeto
-- Animações no Warning
+- Corrigir os cursos antigos que estão incompletos
 - Montar os testes
 - Melhorar a pipeline de CI/CD
-- Corrigir os cursos antigos que estão incompletos
 - Subir na Digital Ocean com nginx, não http-server
+- Animações no Warning

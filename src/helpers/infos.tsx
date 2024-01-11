@@ -27,7 +27,7 @@ const courses = [
     name: "React",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink: import.meta.env.VITE_REACT,
+    certificationLink: "https://drive.google.com/file/d/1CQDU3fVGDoPwpaP2mrITaGb5FGblimL_/view?usp=drive_link",
     technologies: [
       "HTML",
       "CSS",
@@ -44,7 +44,7 @@ const courses = [
     name: "TypeScript para Iniciantes",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink: import.meta.env.VITE_TYPESCRIPT,
+    certificationLink: "https://drive.google.com/file/d/1SoPOdGsgJ7ZVEiKG6jTa4YeonW6CCAme/view?usp=drive_link",
     technologies: ["HTML", "TypeScript", "Type", "Interface", "Generics"],
   },
   {
@@ -52,7 +52,7 @@ const courses = [
     name: "Vue.js 2",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink: import.meta.env.VITE_VUE,
+    certificationLink: "https://drive.google.com/file/d/1OfEK27Lf21uIO0AJkx4f1Sxtsltzqm_c/view?usp=drive_link",
     technologies: [
       "HTML",
       "CSS",
@@ -69,7 +69,7 @@ const courses = [
     name: "UI Design para Iniciantes",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink: import.meta.env.VITE_UI_DESIGN,
+    certificationLink: "https://drive.google.com/file/d/1mJ4GmdEKPQ0ljGPdvX6pJNEFNMNVnEjj/view?usp=drive_link",
     technologies: ["HTML", "CSS", "JavaScript", "Figma", "SVG", "Prototipação"],
   },
   {
@@ -77,7 +77,7 @@ const courses = [
     name: "WordPress REST API",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink: import.meta.env.VITE_WORDPRESS,
+    certificationLink: "https://drive.google.com/file/d/1fhjD-UHUEQG4Ik9NiF7R_k1F-2UyhlVC/view?usp=drive_link",
     technologies: ["WordPress", "PHP", "REST"],
   },
 ];
@@ -86,33 +86,33 @@ const contacts = [
   {
     id: 1,
     name: "LinkedIn",
-    href: import.meta.env.VITE_LINKEDIN,
+    href: "https://www.linkedin.com/in/augusto-piatto/",
     src: "/svg/linked-in.svg",
   },
   {
     id: 2,
     name: "GitHub",
-    href: import.meta.env.VITE_GITHUB,
+    href: "https://github.com/augustopiatto",
     src: "/svg/github.svg",
   },
   {
     id: 3,
     name: "Email",
-    href: import.meta.env.VITE_EMAIL,
+    href: "ampiatto@hotmail.com",
     src: "/svg/email.svg",
     copy: true,
   },
   {
     id: 4,
     name: "Phone",
-    href: import.meta.env.VITE_PHONE,
+    href: "11994029118",
     src: "/svg/phone.svg",
     copy: true,
   },
   {
     id: 5,
     name: "Download CV",
-    href: import.meta.env.VITE_CV,
+    href: "https://drive.google.com/file/d/1Fxhqwj6AXas1V8raIe_qjsMzLZzgQ9yB/view?usp=drive_link",
     src: "/svg/download.svg",
     download: true,
   },
