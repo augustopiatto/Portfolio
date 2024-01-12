@@ -9,7 +9,7 @@ function App() {
     <>
       <WarningStorage>
         <Header />
-        <div className="mt-20 px-40 bg-background">
+        <div className="mt-20 px-5 medium:px-40 bg-background">
           <Warning />
           <Content />
         </div>

@@ -18,8 +18,8 @@ body {
   position: relative;
 }
 
-#tooltip > *p,
-#tooltip > *span {
+#tooltip>*p,
+#tooltip>*span {
   white-space: nowrap;
   visibility: hidden;
   background-color: rgba(72, 72, 72, 0.5);
@@ -32,8 +32,8 @@ body {
   color: rgb(241, 241, 246);
 }
 
-#tooltip:hover > *p,
-#tooltip:hover > *span {
+#tooltip:hover>*p,
+#tooltip:hover>*span {
   visibility: visible;
 }
 
@@ -47,6 +47,7 @@ body {
     z-index: -1;
     transform: translateX(580px);
   }
+
   100% {
     z-index: 10;
     transform: translateX(0px);
@@ -58,6 +59,7 @@ body {
     z-index: 10;
     transform: translateX(0px);
   }
+
   100% {
     z-index: -1;
     transform: translateX(580px);
@@ -73,6 +75,7 @@ div[id^="slider-item-"] {
   0% {
     opacity: 100;
   }
+
   100% {
     opacity: 0;
   }
@@ -85,7 +88,7 @@ div[id^="slider-item-"] {
   animation: fade-out 0.5s ease-out;
 }
 
-p > a {
+p>a {
   text-decoration: underline !important;
   font-weight: bold;
   letter-spacing: 1px;
@@ -93,7 +96,7 @@ p > a {
   cursor: pointer;
 }
 
-p > a[activated] {
+p>a[activated] {
   color: rgb(77, 55, 105) !important;
 }
 
@@ -105,6 +108,7 @@ p > a[activated] {
   from {
     scale: 1;
   }
+
   to {
     scale: 1.05;
   }
