@@ -15,9 +15,9 @@ Para iniciar o projeto, siga os passos abaixo:
 
 - Clone o repositório em sua máquina local.
 - Acesse a pasta do projeto e rode o comando `npm install`.
-(Etapa temporária, até conseguir rodar o build no CD)
+  (Etapa temporária, até conseguir rodar o build no CD)
 - Na mesma pasta, rode `npm run build`. Rode também sempre que houver uma mudança para ser refletida na tela.
-(Etapa temporária, até conseguir rodar o build no CD)
+  (Etapa temporária, até conseguir rodar o build no CD)
 - Rode o comando `npm run dev`
 
 ## Tecnologias e Funcionalidades
@@ -57,7 +57,6 @@ O projeto possui as seguintes funcionalidades:
 
 - Deixar responsivo
 - Fechar modal ao clicar fora E também se clicar na tecla ESC, não só pelo botão
-- Modal está passando tamanho máximo da tela e não fica rolável
 - Colocar um respiro maior na parte de cima e debaixo dentro do modal
 - Corrigir os cursos antigos que estão incompletos
 - Montar os testes

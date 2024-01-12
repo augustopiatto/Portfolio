@@ -52,7 +52,7 @@ export default {
       },
       screens: {
         medium: "769px",
-        large: "1441px"
+        large: "1440px"
       }
     },
   },

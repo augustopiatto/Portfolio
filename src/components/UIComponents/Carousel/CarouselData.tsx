@@ -30,7 +30,7 @@ function CarouselDescription({
       {data.map((info, index) => (
         <div key={index}>
           {index === currentIndex && (
-            <div className="flex flex-col justify-around h-40 pb-5 relative">
+            <div className="flex flex-col justify-around pb-5 relative">
               <div className="w-full flex mb-5 gap-5 px-10">
                 <h2 className="font-bebas text-2xl text-title">Descrição</h2>
                 <p className="font-chivo text-xl text-paragraph">
