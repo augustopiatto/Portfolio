@@ -23,15 +23,19 @@ function Courses() {
         {courses.map((course: CourseType) => (
           <Card key={course.id}>
             <div className="flex flex-col gap-7">
-              <div className="flex items-start gap-6 max-w-[calc(100%-80px)]">
-                <img src={course.institutionSVG} alt={course.institutionSVG} />
-                <h1 className="font-bebas text-4xl capitalize">
+              <div className="inline medium:max-w-[calc(100%-80px)]">
+                <img
+                  src={course.institutionSVG}
+                  alt={course.institutionSVG}
+                  className="inline"
+                />
+                <h1 className="inline ml-4 font-bebas text-2xl capitalize align-bottom medium:text-4xl">
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>
                   <a
                     href={course.certificationLink}
-                    className="cursor-pointer h-6 w-7 block"
+                    className="ml-4 align-center cursor-pointer inline-block h-6 w-7"
                     onClick={(event) =>
                       copyURI(event, course.certificationLink)
                     }

@@ -5,7 +5,11 @@ interface Tooltip {
 }
 
 function Tooltip({ children }: Tooltip) {
-  return <div id="tooltip">{children}</div>;
+  return (
+    <div id="tooltip" className="inline">
+      {children}
+    </div>
+  );
 }
 
 export default Tooltip;
