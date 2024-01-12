@@ -34,8 +34,8 @@ function AboutDialog() {
           júnior no time de backoffice da empresa. Desde então trabalhei por 2
           anos como desenvolvedor fullstack na empresa, e saí em abril de 2023.
         </p>
-        <FullDivider />
-        <h2 className="font-bebas text-3xl uppercase mt-3">Lazer</h2>
+        <FullDivider marginBottom="mb-5" marginTop="mt-5" />
+        <h2 className="font-bebas text-3xl uppercase">Lazer</h2>
         <p>
           Quando fiz estágio precisei mudar de cidade, e acabei gostando
           bastante de onde fiquei, São José dos Campos. Moro aqui até hoje. A

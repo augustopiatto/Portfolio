@@ -26,7 +26,7 @@ export default {
       borderRadius: {
         large: "50px",
         card: "50px 50px 50px 0px",
-        dialog: "50px 10px 50px 10px",
+        dialog: "50px 0px 0px 10px",
         "ordinary-expansion": "24px 24px 24px 0px",
       },
       boxShadow: {
