@@ -25,7 +25,7 @@ function ExpandableCard({
       <Card borderRadius={borderRadius} maxWidth={maxWidth}>
         {children}
         {place && (
-          <div className="flex items-center gap-7 mt-7">
+          <div className="flex flex-col mt-7 gap-2 medium:flex-row medium:items-center medium:gap-7">
             <SeparatorLine />
             <span className="font-chivo text-paragraph text-lg">{place}</span>
           </div>
