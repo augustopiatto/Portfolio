@@ -30,9 +30,13 @@ function Study() {
           openDialog={() => openDialog(major.id)}
         >
           <div className="flex flex-col gap-3">
-            <h1 className="font-bebas capitalize text-4xl">{major.name}</h1>
-            <div className="flex justify-between items-center flex-wrap">
-              <h2 className="font-chivo font-bold text-xl">{major.college}</h2>
+            <h1 className="font-bebas capitalize text-2xl medium:text-4xl">
+              {major.name}
+            </h1>
+            <div className="flex justify-between gap-2 items-center flex-wrap">
+              <h2 className="font-chivo font-bold text-base medium:text-xl">
+                {major.college}
+              </h2>
               <SeparatorDot />
               <p className="font-chivo font-bold text-paragraph">
                 {major.type}
