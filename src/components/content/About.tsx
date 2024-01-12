@@ -15,7 +15,10 @@ function About() {
   }
 
   return (
-    <div id="about" className="flex justify-between mt-14">
+    <div
+      id="about"
+      className="mt-14 flex flex-col items-center gap-10 large:flex-row large:justify-betwween"
+    >
       <ExpandableCard
         borderRadius={"rounded-card"}
         maxWidth={"max-w-screen-sm"}
