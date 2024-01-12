@@ -33,6 +33,11 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
     closeDropdown();
   }
 
+  function deleteValue() {
+    setSelectedItem("");
+    onChange("");
+  }
+
   React.useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
@@ -71,6 +76,7 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
           className="w-full h-full max-h-10 px-3 border-r-[1px] border-y-[1px] rounded-r-md border-black"
           onClick={toggleDropdown}
         />
+        {selectedItem && <div onClick={() => deleteValue()} className="absolute top-2 right-14 font-bold cursor-pointer">X</div>}
         <div id="arrow-down" />
         {openedDropdown && (
           <div

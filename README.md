@@ -7,7 +7,18 @@ Criado para exibir meus conhecimentos de maneira visualmente melhor.
 
 ## Preview
 
-O projeto contém informações de meus estudos e projetos pessoais.
+O objetivo é exibir e divulgar minhas informações de maneira clara, além de aprender durante o desenvolvimento deste portfólio. O projeto contém informações de meus estudos e projetos pessoais.
+
+## Começando
+
+Para iniciar o projeto, siga os passos abaixo:
+
+- Clone o repositório em sua máquina local.
+- Acesse a pasta do projeto e rode o comando `npm install`.
+(Etapa temporária, até conseguir rodar o build no CD)
+- Na mesma pasta, rode `npm run build`. Rode também sempre que houver uma mudança para ser refletida na tela.
+(Etapa temporária, até conseguir rodar o build no CD)
+- Rode o comando `npm run dev`
 
 ## Tecnologias e Funcionalidades
 
@@ -21,14 +32,17 @@ O projeto inclui as seguintes tecnologias:
 - Vitest para testes unitários
 - SASS para estruturação do CSS
 - TailwindCSS para estilização de UI
+- CI/CD para facilitar desenvolvimento contínuo
 
 ### Funcionalidades
 
 O projeto possui as seguintes funcionalidades:
 
-- useContext
-- Eventos
-- Injection
+- Apresentação do Augusto
+- Exibição com filtro de projetos importantes
+- Cursos e formação
+- Idiomas
+- Links úteis para mais detalhes
 
 # Decisões técnicas
 
@@ -37,10 +51,10 @@ O projeto possui as seguintes funcionalidades:
 - TailwindCSS remove a dificuldade que o React impõe no uso de CSS em um escopo local.
 - Vitest é uma forma atual e fácil de se realizar testes de componentes.
 - União entre TypeScript e React é famosa hoje em dia e um dev front-end deve ter conhecimentos sobre.
+- CI/CD é uma forma de facilitar o desenvolvimento através de testes e deploy automatizados em projetos reais.
 
 ## Melhorias futuras
 
-- Opção de remover filtro aplicado no projeto
 - Deixar responsivo
 - Fechar modal ao clicar fora E também se clicar na tecla ESC, não só pelo botão
 - Modal está passando tamanho máximo da tela e não fica rolável

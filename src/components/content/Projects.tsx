@@ -48,16 +48,19 @@ function Projects() {
   }
 
   function searchTech(value: string) {
-    const filteredProjects = projects.reduce(
-      (acc: ProjectInterface[], project) => {
-        project.technologies.forEach((tech) => {
-          if (tech === value) acc.push(project);
-        });
-        return acc;
-      },
-      []
-    );
-    setFilteredProjects(filteredProjects);
+    if (value) {
+      const localFilteredProjects = projects.reduce(
+        (acc: ProjectInterface[], project) => {
+          project.technologies.forEach((tech) => {
+            if (tech === value) acc.push(project);
+          });
+          return acc;
+        },
+        []
+      );
+      setFilteredProjects(localFilteredProjects);
+    }
+    else setFilteredProjects(projects)
   }
 
   return (
