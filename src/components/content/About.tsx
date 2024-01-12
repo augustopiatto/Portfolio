@@ -26,14 +26,18 @@ function About() {
         openDialog={openDialog}
       >
         <div className="flex">
-          <h1 className="font-bebas text-4xl capitalize leading-tight">
+          <h1 className="font-bebas capitalize leading-tight text-2xl medium:text-4xl">
             Olá! Bem-vindo(a) <br />
             Sou <span className="text-highlight">Augusto</span>, desenvolvedor
             web full stack
           </h1>
-          <img src={Ornament1} alt="ornament1" className="h-14 w-24 mt-3" />
+          <img
+            src={Ornament1}
+            alt="ornament1"
+            className="mt-3 h-8 w-12 medium:h-14 medium:w-24"
+          />
         </div>
-        <p className="font-chivo text-paragraph text-base my-6">
+        <p className="font-chivo text-paragraph my-6 text-base">
           Tenho 2 anos de experiência como full stack e venho aprimorando minhas
           habilidades de front end. Em meus projetos, meu principal foco é a
           experiência do usuário e sua interação com o sistema.
