@@ -12,12 +12,14 @@ function Content() {
       <PartialDivider />
       <Projects />
       <PartialDivider />
-      <div className="flex gap-10 mb-16">
-        <div className="flex-1 flex flex-col gap-12">
+      <div className="flex flex-col gap-10 mx-auto mb-16 large:flex-row">
+        <div className="flex flex-col gap-12 large:flex-1">
           <Studies />
           <Languages />
         </div>
-        <Courses />
+        <div className="large:flex-1">
+          <Courses />
+        </div>
       </div>
     </div>
   );

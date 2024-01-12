@@ -18,7 +18,7 @@ function Courses() {
   }
 
   return (
-    <div className="flex flex-1 max-h-[824px]">
+    <div className="flex max-h-[824px]">
       <Slider>
         {courses.map((course: CourseType) => (
           <Card key={course.id}>
