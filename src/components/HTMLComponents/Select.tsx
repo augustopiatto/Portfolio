@@ -79,7 +79,7 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
         {selectedItem && (
           <div
             onClick={() => deleteValue()}
-            className="absolute top-2 right-14 font-bold cursor-pointer"
+            className="absolute top-2 right-10 font-bold cursor-pointer"
           >
             X
           </div>

@@ -24,6 +24,10 @@ function CarouselDescription({
     setOpenedDialog(true);
   }
 
+  function isScreenSizeSmall() {
+    return window.matchMedia("(max-width: 425px)").matches;
+  }
+
   if (!data || !data.length) return;
   return (
     <div>
@@ -32,17 +36,25 @@ function CarouselDescription({
           {index === currentIndex && (
             <div className="flex flex-col justify-around pb-5 relative">
               <div className="w-full flex mb-5 gap-5 px-10">
-                <h2 className="font-bebas text-2xl text-title">Descrição</h2>
-                <p className="font-chivo text-xl text-paragraph">
+                <h2 className="font-bebas text-title text-xl medium:text-2xl">
+                  Descrição
+                </h2>
+                <p className="font-chivo text-paragraph text-base medium:text-xl">
                   {info.description}
                 </p>
               </div>
               <div className="w-full flex items-center gap-5 px-10">
-                <h2 className="font-bebas text-2xl text-title">Tecnologias</h2>
+                <h2 className="font-bebas text-title text-xl medium:text-2xl">
+                  Tecnologias
+                </h2>
                 <div className="flex flex-wrap gap-5">
-                  {info.technologies.map((tag) => (
-                    <Tag text={tag} key={tag} />
-                  ))}
+                  {isScreenSizeSmall()
+                    ? info.technologies
+                        .slice(0, 4)
+                        .map((tag) => <Tag text={tag} key={tag} />)
+                    : info.technologies.map((tag) => (
+                        <Tag text={tag} key={tag} />
+                      ))}
                 </div>
               </div>
               <div
