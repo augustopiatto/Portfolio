@@ -71,9 +71,11 @@ function CarouselDescription({
           )}
         </div>
       ))}
-      <Dialog openedDialog={openedDialog} setOpenedDialog={setOpenedDialog}>
-        <ProjectsDialog info={dialogInfo} />
-      </Dialog>
+      {openedDialog && (
+        <Dialog setOpenedDialog={setOpenedDialog}>
+          <ProjectsDialog info={dialogInfo} />
+        </Dialog>
+      )}
     </div>
   );
 }

@@ -50,18 +50,16 @@ function Study() {
           </div>
         </ExpandableCard>
       ))}
-      <Dialog
-        openedDialog={openedUnespDialog}
-        setOpenedDialog={setOpenedUnespDialog}
-      >
-        <UnespDialog />
-      </Dialog>
-      <Dialog
-        openedDialog={openedAlfredDialog}
-        setOpenedDialog={setOpenedAlfredDialog}
-      >
-        <AlfredDialog />
-      </Dialog>
+      {openedUnespDialog && (
+        <Dialog setOpenedDialog={setOpenedUnespDialog}>
+          <UnespDialog />
+        </Dialog>
+      )}
+      {openedAlfredDialog && (
+        <Dialog setOpenedDialog={setOpenedAlfredDialog}>
+          <AlfredDialog />
+        </Dialog>
+      )}
     </div>
   );
 }

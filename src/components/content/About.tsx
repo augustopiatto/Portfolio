@@ -44,9 +44,11 @@ function About() {
         </p>
       </ExpandableCard>
       <Picture />
-      <Dialog openedDialog={openedDialog} setOpenedDialog={setOpenedDialog}>
-        <AboutDialog />
-      </Dialog>
+      {openedDialog && (
+        <Dialog setOpenedDialog={setOpenedDialog}>
+          <AboutDialog />
+        </Dialog>
+      )}
     </div>
   );
 }

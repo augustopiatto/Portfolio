@@ -55,9 +55,7 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
-- Deixar responsivo
 - Corrigir o Warning em modo mobile
-- Fechar modal ao clicar fora E também se clicar na tecla ESC, não só pelo botão
 - Colocar um respiro maior na parte de cima e debaixo dentro do modal
 - Corrigir os cursos antigos que estão incompletos
 - Montar os testes
