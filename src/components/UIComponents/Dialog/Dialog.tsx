@@ -28,7 +28,10 @@ function Dialog({ children, openedDialog, setOpenedDialog }: Dialog) {
       id="dialog"
       className="fixed inset-0 z-50 h-full w-full bg-black bg-opacity-50 animate-fade-in"
     >
-      <div className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card w-2/3 rounded-dialog p-14 pt-24 max-h-[90%] overflow-auto">
+      <div
+        id="dialog-parent-div"
+        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card w-2/3 rounded-dialog py-14 px-4 max-h-[90%] overflow-auto p-14 medium:p-14"
+      >
         <button onClick={closeDialog} className="absolute top-5 right-9">
           <span className="text-2xl font-bold text-primary">X</span>
         </button>

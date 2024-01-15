@@ -29,13 +29,13 @@ function Courses() {
                   alt={course.institutionSVG}
                   className="inline"
                 />
-                <h1 className="inline ml-4 font-bebas text-2xl capitalize align-bottom medium:text-4xl">
+                <h1 className="inline mx-4 font-bebas text-2xl capitalize align-bottom medium:text-4xl">
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>
                   <a
                     href={course.certificationLink}
-                    className="ml-4 align-center cursor-pointer inline-block h-6 w-7"
+                    className="my-2 align-middle cursor-pointer inline-block h-6 w-7"
                     onClick={(event) =>
                       copyURI(event, course.certificationLink)
                     }
