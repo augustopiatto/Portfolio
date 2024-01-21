@@ -25,14 +25,18 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   return (
     <Tooltip>
       <a
-        className={`bg-secondary rounded-full h-20 w-20 flex items-center justify-center cursor-pointer`}
+        className={`bg-secondary rounded-full flex items-center justify-center cursor-pointer h-10 w-10 medium:h-16 medium:w-16`}
         href={href}
         download={download}
         target={copy ? "" : "_blank"}
         onClick={(event) => copyURI(event)}
       >
         <p>{name}</p>
-        <img src={src} alt={name} />
+        <img
+          src={src}
+          alt={name}
+          className="h-6 w-6 medium:h-auto medium:w-auto"
+        />
       </a>
     </Tooltip>
   );

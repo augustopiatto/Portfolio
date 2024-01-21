@@ -3,7 +3,7 @@ import { scrollToTarget } from "../helpers/helperFunctions";
 function Header() {
   return (
     <div className="fixed bg-paragraph max-h-20 h-20 max-w-inherit w-full z-50 shadow-xl">
-      <div className="flex mx-auto w-10/12 justify-between align-middle py-5">
+      <div className="flex mx-auto w-10/12 max-w-[1200px] justify-between align-middle py-5">
         <h2 className="font-bebas text-background font-bold text-3xl medium:text-5xl">
           AMP
         </h2>

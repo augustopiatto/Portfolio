@@ -14,7 +14,7 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
         <h1 className="font-bebas text-4xl uppercase leading-tight">
           {info.name}
         </h1>
-        <div className="mb-2 pr-10">
+        <div className="mb-2 large:pr-10">
           <Icon
             href={info.details.href}
             name={info.name}
