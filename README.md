@@ -59,4 +59,3 @@ O projeto possui as seguintes funcionalidades:
 - Montar os testes
 - Melhorar a pipeline de CI/CD
 - Subir na Digital Ocean com nginx, não http-server
-- No ExpandableCard, ver como usar injection

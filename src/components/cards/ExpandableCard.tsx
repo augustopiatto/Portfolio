@@ -11,8 +11,6 @@ interface ExpandableCard {
   openDialog: () => void;
 }
 
-// talvez usar injection direto no Card e nao precisar desses intermediarios
-
 function ExpandableCard({
   borderRadius,
   children,
