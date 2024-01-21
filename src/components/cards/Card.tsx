@@ -9,7 +9,7 @@ interface Card {
 function Card({
   borderRadius = "rounded-3xl",
   children,
-  maxWidth = "max-w-screen-sm",
+  maxWidth = "max-w-screen-lg",
 }: Card) {
   return (
     <div

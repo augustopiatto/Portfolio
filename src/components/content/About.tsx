@@ -17,15 +17,15 @@ function About() {
   return (
     <div
       id="about"
-      className="mt-14 flex flex-col items-center gap-10 large:flex-row large:justify-betwween"
+      className="mt-14 flex flex-col items-center gap-10 large:flex-row large:justify-between"
     >
       <ExpandableCard
         borderRadius={"rounded-card"}
-        maxWidth={"max-w-screen-sm"}
+        maxWidth={"max-w-screen-md"}
         place={place}
         openDialog={openDialog}
       >
-        <div className="flex">
+        <div className="flex justify-between">
           <h1 className="font-bebas capitalize leading-tight text-2xl medium:text-4xl">
             Olá! Bem-vindo(a) <br />
             Sou <span className="text-highlight">Augusto</span>, desenvolvedor
@@ -34,7 +34,7 @@ function About() {
           <img
             src={Ornament1}
             alt="ornament1"
-            className="mt-3 h-8 w-12 medium:h-14 medium:w-24"
+            className="mt-3 h-10 w-14 medium:h-12 medium:w-20 large:h-14 large:w-24"
           />
         </div>
         <p className="font-chivo text-paragraph my-6 text-base">

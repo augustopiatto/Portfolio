@@ -9,7 +9,7 @@ function App() {
     <>
       <WarningStorage>
         <Header />
-        <div className="mt-20 px-5 medium:px-40 bg-background">
+        <div className="mt-20 px-5 mx-auto medium:px-0 max-w-[1200px]">
           <Warning />
           <Content />
         </div>
