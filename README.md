@@ -55,11 +55,8 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
-- Corrigir o Warning em modo mobile
-- Colocar um respiro maior na parte de cima e debaixo dentro do modal
 - Corrigir os cursos antigos que estão incompletos
 - Montar os testes
 - Melhorar a pipeline de CI/CD
 - Subir na Digital Ocean com nginx, não http-server
-- Animações no Warning
 - No ExpandableCard, ver como usar injection
