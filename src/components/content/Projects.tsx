@@ -59,26 +59,30 @@ function Projects() {
         []
       );
       setFilteredProjects(localFilteredProjects);
-    }
-    else setFilteredProjects(projects)
+    } else setFilteredProjects(projects);
   }
 
   return (
-    <div id="projects" className="mx-auto">
-      <Select
-        items={selectItems}
-        placeholder="Selecione a tecnologia desejada"
-        onChange={searchTech}
-      />
-      {projects && !!projects.length && (
-        <Carousel
-          headers={headers}
-          images={images}
-          onChangeIndex={onChangeIndex}
-        >
-          <CarouselData data={filteredProjects} currentIndex={carouselIndex} />
-        </Carousel>
-      )}
+    <div id="projects" className="bg-radial-dark-purple-project py-14">
+      <div className="max-w-4xl mx-auto">
+        <Select
+          items={selectItems}
+          placeholder="Selecione a tecnologia desejada"
+          onChange={searchTech}
+        />
+        {projects && !!projects.length && (
+          <Carousel
+            headers={headers}
+            images={images}
+            onChangeIndex={onChangeIndex}
+          >
+            <CarouselData
+              data={filteredProjects}
+              currentIndex={carouselIndex}
+            />
+          </Carousel>
+        )}
+      </div>
     </div>
   );
 }

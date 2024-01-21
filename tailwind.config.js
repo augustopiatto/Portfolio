@@ -18,6 +18,14 @@ export default {
         success: "rgb(4, 218, 0)",
         // vermelho forte
         error: "rgb(232, 28, 0)",
+        // teste de novos
+        "1": "#9595A6",
+      },
+      backgroundImage: {
+        "radial-dark-purple-about": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 90%)",
+        "radial-dark-purple-project": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 70%, rgb(13, 5, 30) 100%)",
+        "radial-dark-purple-study": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 70%)",
+        "footer": "linear-gradient(to bottom, rgb(38, 22, 70) 0%, rgb(13, 5, 30) 40%)",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],

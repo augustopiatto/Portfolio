@@ -47,7 +47,7 @@ function Carousel({
   }, [images]);
 
   return (
-    <div className="max-w-4xl bg-card shadow-expansion shadow-light-grey rounded-b-3xl rounded-t-md flex flex-col gap-5 py-5">
+    <div className="bg-card shadow-expansion shadow-light-grey rounded-b-3xl rounded-t-md flex flex-col gap-5 py-5">
       <CarouselStepper images={images} currentIndex={currentIndex} />
       {headers && (
         <CarouselHeader headers={headers} currentIndex={currentIndex} />

@@ -12,7 +12,7 @@ function Content() {
       <PartialDivider />
       <Projects />
       <PartialDivider />
-      <div className="flex flex-col gap-10 mx-auto mb-16 large:flex-row">
+      <div className="bg-radial-dark-purple-study py-14 flex flex-col gap-10 mx-auto mb-16 large:flex-row">
         <div className="flex flex-col gap-12 large:flex-1">
           <Studies />
           <Languages />

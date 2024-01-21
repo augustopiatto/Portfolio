@@ -4,12 +4,12 @@ interface PartialDividerInterface {
 }
 
 function PartialDivider({
-  marginBottom = "mb-[72px]",
-  marginTop = "mt-[72px]",
+  marginBottom = "",
+  marginTop = "",
 }: PartialDividerInterface) {
   return (
     <div
-      className={`${marginBottom} ${marginTop} bg-light-grey rounded h-px w-11/12 mx-auto`}
+      className={`${marginBottom} ${marginTop} bg-1 rounded h-px w-11/12 mx-auto`}
     />
   );
 }

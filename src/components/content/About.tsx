@@ -17,7 +17,7 @@ function About() {
   return (
     <div
       id="about"
-      className="mt-14 flex flex-col items-center gap-10 large:flex-row large:justify-between"
+      className="bg-radial-dark-purple-about py-14 flex flex-col items-center gap-10 large:flex-row large:justify-between"
     >
       <ExpandableCard
         borderRadius={"rounded-card"}
