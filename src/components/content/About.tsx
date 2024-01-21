@@ -38,7 +38,7 @@ function About() {
           />
         </div>
         <p className="font-chivo text-paragraph my-6 text-base">
-          teste 2 anos de experiência como full stack e venho aprimorando minhas
+          Tenho 2 anos de experiência como full stack e venho aprimorando minhas
           habilidades de front end. Em meus projetos, meu principal foco é a
           experiência do usuário e sua interação com o sistema.
         </p>
