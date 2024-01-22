@@ -30,11 +30,14 @@ function CarouselDescription({
 
   if (!data || !data.length) return;
   return (
-    <>
+    <div>
       {data.map((info, index) => (
-        <div key={index}>
+        <>
           {index === currentIndex && (
-            <div className="flex flex-col justify-around pb-5">
+            <div
+              className="min-h-[156px] h-full flex flex-col justify-around"
+              key={index}
+            >
               <div className="w-full flex mb-5 gap-5 px-10">
                 <h2 className="font-bebas text-highlight text-xl medium:text-2xl">
                   Descrição
@@ -71,14 +74,14 @@ function CarouselDescription({
               </div>
             </div>
           )}
-        </div>
+        </>
       ))}
       {openedDialog && (
         <Dialog setOpenedDialog={setOpenedDialog}>
           <ProjectsDialog info={dialogInfo} />
         </Dialog>
       )}
-    </>
+    </div>
   );
 }
 
