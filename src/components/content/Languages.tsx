@@ -15,10 +15,10 @@ function Languages() {
         />
         {languages.map((language: LanguageType) => (
           <div className="grid grid-cols-12 items-center" key={language.id}>
-            <h2 className="col-span-5 font-bebas capitalize text-2xl medium:text-4xl">
+            <h2 className="col-span-5 font-bebas capitalize text-2xl text-highlight medium:text-4xl">
               {language.name}
             </h2>
-            <p className="col-span-7 font-chivo font-bold text-paragraph text-base medium:text-xl">
+            <p className="col-span-7 font-chivo font-bold text-base text-5 medium:text-xl">
               {language.level}
             </p>
           </div>

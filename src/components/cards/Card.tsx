@@ -13,7 +13,7 @@ function Card({
 }: Card) {
   return (
     <div
-      className={`${borderRadius} ${maxWidth} bg-card p-7 relative shadow-card shadow-light-grey`}
+      className={`${borderRadius} ${maxWidth} bg-3 p-7 relative shadow-card`}
     >
       {children}
     </div>

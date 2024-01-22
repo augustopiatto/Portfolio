@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         background: "rgb(241, 241, 246)",
-        card: "rgb(228, 228, 233)",
+        // card: "rgb(228, 228, 233)",
         title: "rgb(52, 52, 80)",
         "title-lighter": "rgb(52, 52, 80, 0.65)",
         paragraph: "rgb(87, 87, 116)",
@@ -21,13 +21,17 @@ export default {
         // teste de novos
         "1": "#9595A6",
         "2": "#0D051E",
+        "3": "#2E2B33",
+        // De cima mais clara
+        "4": "rgba(60, 60, 60)",
+        "5": "#FAFAFF",
       },
       backgroundImage: {
         "radial-dark-purple-about": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 90%)",
         "radial-dark-purple-project": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 70%, rgb(13, 5, 30) 100%)",
         "radial-dark-purple-study": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 70%)",
         "footer": "linear-gradient(to bottom, rgb(38, 22, 70) 0%, rgb(13, 5, 30) 40%)",
-        "tag": "linear-gradient(to left, rgb(166, 127,249) 0%, rgb(196, 168, 255) 100%)",
+        "tag": "linear-gradient(to left, rgb(196, 168, 255) 0%, rgb(166, 127,249) 100%)",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
@@ -40,8 +44,8 @@ export default {
         "ordinary-expansion": "24px 24px 24px 0px",
       },
       boxShadow: {
-        card: "0px 3px 4px 0px",
-        expansion: "0px 4px 4px 0px",
+        card: "0px 3px 10px 0px rgba(0, 0, 0, 0.25)",
+        expansion: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
         focused: "0px 0px 10px 1000px rgba(0, 0, 0, 0.7)",
         "button-inner": "inset 0px 0px 10px 1000px rgb(0 0 0 / 0.04)",
       },

@@ -25,19 +25,21 @@ function ExpandableCard({
         {place && (
           <div className="flex mt-7 items-center gap-7">
             <SeparatorLine />
-            <span className="font-chivo text-paragraph text-lg">{place}</span>
+            <span className="font-chivo text-highlight text-lg">{place}</span>
           </div>
         )}
       </Card>
-      <div
-        className="bg-card rounded-b w-14 px-4 pb-3 pt-0 shadow-expansion shadow-light-grey relative cursor-pointer"
-        onClick={openDialog}
-      >
-        <img
-          src={ExpansionRight}
-          alt="expansion-right"
-          className="h-4 w-6 hover:scale-[1.2]"
-        />
+      <div className="bg-3 rounded-b h-10 w-20 shadow-expansion relative">
+        <div
+          className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded flex justify-center items-center cursor-pointer hover:bg-4"
+          onClick={openDialog}
+        >
+          <img
+            src={ExpansionRight}
+            alt="expansion-right"
+            className="h-4 w-6 mx-6 my-[6px] hover:scale-[1.1]"
+          />
+        </div>
       </div>
     </div>
   );
