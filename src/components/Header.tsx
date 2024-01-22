@@ -7,7 +7,7 @@ function Header() {
         <h2 className="font-bebas text-background font-bold text-3xl medium:text-5xl">
           AMP
         </h2>
-        <nav className="flex gap-8 [&>a]:font-bebas [&>a]:text-background [&>a]:leading-loose [&>a]:capitalize [&>a]:cursor-pointer [&>a]:text-lg medium:[&>a]:text-2xl">
+        <nav className="flex gap-8 [&>a]:font-bebas [&>a]:text-5 [&>a]:leading-loose [&>a]:capitalize [&>a]:cursor-pointer [&>a]:text-lg medium:[&>a]:text-2xl">
           <a onClick={() => scrollToTarget("about")}>Sobre</a>
           <a onClick={() => scrollToTarget("projects")}>Projetos</a>
           <a onClick={() => scrollToTarget("contact")}>Contato</a>
