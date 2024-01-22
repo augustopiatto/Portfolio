@@ -12,7 +12,7 @@ function Slider({ children }: SliderInterface) {
   const [sliderItemsHeight, setSliderItemsHeight] = React.useState<number>(0);
 
   // 4 pixels a menos só pra aparecer o sombreado
-  const parentHeight = 820;
+  const parentHeight = 848;
   const childrenArray = React.Children.toArray(children);
 
   function sliderInfiniteScroll() {
