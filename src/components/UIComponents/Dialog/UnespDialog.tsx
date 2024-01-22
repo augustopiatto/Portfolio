@@ -8,15 +8,15 @@ function UnespDialog() {
   return (
     <>
       <div className="flex justify-between items-end">
-        <h1 className="font-bebas text-4xl text-highlight uppercase leading-tight">
+        <h1 className="font-bebas text-4xl text-title uppercase leading-tight">
           Graduação em Engenharia de Materiais
         </h1>
-        <h2 className="font-bebas text-3xl text-highlight uppercase">
+        <h2 className="font-bebas text-3xl text-title uppercase">
           UNESP Guaratinguetá
         </h2>
       </div>
       <FullDivider />
-      <section className="flex flex-col gap-3 mt-7 text-5 [&>p]:font-chivo [&>p]:text-lg">
+      <section className="flex flex-col gap-3 mt-7 text-secondary [&>p]:font-chivo [&>p]:text-lg">
         <p>
           <a
             href="https://www.feg.unesp.br/#!/ensino/graduacao/cursos/graduacao-em-engenharia-de-materiais/"

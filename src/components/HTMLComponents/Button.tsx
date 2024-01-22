@@ -8,7 +8,7 @@ interface ButtonInterface {
 function Button({ children, onClick }: ButtonInterface) {
   return (
     <button
-      className="bg-primary rounded-large shadow-expansion shadow-light-grey px-32 py-4"
+      className="bg-highlight rounded-large shadow-expansion px-32 py-4"
       onClick={onClick}
     >
       {children}

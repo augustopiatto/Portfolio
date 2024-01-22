@@ -61,10 +61,10 @@ function Dialog({ children, setOpenedDialog }: Dialog) {
       <div
         id="dialog-parent-div"
         ref={dialogRef}
-        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-3 w-2/3 rounded-dialog max-h-[90%] overflow-auto pt-24 pb-10 px-10 medium:px-20"
+        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card-background w-2/3 rounded-dialog max-h-[90%] overflow-auto pt-24 pb-10 px-10 medium:px-20"
       >
         <button onClick={closeDialog} className="absolute top-5 right-9">
-          <span className="text-2xl font-bold text-primary">X</span>
+          <span className="text-2xl font-bold text-highlight">X</span>
         </button>
         {children}
         <img

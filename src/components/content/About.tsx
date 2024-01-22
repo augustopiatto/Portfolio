@@ -26,10 +26,10 @@ function About() {
         openDialog={openDialog}
       >
         <div className="flex justify-between">
-          <h1 className="font-bebas capitalize leading-tight text-highlight text-2xl medium:text-4xl">
+          <h1 className="font-bebas capitalize leading-tight text-title text-2xl medium:text-4xl">
             Olá! Bem-vindo(a) <br />
-            Sou <span className="text-primary">Augusto</span>, desenvolvedor web
-            full stack
+            Sou <span className="text-highlight">Augusto</span>, desenvolvedor
+            web full stack
           </h1>
           <img
             src={Ornament1}
@@ -37,7 +37,7 @@ function About() {
             className="mt-3 h-10 w-14 medium:h-12 medium:w-20 large:h-14 large:w-24"
           />
         </div>
-        <p className="font-chivo text-5 my-6 text-base">
+        <p className="font-chivo text-secondary my-6 text-base">
           Tenho 2 anos de experiência como full stack e venho aprimorando minhas
           habilidades de front end. Em meus projetos, meu principal foco é a
           experiência do usuário e sua interação com o sistema.

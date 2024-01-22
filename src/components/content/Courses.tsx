@@ -29,7 +29,7 @@ function Courses() {
                   alt={course.institutionSVG}
                   className="inline"
                 />
-                <h1 className="inline mx-4 font-bebas text-2xl text-highlight capitalize align-bottom medium:text-4xl">
+                <h1 className="inline mx-4 font-bebas text-2xl text-title capitalize align-bottom medium:text-4xl">
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>

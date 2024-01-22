@@ -4,12 +4,12 @@ function AboutDialog() {
   return (
     <>
       <div>
-        <h1 className="font-bebas text-4xl text-highlight uppercase leading-tight">
+        <h1 className="font-bebas text-4xl text-title uppercase leading-tight">
           Sobre o Augusto
         </h1>
         <FullDivider />
       </div>
-      <section className="flex flex-col gap-3 mt-7 text-5 [&>p]:font-chivo [&>p]:text-lg">
+      <section className="flex flex-col gap-3 mt-7 text-secondary [&>p]:font-chivo [&>p]:text-lg">
         <p>
           Sou Augusto, tenho 28 anos, sempre gostei de exatas e por esse motivo
           decidi seguir para essa área durante meus estudos. Durante ensino
@@ -35,7 +35,7 @@ function AboutDialog() {
           anos como desenvolvedor fullstack na empresa, e saí em abril de 2023.
         </p>
         <FullDivider marginBottom="mb-5" marginTop="mt-5" />
-        <h2 className="font-bebas text-3xl text-highlight uppercase">Lazer</h2>
+        <h2 className="font-bebas text-3xl text-title uppercase">Lazer</h2>
         <p>
           Quando fiz estágio precisei mudar de cidade, e acabei gostando
           bastante de onde fiquei, São José dos Campos. Moro aqui até hoje. A

@@ -92,7 +92,7 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
           >
             {items.map((item) => (
               <div
-                className="bg-secondary py-1 px-2 font-chivo text-title text-l border-[1px] border-gray cursor-pointer hover:bg-highlight"
+                className="bg-secondary py-1 px-2 font-chivo text-dark-blue text-l border-[1px] border-gray cursor-pointer hover:bg-title"
                 key={item}
                 onClick={() => selectValue(item)}
               >

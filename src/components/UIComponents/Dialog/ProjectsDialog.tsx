@@ -11,7 +11,7 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
   return (
     <>
       <div className="flex justify-between items-end">
-        <h1 className="font-bebas text-4xl text-5 uppercase leading-tight">
+        <h1 className="font-bebas text-4xl text-title uppercase leading-tight">
           {info.name}
         </h1>
         <div className="mb-2 large:pr-10">
@@ -23,7 +23,7 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
         </div>
       </div>
       <FullDivider />
-      <section className="flex flex-col gap-3 mt-7 text-5 [&>p]:font-chivo [&>p]:text-lg">
+      <section className="flex flex-col gap-3 mt-7 text-secondary [&>p]:font-chivo [&>p]:text-lg">
         <p>{info.details.objective}</p>
       </section>
       <FullDivider marginBottom="mb-10" marginTop="mt-5" />

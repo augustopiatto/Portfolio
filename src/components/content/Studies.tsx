@@ -30,19 +30,23 @@ function Study() {
           openDialog={() => openDialog(major.id)}
         >
           <div className="flex flex-col gap-3">
-            <h1 className="font-bebas capitalize text-2xl text-highlight medium:text-4xl">
+            <h1 className="font-bebas capitalize text-2xl text-title medium:text-4xl">
               {major.name}
             </h1>
             <div className="flex justify-between gap-2 items-center flex-wrap">
-              <h2 className="font-chivo font-bold text-base text-5 medium:text-xl">
+              <h2 className="font-chivo font-bold text-base text-secondary medium:text-xl">
                 {major.college}
               </h2>
               <SeparatorDot />
-              <p className="font-chivo font-bold text-5">{major.type}</p>
+              <p className="font-chivo font-bold text-secondary">
+                {major.type}
+              </p>
               <SeparatorDot />
-              <p className="font-chivo font-bold text-5">{major.grade}</p>
+              <p className="font-chivo font-bold text-secondary">
+                {major.grade}
+              </p>
             </div>
-            <p className="font-chivo font-bold text-5">{major.term}</p>
+            <p className="font-chivo font-bold text-secondary">{major.term}</p>
           </div>
         </ExpandableCard>
       ))}

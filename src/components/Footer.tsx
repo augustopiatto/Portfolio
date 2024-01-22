@@ -9,7 +9,7 @@ function Footer() {
         <div className="flex flex-1 justify-center">
           <p className="font-chivo text-secondary text-lg medium:text-2xl">
             Sinta-se à vontade para entrar em{" "}
-            <span className="text-primary font-bold">contato</span> comigo.
+            <span className="text-highlight font-bold">contato</span> comigo.
             Vamos bater um papo!
           </p>
         </div>
