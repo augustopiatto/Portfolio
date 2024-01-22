@@ -7,7 +7,7 @@ function FullDivider({
   marginBottom = "",
   marginTop = "",
 }: FullDividerInterface) {
-  return <div className={`${marginBottom} ${marginTop} bg-light-grey h-0.5`} />;
+  return <div className={`${marginBottom} ${marginTop} bg-highlight h-0.5`} />;
 }
 
 export default FullDivider;

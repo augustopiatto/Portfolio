@@ -8,12 +8,12 @@ function AlfredDialog() {
   return (
     <>
       <div>
-        <h1 className="font-bebas text-4xl uppercase leading-tight">
+        <h1 className="font-bebas text-4xl text-highlight uppercase leading-tight">
           Graduação Sanduíche em Materials Engineering
         </h1>
       </div>
       <FullDivider />
-      <section className="flex flex-col gap-3 mt-7 [&>p]:font-chivo [&>p]:text-lg">
+      <section className="flex flex-col gap-3 mt-7 text-5 [&>p]:font-chivo [&>p]:text-lg">
         <p>
           <a
             href="https://www.alfred.edu/academics/graduate-programs/materials-science-engineering.cfm"
