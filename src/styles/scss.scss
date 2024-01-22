@@ -148,3 +148,8 @@ p>a[activated] {
   top: 16px;
   transform: rotate(225deg);
 }
+
+#dropdown-wrapper:focus {
+  outline: none;
+  border: 2px;
+}
