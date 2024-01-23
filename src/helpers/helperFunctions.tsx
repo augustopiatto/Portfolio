@@ -1,4 +1,19 @@
-export function scrollToTarget(target: string) {
+function getAbsolutePosition(element: HTMLElement) {
+  const targetPosition = element.getBoundingClientRect();
+
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+  const absoluteTop = targetPosition.top + scrollTop;
+  const absoluteLeft = targetPosition.left + scrollLeft;
+
+  return {
+    top: absoluteTop,
+    left: absoluteLeft,
+  };
+}
+
+export function scrollToTarget(target: string, padding = 0) {
   const targetDiv = document.getElementById(target);
 
   if (targetDiv) {
@@ -9,10 +24,20 @@ export function scrollToTarget(target: string) {
       0,
       (window.innerHeight - targetDiv.offsetHeight) / 4
     );
-    const targetOffset = targetPosition + window.scrollY - offset;
+    let top = targetPosition + window.scrollY - offset;
+
+    if (isScreenSizeSmall()) {
+      const headerHeight = 80;
+      const extraSpace = 8;
+      top =
+        getAbsolutePosition(targetDiv).top +
+        padding -
+        extraSpace -
+        headerHeight;
+    }
 
     window.scrollTo({
-      top: targetOffset,
+      top: top,
       behavior: "smooth",
     });
 
@@ -20,4 +45,8 @@ export function scrollToTarget(target: string) {
       targetDiv.classList.remove("highlight");
     }, 2000);
   }
+}
+
+export function isScreenSizeSmall() {
+  return window.matchMedia("(max-width: 425px)").matches;
 }

@@ -4,6 +4,7 @@ import ExpansionRight from "/svg/expansion-right.svg";
 import Dialog from "../Dialog/Dialog";
 import ProjectsDialog from "../Dialog/ProjectsDialog";
 import { ProjectInterface } from "../../../helpers/interfaces/interfaces";
+import { isScreenSizeSmall } from "../../../helpers/helperFunctions";
 
 interface CarouselDataInterface {
   data: ProjectInterface[];
@@ -19,10 +20,6 @@ function CarouselData({ data, currentIndex }: CarouselDataInterface) {
   function openDialog(info: ProjectInterface) {
     setDialogInfo(info);
     setOpenedDialog(true);
-  }
-
-  function isScreenSizeSmall() {
-    return window.matchMedia("(max-width: 425px)").matches;
   }
 
   if (!data || !data.length) return;
