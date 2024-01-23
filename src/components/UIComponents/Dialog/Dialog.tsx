@@ -56,12 +56,12 @@ function Dialog({ children, setOpenedDialog }: Dialog) {
   return (
     <div
       id="dialog"
-      className="fixed inset-0 z-50 h-full w-full bg-black bg-opacity-50 animate-fade-in"
+      className="fixed inset-0 z-50 h-full w-full bg-black bg-opacity-50 animate-fade-in px-2 medium:px-0"
     >
       <div
         id="dialog-parent-div"
         ref={dialogRef}
-        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card-background w-2/3 rounded-dialog max-h-[90%] overflow-auto pt-24 pb-10 px-10 medium:px-20"
+        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card-background rounded-dialog max-h-[90%] overflow-auto pt-24 pb-10 medium:w-2/3 px-10 medium:px-20"
       >
         <button onClick={closeDialog} className="absolute top-5 right-9">
           <span className="text-2xl font-bold text-highlight">X</span>

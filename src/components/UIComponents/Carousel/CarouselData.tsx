@@ -5,15 +5,12 @@ import Dialog from "../Dialog/Dialog";
 import ProjectsDialog from "../Dialog/ProjectsDialog";
 import { ProjectInterface } from "../../../helpers/interfaces/interfaces";
 
-interface CarouselDescriptionInterface {
+interface CarouselDataInterface {
   data: ProjectInterface[];
   currentIndex: number;
 }
 
-function CarouselDescription({
-  data,
-  currentIndex,
-}: CarouselDescriptionInterface) {
+function CarouselData({ data, currentIndex }: CarouselDataInterface) {
   const [openedDialog, setOpenedDialog] = React.useState<boolean>(false);
   const [dialogInfo, setDialogInfo] = React.useState<ProjectInterface | null>(
     null
@@ -31,9 +28,9 @@ function CarouselDescription({
   if (!data || !data.length) return;
   return (
     <div>
-      {data.map((info, index) => (
-        <>
-          {index === currentIndex && (
+      {data.map(
+        (info, index) =>
+          index === currentIndex && (
             <div
               className="min-h-[156px] h-full flex flex-col justify-around"
               key={index}
@@ -73,9 +70,8 @@ function CarouselDescription({
                 </div>
               </div>
             </div>
-          )}
-        </>
-      ))}
+          )
+      )}
       {openedDialog && (
         <Dialog setOpenedDialog={setOpenedDialog}>
           <ProjectsDialog info={dialogInfo} />
@@ -85,4 +81,4 @@ function CarouselDescription({
   );
 }
 
-export default CarouselDescription;
+export default CarouselData;
