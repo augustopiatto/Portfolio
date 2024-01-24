@@ -56,6 +56,7 @@ O projeto possui as seguintes funcionalidades:
 ## Melhorias futuras
 
 - Corrigir os cursos antigos que estão incompletos
+- Deixar a foto mais descontraida e quando passar mouse por cima, muda a foto e deixa em algum esquema de carta
 - Montar os testes
 - Melhorar a pipeline de CI/CD
 - Subir na Digital Ocean com nginx, não http-server
