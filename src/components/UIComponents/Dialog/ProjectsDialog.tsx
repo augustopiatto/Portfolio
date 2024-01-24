@@ -1,6 +1,7 @@
 import { ProjectInterface } from "../../../helpers/interfaces/interfaces";
 import FullDivider from "../../dividers/FullDivider";
 import Icon from "../Icon";
+import Tag from "../Tag";
 
 interface ProjectsDialogInterface {
   info: ProjectInterface | null;
@@ -23,7 +24,12 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
         </div>
       </div>
       <FullDivider />
-      <section className="flex flex-col gap-3 mt-7 text-secondary [&>p]:font-chivo [&>p]:text-lg">
+      <div className="flex flex-wrap gap-3 mt-3 mb-7">
+        {info.technologies.map((tag) => (
+          <Tag text={tag} small key={tag} />
+        ))}
+      </div>
+      <section className="flex flex-col gap-3 text-secondary [&>p]:font-chivo [&>p]:text-lg">
         <p>{info.details.objective}</p>
       </section>
       <FullDivider marginBottom="mb-10" marginTop="mt-5" />

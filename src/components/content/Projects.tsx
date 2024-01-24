@@ -40,7 +40,7 @@ function Projects() {
       });
       return acc;
     }, []);
-    setSelectItems(items);
+    setSelectItems(items.sort());
   }, []);
 
   function onChangeIndex(currentIndex: number) {

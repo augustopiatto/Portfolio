@@ -8,7 +8,6 @@ interface Icon {
   href: string;
   name: string;
   src: string;
-  size?: number;
 }
 
 function Icon({ copy = false, download = false, href, name, src }: Icon) {
@@ -25,7 +24,7 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   return (
     <Tooltip>
       <a
-        className={`bg-secondary rounded-full flex items-center justify-center cursor-pointer h-10 w-10 medium:h-16 medium:w-16`}
+        className="bg-secondary rounded-full flex items-center justify-center cursor-pointer h-10 w-10 medium:h-16 medium:w-16"
         href={href}
         download={download}
         target={copy ? "" : "_blank"}

@@ -14,7 +14,7 @@ function CarouselStepper({ images, currentIndex }: CarouselStepperInterface) {
   }
 
   return (
-    <div className="flex justify-center gap-10">
+    <div className="flex flex-wrap justify-center gap-10">
       {!!images.length &&
         images.map((_, index) => (
           <div
