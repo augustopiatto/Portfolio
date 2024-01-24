@@ -21,6 +21,48 @@ const majors = [
   },
 ];
 
+const contacts = [
+  {
+    id: 1,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/augusto-piatto/",
+    src: "/svg/linked-in.svg",
+  },
+  {
+    id: 2,
+    name: "GitHub",
+    href: "https://github.com/augustopiatto",
+    src: "/svg/github.svg",
+  },
+  {
+    id: 3,
+    name: "Email",
+    href: "ampiatto@hotmail.com",
+    src: "/svg/email.svg",
+    copy: true,
+  },
+  {
+    id: 4,
+    name: "Phone",
+    href: "11994029118",
+    src: "/svg/phone.svg",
+    copy: true,
+  },
+  {
+    id: 5,
+    name: "Download CV",
+    href: "https://drive.google.com/file/d/1Fxhqwj6AXas1V8raIe_qjsMzLZzgQ9yB/view?usp=drive_link",
+    src: "/svg/download.svg",
+    download: true,
+  },
+];
+
+const languages = [
+  { id: 1, name: "Português", level: "Nativo" },
+  { id: 2, name: "Inglês", level: "Avançado" },
+  { id: 3, name: "Espanhol", level: "Intermediário" },
+];
+
 const courses = [
   {
     id: 1,
@@ -87,56 +129,34 @@ const courses = [
   },
 ];
 
-const contacts = [
-  {
-    id: 1,
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/augusto-piatto/",
-    src: "/svg/linked-in.svg",
-  },
-  {
-    id: 2,
-    name: "GitHub",
-    href: "https://github.com/augustopiatto",
-    src: "/svg/github.svg",
-  },
-  {
-    id: 3,
-    name: "Email",
-    href: "ampiatto@hotmail.com",
-    src: "/svg/email.svg",
-    copy: true,
-  },
-  {
-    id: 4,
-    name: "Phone",
-    href: "11994029118",
-    src: "/svg/phone.svg",
-    copy: true,
-  },
-  {
-    id: 5,
-    name: "Download CV",
-    href: "https://drive.google.com/file/d/1Fxhqwj6AXas1V8raIe_qjsMzLZzgQ9yB/view?usp=drive_link",
-    src: "/svg/download.svg",
-    download: true,
-  },
-];
-
 const projects = [
   {
     id: 1,
+    name: "Liga Magic - Processo Seletivo - Front End Jr",
+    img: "",
+    description:
+      "Uma tela simulando a compra de uma carta, permitindo o usuário escolher as especificações",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa Liga Magic. O site foi feito usando Vanilla JavaScript (sem framework) e permite ao usuário escolher a edição da carta 'Contramágica', e apresenta um layout com interação, apesar de não apresentar muita lógica, pois o projeto foi desenvolvido a partir de uma tela no Figma sem protótipo ou interações",
+      href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo-FrontJr",
+      moreImages: [],
+    },
+  },
+  {
+    id: 2,
     name: "React - Origamid",
     img: "/images/react-origamid.png",
     description: "Uma rede social para colocar as fotos de seus cachorros",
     technologies: [
       "React",
       "JavaScript",
-      "HTML",
-      "CSS",
       "React Router",
       "Prop Types",
       "Vite",
+      "HTML",
+      "CSS",
     ],
     details: {
       objective: (
@@ -157,18 +177,95 @@ const projects = [
     },
   },
   {
-    id: 2,
+    id: 3,
+    name: "Azapy - Processo Seletivo",
+    img: "",
+    description:
+      "Tela para definir um combate entre dois personagens de quadrinhos",
+    technologies: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "NextJS",
+      "HTML",
+      "CSS",
+    ],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa Azapy. O site consome uma API fornecida e exibe os personagens 10 personagens por página. O usuário pode escolher 2 personagens para lutar e a lógica compara os status para ver qual ganharia em uma luta direta. O usuário pode filtrar os heróis que deseja e também pode visualizar em celular, pois é um projeto responsivo",
+      href: GITHUB_BASE_URL + "",
+      moreImages: [],
+    },
+  },
+  {
+    id: 4,
+    name: "DNC - Processo Seletivo",
+    img: "/images/dnc.png",
+    description: "Sistema de cadastro de alunos, notas e exibição de rank",
+    technologies: [
+      "Vue3",
+      "JavaScript",
+      "SASS",
+      "Vuetify",
+      "Django",
+      "Python",
+      "Pydantic",
+      "PostgreSQL",
+      "Docker",
+      "Pytest",
+      "Axios",
+      "HTML",
+      "CSS",
+      "Vite",
+    ],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa DNC. Neste site é possível realizar cadastro de usuário, associar notas ao usuário e o sistema gera uma listagem de top 3 melhores alunos e uma listagem de top 10 alunos por curso",
+      href: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
+      moreImages: [{ name: "teste3", src: "/images/dnc.png" }],
+    },
+  },
+  {
+    id: 5,
+    name: "Inoa - Processo Seletivo",
+    img: "",
+    description: "Sistema de controle de ativos financeiros",
+    technologies: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Vitest",
+      "Django",
+      "Python",
+      "Pydantic",
+      "Django SMTP E-mail",
+      "Gunicorn",
+      "PostgreSQL",
+      "Docker",
+      "Pytest",
+      "Vite",
+      "HTML",
+    ],
+    details: {
+      objective:
+        "Projeto feito para processo seletivo da empresa Inoa. Neste site é possível que o usuário adicione ativos para sua conta, e o sistema monitora estes ativos no período de tempo estabelecido pelo usuário e o notifica através de e-mail quando o valor dos ativos atingem o especificado",
+      href: GITHUB_BASE_URL + "Inoa-ProcessoSeletivo",
+      moreImages: [],
+    },
+  },
+  {
+    id: 6,
     name: "Liga Magic - Processo Seletivo",
     img: "/images/liga-magic.png",
     description: "Formulário para se cadastrar em um campeonato de Magic",
     technologies: [
       "Vue3",
       "JavaScript",
+      "SASS",
+      "Vitest",
+      "Vite",
       "HTML",
       "CSS",
-      "SASS",
-      "Vite",
-      "Vitest",
     ],
     details: {
       objective:
@@ -178,39 +275,31 @@ const projects = [
     },
   },
   {
-    id: 3,
-    name: "DNC - Processo Seletivo",
-    img: "/images/dnc.png",
-    description: "Sistema de cadastro de alunos, notas e exibição de rank",
-    technologies: [
-      "Vue3",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "SASS",
-      "Vite",
-      "Vuetify",
-      "Axios",
-      "Django",
-      "Python",
-      "PostgreSQL",
-      "Pydantic",
-      "Docker",
-      "Pytest",
-    ],
+    id: 7,
+    name: "Beemon - Processo Seletivo",
+    img: "",
+    description:
+      "Realiza raspagem de dados no site Quotes to Scrape e faz o devido armazenamento",
+    technologies: ["Python", "Scrapy", "Splash", "MongoDB", "Docker"],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa DNC. Neste site é possível realizar cadastro de usuário, associar notas ao usuário e o sistema gera uma listagem de top 3 melhores alunos e uma listagem de top 10 alunos por curso",
-      href: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
-      moreImages: [{ name: "teste3", src: "/images/dnc.png" }],
+        "Projeto feito para processo seletivo da empresa Beemon. O projeto vasculha o site Quotes to Scrape, estrutura os dados e os salva em um banco não relacional, e gera provas de consulta",
+      href: GITHUB_BASE_URL + "Beemon-ProcessoSeletivo",
+      moreImages: [],
     },
   },
-];
-
-const languages = [
-  { id: 1, name: "Português", level: "Nativo" },
-  { id: 2, name: "Inglês", level: "Avançado" },
-  { id: 3, name: "Espanhol", level: "Intermediário" },
+  // {
+  //   id: 1,
+  //   name: "",
+  //   img: "",
+  //   description: "",
+  //   technologies: [],
+  //   details: {
+  //     objective: "",
+  //     href: GITHUB_BASE_URL + "",
+  //     moreImages: [],
+  //   },
+  // },
 ];
 
 export { contacts, courses, majors, projects, languages };
