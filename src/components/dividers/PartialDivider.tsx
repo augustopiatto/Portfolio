@@ -9,7 +9,7 @@ function PartialDivider({
 }: PartialDividerInterface) {
   return (
     <div
-      className={`${marginBottom} ${marginTop} bg-title rounded h-px w-11/12 mx-auto`}
+      className={`${marginBottom} ${marginTop} bg-title rounded h-px w-11/12 mx-auto z-10`}
     />
   );
 }
