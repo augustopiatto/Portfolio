@@ -84,7 +84,7 @@ function Slider({ children }: SliderInterface) {
   if (!childrenArray || !childrenArray.length) return;
   return (
     <div className="relative flex flex-col gap-10 overflow-hidden pr-1">
-      <div className="absolute z-10 cursor-pointer h-[7%] right-0 w-10 medium:w-20 [&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-bl-2xl [&>*]:rounded-br-none [&>*]:rounded-t-none [&>button]:bg-highlight [&>button]:shadow-none [&>button]:border-none [&>button]:hover:bg-darker-highlight [&>button]:hover:scale-105">
+      <div className="absolute z-10 cursor-pointer h-[7%] right-0 w-10 medium:w-20 [&>*]:w-10 medium:[&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-bl-2xl [&>*]:rounded-br-none [&>*]:rounded-t-none [&>button]:bg-highlight [&>button]:shadow-none [&>button]:border-none [&>button]:hover:bg-darker-highlight [&>button]:hover:scale-105">
         <Button onClick={previous}>
           <img
             src={expansionRightWhite}

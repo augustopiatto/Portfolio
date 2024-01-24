@@ -55,7 +55,6 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
-- Ajustar em formato de tela (footer nao centralizado, slider nao funcional, nav do header ta zuado)
 - Corrigir os cursos antigos que estão incompletos
 - Montar os testes
 - Melhorar a pipeline de CI/CD
