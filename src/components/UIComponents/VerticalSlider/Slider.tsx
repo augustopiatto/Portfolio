@@ -105,7 +105,7 @@ function Slider({ children }: SliderInterface) {
           {child}
         </div>
       ))}
-      <div className="absolute bottom-0 z-10 cursor-pointer h-[7%] right-0 w-10 medium:w-20 [&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-tl-3xl [&>*]:rounded-tr-none [&>*]:rounded-b-none [&>button]:bg-highlight [&>button]:shadow-none [&>button]:border-none [&>button]:hover:bg-darker-highlight [&>button]:hover:scale-105">
+      <div className="absolute bottom-0 z-10 cursor-pointer h-[7%] right-0 w-10 medium:w-20 [&>*]:w-10 medium:[&>*]:w-20 [&>*]:px-0 [&>*]:py-0 [&>*]:h-full [&>*]:rounded-tl-3xl [&>*]:rounded-tr-none [&>*]:rounded-b-none [&>button]:bg-highlight [&>button]:shadow-none [&>button]:border-none [&>button]:hover:bg-darker-highlight [&>button]:hover:scale-105">
         <Button onClick={next}>
           <img
             src={expansionRightWhite}

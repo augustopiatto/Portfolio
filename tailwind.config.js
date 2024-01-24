@@ -18,12 +18,17 @@ export default {
         "dark-blue": "rgb(52, 52, 80)",
       },
       backgroundImage: {
-        "radial-dark-purple-about": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 90%)",
-        "radial-dark-purple-project": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 70%, rgb(13, 5, 30) 100%)",
-        "radial-dark-purple-study": "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 70%)",
-        "footer": "linear-gradient(to bottom, rgb(38, 22, 70) 0%, rgb(13, 5, 30) 40%)",
-        "tag": "linear-gradient(to right, rgb(166, 127, 249) 0%, rgb(196, 168, 255) 100%)",
-        "warning": "linear-gradient(to right, rgb(13, 5, 30) 0%, rgb(46, 43, 51) 100%)",
+        "radial-dark-purple-about":
+          "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 90%)",
+        "radial-dark-purple-project":
+          "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 70%, rgb(13, 5, 30) 100%)",
+        "radial-dark-purple-study":
+          "radial-gradient(50% 50% at 50% 50%, rgb(65, 39, 120) 0%, rgb(13, 5, 30) 70%)",
+        footer:
+          "linear-gradient(to bottom, rgb(38, 22, 70) 0%, rgb(13, 5, 30) 40%)",
+        tag: "linear-gradient(to right, rgb(166, 127, 249) 0%, rgb(196, 168, 255) 100%)",
+        warning:
+          "linear-gradient(to right, rgb(13, 5, 30) 0%, rgb(46, 43, 51) 100%)",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
@@ -58,8 +63,8 @@ export default {
       },
       screens: {
         medium: "769px",
-        large: "1440px"
-      }
+        large: "1440px",
+      },
     },
   },
   plugins: [],
