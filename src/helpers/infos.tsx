@@ -63,6 +63,45 @@ const languages = [
   { id: 3, name: "Espanhol", level: "Intermediário" },
 ];
 
+const timeline = [
+  {
+    id: 1,
+    year: 2010,
+    info: "Fiz curso técnico em manutenção automotiva na ETEC e a partir disso decidi ingressar em engenharia para a faculdade",
+  },
+  {
+    id: 2,
+    year: 2013,
+    info: "Ingressei em Engenharia de Materiais na UNESP em 2013",
+  },
+  {
+    id: 3,
+    year: 2015,
+    info: "Fiz intercâmbio de 1 ano nos Estados Unidos através do programa Ciência sem Fronteiras",
+  },
+  {
+    id: 4,
+    year: 2017,
+    info: "Estagiei na área por um ano, mas mexendo principalmente com Excel e VBA",
+  },
+  {
+    id: 5,
+    year: 2021,
+    info: "Comecei bootcamp de programação na Buser Brasil",
+  },
+  {
+    id: 6,
+    year: 2021,
+    info: "Entrei como desenvolvedor full stack júnior na Buser Brasil",
+  },
+  {
+    id: 7,
+    year: 2023,
+    info: "Saída da Buser Brasil e começo de estudo focado em Front",
+  },
+  { id: 8, year: 2024, info: "Sua empresa?" },
+];
+
 const courses = [
   {
     id: 1,
@@ -302,4 +341,4 @@ const projects = [
   // },
 ];
 
-export { contacts, courses, majors, projects, languages };
+export { contacts, courses, majors, projects, languages, timeline };
