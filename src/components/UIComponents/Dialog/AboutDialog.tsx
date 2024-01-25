@@ -11,17 +11,15 @@ function AboutDialog() {
   return (
     <>
       <div>
-        <h1 className="font-bebas text-4xl text-title uppercase leading-tight">
-          Sobre o Augusto
-        </h1>
+        <h1 className="title-font">Sobre o Augusto</h1>
         <FullDivider />
         <section className="my-7">
-          <p className="mb-10 text-secondary font-chivo text-lg">
+          <p className="mb-10 text-font">
             Tenho {age} anos, sempre gostei de exatas e por esse motivo decidi
             seguir para essa área durante meus estudos
           </p>
           {/* temporário enquanto não faço a timeline */}
-          <ul className="text-secondary font-chivo text-lg list-disc pl-5">
+          <ul className="text-font list-disc pl-5">
             <li>
               2010 - Fiz curso técnico em manutenção automotiva na ETEC e a
               partir disso decidi ingressar em engenharia para a faculdade
@@ -48,10 +46,8 @@ function AboutDialog() {
           {/* <Timeline /> */}
         </section>
         <FullDivider marginBottom="mb-7" marginTop="mt-5" />
-        <section className="text-secondary font-chivo text-lg">
-          <h2 className="mb-3 font-bebas text-3xl text-title uppercase">
-            Lazer
-          </h2>
+        <section className="text-font">
+          <h2 className="title-font text-3xl mb-3">Lazer</h2>
           <p>
             Quando fiz estágio precisei mudar de cidade, e acabei gostando
             bastante de onde fiquei, São José dos Campos. Moro aqui até hoje. A
