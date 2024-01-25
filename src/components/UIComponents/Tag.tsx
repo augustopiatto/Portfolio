@@ -14,7 +14,7 @@ function Tag({ text, small }: Tag) {
         isScreenSizeSmall() || small
           ? smallClass
           : "text-sm px-2.5 py-1.5 rounded-lg"
-      } bg-tag  font-chivo font-bold uppercase text-dark-blue`}
+      } bg-tag tag-font`}
     >
       {text}
     </div>

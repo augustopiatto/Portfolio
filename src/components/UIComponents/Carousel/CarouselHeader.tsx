@@ -12,9 +12,7 @@ function CarouselHeader({ headers, currentIndex }: CarouselHeader) {
       {headers.map((header, index) => (
         <div key={index}>
           {index === currentIndex && (
-            <h1 className="font-bebas uppercase text-title text-3xl medium:text-4xl">
-              {header.name}
-            </h1>
+            <h1 className="title-font">{header.name}</h1>
           )}
         </div>
       ))}

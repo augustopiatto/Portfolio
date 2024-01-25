@@ -33,15 +33,13 @@ function CarouselData({ data, currentIndex }: CarouselDataInterface) {
               key={index}
             >
               <div className="w-full flex mb-5 gap-5 px-10">
-                <h2 className="font-bebas text-title text-xl medium:text-2xl">
+                <h2 className="title-font text-xl medium:text-3xl">
                   Descrição
                 </h2>
-                <p className="font-chivo text-secondary text-base medium:text-xl">
-                  {info.description}
-                </p>
+                <p className="text-font">{info.description}</p>
               </div>
               <div className="w-full flex items-start gap-5 px-10">
-                <h2 className="font-bebas text-title leading-5 text-xl medium:text-2xl">
+                <h2 className="title-font leading-5 text-xl medium:text-3xl">
                   Tecnologias
                 </h2>
                 <div className="flex flex-wrap gap-5">
