@@ -55,8 +55,8 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
+- Coloca a lupa pra dentro do select
 - tooltip do icone do GitHub está sendo cortado pelo fim do dialog
-- Padronizar variacoes de fontes, usar menos
 - Fazer a timeline
 - Deixar a foto mais descontraida e quando passar mouse por cima, muda a foto e deixa em algum esquema de carta
 - Montar os testes

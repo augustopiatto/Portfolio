@@ -30,10 +30,6 @@ export default {
         warning:
           "linear-gradient(to right, rgb(13, 5, 30) 0%, rgb(46, 43, 51) 100%)",
       },
-      fontFamily: {
-        bebas: ["Bebas Neue", "sans-serif"],
-        chivo: ["Chivo Mono", "sans-serif"],
-      },
       borderRadius: {
         large: "50px",
         card: "50px 50px 50px 0px",

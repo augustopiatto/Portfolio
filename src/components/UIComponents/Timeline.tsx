@@ -30,7 +30,7 @@ function Timeline() {
         (date) =>
           visibleDates.includes(date.id) && (
             <div
-              className="flex flex-col gap-3 items-center text-secondary font-chivo text-lg"
+              className="flex flex-col gap-3 items-center text-secondary text-font"
               key={date.id}
             >
               <h1>{date.id}</h1>

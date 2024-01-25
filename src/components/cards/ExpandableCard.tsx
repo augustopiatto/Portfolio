@@ -25,7 +25,7 @@ function ExpandableCard({
         {place && (
           <div className="flex mt-7 items-center gap-7">
             <SeparatorLine />
-            <span className="font-chivo text-title text-lg">{place}</span>
+            <span className="text-font text-title">{place}</span>
           </div>
         )}
       </Card>
