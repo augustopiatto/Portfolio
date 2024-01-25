@@ -1,5 +1,6 @@
 import { ProjectInterface } from "../../../helpers/interfaces/interfaces";
 import FullDivider from "../../dividers/FullDivider";
+import PartialDivider from "../../dividers/PartialDivider";
 import Icon from "../Icon";
 import Tag from "../Tag";
 
@@ -29,13 +30,26 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
           <Tag text={tag} small key={tag} />
         ))}
       </div>
-      <section className="flex flex-col gap-3 text-secondary [&>p]:font-chivo [&>p]:text-lg">
+      <section className="flex flex-col gap-3 text-secondary font-chivo text-lg">
         <p>{info.details.objective}</p>
       </section>
       <FullDivider marginBottom="mb-10" marginTop="mt-5" />
-      <section className="flex justify-center gap-5">
-        {info.details.moreImages.map((img) => (
-          <img src={img.src} alt={img.name} key={img.name} />
+      <section className="flex flex-col items-center gap-10 text-title font-bebas text-3xl">
+        {info.details.moreImages.map((img, index) => (
+          <div
+            className="flex flex-col items-center gap-2 large:max-w-[80%]"
+            key={img.id}
+          >
+            <h1>{img.name}</h1>
+            <img
+              src={img.src}
+              alt={img.name}
+              className="rounded-[24px] border-4 border-title"
+            />
+            {index !== info.details.moreImages.length - 1 && (
+              <PartialDivider marginTop="mt-10" />
+            )}
+          </div>
         ))}
       </section>
     </>

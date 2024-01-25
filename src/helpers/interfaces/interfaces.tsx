@@ -12,6 +12,7 @@ export interface CarouselImageInterface {
 }
 
 type Image = {
+  id: number;
   name: string;
   src: string;
 };

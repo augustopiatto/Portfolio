@@ -172,7 +172,7 @@ const projects = [
   {
     id: 1,
     name: "Liga Magic - Processo Seletivo - Front End Jr",
-    img: "",
+    img: "/images/liga-magic-jr.png",
     description:
       "Uma tela simulando a compra de uma carta, permitindo o usuário escolher as especificações",
     technologies: ["JavaScript", "HTML", "CSS"],
@@ -180,7 +180,23 @@ const projects = [
       objective:
         "Projeto feito para processo seletivo da empresa Liga Magic. O site foi feito usando Vanilla JavaScript (sem framework) e permite ao usuário escolher a edição da carta 'Contramágica', e apresenta um layout com interação, apesar de não apresentar muita lógica, pois o projeto foi desenvolvido a partir de uma tela no Figma sem protótipo ou interações",
       href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo-FrontJr",
-      moreImages: [],
+      moreImages: [
+        {
+          id: 1,
+          name: "Modal",
+          src: "/images/projects-modal/liga-magic-jr-details-1.png",
+        },
+        {
+          id: 2,
+          name: "Dropdown",
+          src: "/images/projects-modal/liga-magic-jr-details-2.png",
+        },
+        {
+          id: 3,
+          name: "Warning",
+          src: "/images/projects-modal/liga-magic-jr-details-3.png",
+        },
+      ],
     },
   },
   {
@@ -212,7 +228,7 @@ const projects = [
         </>
       ),
       href: GITHUB_BASE_URL + "Origamid-React",
-      moreImages: [{ name: "teste", src: "/images/react-origamid.png" }],
+      moreImages: [],
     },
   },
   {
@@ -238,36 +254,8 @@ const projects = [
   },
   {
     id: 4,
-    name: "DNC - Processo Seletivo",
-    img: "/images/dnc.png",
-    description: "Sistema de cadastro de alunos, notas e exibição de rank",
-    technologies: [
-      "Vue3",
-      "JavaScript",
-      "SASS",
-      "Vuetify",
-      "Django",
-      "Python",
-      "Pydantic",
-      "PostgreSQL",
-      "Docker",
-      "Pytest",
-      "Axios",
-      "HTML",
-      "CSS",
-      "Vite",
-    ],
-    details: {
-      objective:
-        "Projeto feito para processo seletivo da empresa DNC. Neste site é possível realizar cadastro de usuário, associar notas ao usuário e o sistema gera uma listagem de top 3 melhores alunos e uma listagem de top 10 alunos por curso",
-      href: GITHUB_BASE_URL + "DNC-ProcessoSeletivo",
-      moreImages: [{ name: "teste3", src: "/images/dnc.png" }],
-    },
-  },
-  {
-    id: 5,
     name: "Inoa - Processo Seletivo",
-    img: "",
+    img: "/images/inoa.png",
     description: "Sistema de controle de ativos financeiros",
     technologies: [
       "React",
@@ -289,11 +277,22 @@ const projects = [
       objective:
         "Projeto feito para processo seletivo da empresa Inoa. Neste site é possível que o usuário adicione ativos para sua conta, e o sistema monitora estes ativos no período de tempo estabelecido pelo usuário e o notifica através de e-mail quando o valor dos ativos atingem o especificado",
       href: GITHUB_BASE_URL + "Inoa-ProcessoSeletivo",
-      moreImages: [],
+      moreImages: [
+        {
+          id: 1,
+          name: "Modal",
+          src: "/images/projects-modal/inoa-details-1.png",
+        },
+        {
+          id: 2,
+          name: "Mensagem de erro",
+          src: "/images/projects-modal/inoa-details-2.png",
+        },
+      ],
     },
   },
   {
-    id: 6,
+    id: 5,
     name: "Liga Magic - Processo Seletivo",
     img: "/images/liga-magic.png",
     description: "Formulário para se cadastrar em um campeonato de Magic",
@@ -314,7 +313,7 @@ const projects = [
     },
   },
   {
-    id: 7,
+    id: 6,
     name: "Beemon - Processo Seletivo",
     img: "",
     description:
