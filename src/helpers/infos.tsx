@@ -228,13 +228,29 @@ const projects = [
         </>
       ),
       href: GITHUB_BASE_URL + "Origamid-React",
-      moreImages: [],
+      moreImages: [
+        {
+          id: 1,
+          name: "Login",
+          src: "/images/projects-modal/react-origamid-details-1.png",
+        },
+        {
+          id: 2,
+          name: "Cadastro",
+          src: "/images/projects-modal/react-origamid-details-2.png",
+        },
+        {
+          id: 3,
+          name: "Modal",
+          src: "/images/projects-modal/react-origamid-details-3.png",
+        },
+      ],
     },
   },
   {
     id: 3,
     name: "Azapy - Processo Seletivo",
-    img: "",
+    img: "/images/azapy.png",
     description:
       "Tela para definir um combate entre dois personagens de quadrinhos",
     technologies: [
