@@ -265,7 +265,23 @@ const projects = [
       objective:
         "Projeto feito para processo seletivo da empresa Azapy. O site consome uma API fornecida e exibe os personagens 10 personagens por página. O usuário pode escolher 2 personagens para lutar e a lógica compara os status para ver qual ganharia em uma luta direta. O usuário pode filtrar os heróis que deseja e também pode visualizar em celular, pois é um projeto responsivo",
       href: GITHUB_BASE_URL + "",
-      moreImages: [],
+      moreImages: [
+        {
+          id: 1,
+          name: "Filtros",
+          src: "/images/projects-modal/azapy-details-1.png",
+        },
+        {
+          id: 2,
+          name: "Seleção de Batalha",
+          src: "/images/projects-modal/azapy-details-2.png",
+        },
+        {
+          id: 3,
+          name: "Modal",
+          src: "/images/projects-modal/azapy-details-3.png",
+        },
+      ],
     },
   },
   {
@@ -325,13 +341,29 @@ const projects = [
       objective:
         "Projeto feito para processo seletivo da empresa Liga Magic. Neste site é possível escolher opções de um formulário em um componente passo a passo e validar seus inputs",
       href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo",
-      moreImages: [{ name: "teste2", src: "/images/liga-magic.png" }],
+      moreImages: [
+        {
+          id: 1,
+          name: "Validação",
+          src: "/images/projects-modal/liga-magic-details-1.png",
+        },
+        {
+          id: 2,
+          name: "Stepper",
+          src: "/images/projects-modal/liga-magic-details-2.png",
+        },
+        {
+          id: 3,
+          name: "Warning",
+          src: "/images/projects-modal/liga-magic-details-3.png",
+        },
+      ],
     },
   },
   {
     id: 6,
     name: "Beemon - Processo Seletivo",
-    img: "",
+    img: "/images/beemon.png",
     description:
       "Realiza raspagem de dados no site Quotes to Scrape e faz o devido armazenamento",
     technologies: ["Python", "Scrapy", "Splash", "MongoDB", "Docker"],
@@ -339,7 +371,13 @@ const projects = [
       objective:
         "Projeto feito para processo seletivo da empresa Beemon. O projeto vasculha o site Quotes to Scrape, estrutura os dados e os salva em um banco não relacional, e gera provas de consulta",
       href: GITHUB_BASE_URL + "Beemon-ProcessoSeletivo",
-      moreImages: [],
+      moreImages: [
+        {
+          id: 1,
+          name: "Prova de consulta",
+          src: "/images/projects-modal/beemon-details-1.png",
+        },
+      ],
     },
   },
   // {
