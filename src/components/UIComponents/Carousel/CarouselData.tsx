@@ -40,8 +40,8 @@ function CarouselData({ data, currentIndex }: CarouselDataInterface) {
                   {info.description}
                 </p>
               </div>
-              <div className="w-full flex items-center gap-5 px-10">
-                <h2 className="font-bebas text-title text-xl medium:text-2xl">
+              <div className="w-full flex items-start gap-5 px-10">
+                <h2 className="font-bebas text-title leading-5 text-xl medium:text-2xl">
                   Tecnologias
                 </h2>
                 <div className="flex flex-wrap gap-5">

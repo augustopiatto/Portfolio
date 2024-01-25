@@ -58,7 +58,6 @@ O projeto possui as seguintes funcionalidades:
 - Fonte do tooltip do icone do GitHub dentro do projeto está errada
 - tooltip do icone do GitHub está sendo cortado pelo fim do dialog
 - Mudar o link do certificado para redirecionar direto para outra aba e usar outro icone ao inves do de link
-- Deixar as tags alinhadas com o topo do titulo "Tecnologias" em telas menores
 - Padronizar variacoes de fontes, usar menos
 - Fazer a timeline
 - Deixar a foto mais descontraida e quando passar mouse por cima, muda a foto e deixa em algum esquema de carta
