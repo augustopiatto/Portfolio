@@ -7,7 +7,7 @@ interface CarouselStepperInterface {
 
 function CarouselStepper({ images, currentIndex }: CarouselStepperInterface) {
   function idxBackgroundColor(idx: number) {
-    if (currentIndex >= idx) {
+    if (currentIndex === idx) {
       return "bg-highlight";
     }
     return "bg-transparent";
