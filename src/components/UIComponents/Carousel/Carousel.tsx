@@ -48,7 +48,11 @@ function Carousel({
 
   return (
     <div className="bg-card-background shadow-expansion rounded-b-3xl rounded-t-md flex flex-col gap-5 pt-5 pb-16 relative">
-      <CarouselStepper images={images} currentIndex={currentIndex} />
+      <CarouselStepper
+        images={images}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
       {headers && (
         <CarouselHeader headers={headers} currentIndex={currentIndex} />
       )}
