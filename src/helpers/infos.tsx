@@ -108,7 +108,7 @@ const courses = [
     name: "React",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink:
+    certificateLink:
       "https://drive.google.com/file/d/1CQDU3fVGDoPwpaP2mrITaGb5FGblimL_/view?usp=drive_link",
     technologies: [
       "HTML",
@@ -126,7 +126,7 @@ const courses = [
     name: "TypeScript para Iniciantes",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink:
+    certificateLink:
       "https://drive.google.com/file/d/1SoPOdGsgJ7ZVEiKG6jTa4YeonW6CCAme/view?usp=drive_link",
     technologies: ["HTML", "TypeScript", "Type", "Interface", "Generics"],
   },
@@ -135,7 +135,7 @@ const courses = [
     name: "Vue.js 2",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink:
+    certificateLink:
       "https://drive.google.com/file/d/1OfEK27Lf21uIO0AJkx4f1Sxtsltzqm_c/view?usp=drive_link",
     technologies: [
       "HTML",
@@ -153,7 +153,7 @@ const courses = [
     name: "UI Design para Iniciantes",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink:
+    certificateLink:
       "https://drive.google.com/file/d/1mJ4GmdEKPQ0ljGPdvX6pJNEFNMNVnEjj/view?usp=drive_link",
     technologies: ["HTML", "CSS", "JavaScript", "Figma", "SVG", "Prototipação"],
   },
@@ -162,7 +162,7 @@ const courses = [
     name: "WordPress REST API",
     institution: "Origamid",
     institutionSVG: "/svg/origamid.svg",
-    certificationLink:
+    certificateLink:
       "https://drive.google.com/file/d/1fhjD-UHUEQG4Ik9NiF7R_k1F-2UyhlVC/view?usp=drive_link",
     technologies: ["WordPress", "PHP", "REST"],
   },

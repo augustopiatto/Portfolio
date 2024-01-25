@@ -13,7 +13,7 @@ type CourseType = {
   name: string;
   institution: string;
   institutionSVG: string;
-  certificationLink: string;
+  certificateLink: string;
   technologies: string[];
 };
 

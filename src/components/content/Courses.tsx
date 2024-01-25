@@ -1,22 +1,12 @@
-import React from "react";
 import { courses } from "../../helpers/infos.tsx";
 import { CourseType } from "../../helpers/types/types.tsx";
 import Card from "../cards/Card";
 import Tag from "../UIComponents/Tag.tsx";
 import Tooltip from "../UIComponents/Tooltip.tsx";
-import { WarningContext } from "../../contexts/WarningContext.tsx";
-import Link from "/svg/link.svg";
+import Certificate from "/svg/certificate.svg";
 import Slider from "../UIComponents/VerticalSlider/Slider.tsx";
 
 function Courses() {
-  const { activateWarning } = React.useContext(WarningContext);
-
-  function copyURI(event: React.MouseEvent<HTMLElement>, href: string) {
-    event.preventDefault();
-    navigator.clipboard.writeText(href);
-    activateWarning("Copiado! O link está no CTRL + V");
-  }
-
   return (
     <div className="flex max-h-[848px]">
       <Slider>
@@ -29,20 +19,18 @@ function Courses() {
                   alt={course.institutionSVG}
                   className="inline"
                 />
-                <h1 className="inline mx-4 font-bebas text-2xl text-title capitalize align-bottom medium:text-4xl">
+                <h1 className="inline mx-4 font-bebas text-title capitalize align-bottom text-2xl medium:text-4xl">
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>
                   <a
-                    href={course.certificationLink}
-                    className="my-2 align-middle cursor-pointer inline-block h-6 w-7"
-                    onClick={(event) =>
-                      copyURI(event, course.certificationLink)
-                    }
+                    href={course.certificateLink}
+                    className="cursor-pointer inline-block h-6 w-7"
+                    target="_blank"
                   >
-                    <p>Link do curso</p>
+                    <p>Certificado</p>
                     <img
-                      src={Link}
+                      src={Certificate}
                       alt="course-link"
                       className="hover:scale-[1.2]"
                     />

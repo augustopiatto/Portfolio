@@ -6,7 +6,7 @@ interface Tooltip {
 
 function Tooltip({ children }: Tooltip) {
   return (
-    <div id="tooltip" className="inline">
+    <div id="tooltip" className="inline-block align-middle medium:py-2">
       {children}
     </div>
   );
