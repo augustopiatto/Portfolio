@@ -1,6 +1,6 @@
 import { CarouselImageInterface } from "../../../helpers/interfaces/interfaces";
 import Button from "../../HTMLComponents/Button";
-import ExpansionRight from "/svg/expansion-right.svg";
+import ExpansionRightBorded from "/svg/expansion-right-borded.svg";
 
 interface CarouselImagesInterface {
   images: CarouselImageInterface[];
@@ -32,9 +32,9 @@ function CarouselImages({
         {images.length > 1 && (
           <Button onClick={previous}>
             <img
-              src={ExpansionRight}
-              alt="expansion-right"
-              className="absolute top-1/2 left-[10%] h-4 w-6 opacity-30 rotate-180 visible"
+              src={ExpansionRightBorded}
+              alt="expansion-left"
+              className="absolute top-1/2 left-[10%] h-6 w-8 opacity-70 rotate-180 visible"
             />
           </Button>
         )}
@@ -59,9 +59,9 @@ function CarouselImages({
         {images.length > 1 && (
           <Button onClick={next}>
             <img
-              src={ExpansionRight}
+              src={ExpansionRightBorded}
               alt="expansion-right"
-              className="absolute top-1/2 right-[10%] h-4 w-6 opacity-30 visible"
+              className="absolute top-1/2 right-[10%] h-6 w-8 opacity-70 visible"
             />
           </Button>
         )}
