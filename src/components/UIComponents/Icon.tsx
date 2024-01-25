@@ -8,9 +8,19 @@ interface Icon {
   href: string;
   name: string;
   src: string;
+  small?: boolean;
 }
 
-function Icon({ copy = false, download = false, href, name, src }: Icon) {
+function Icon({
+  copy = false,
+  download = false,
+  href,
+  name,
+  src,
+  small,
+}: Icon) {
+  const smallClass = "medium:h-10 medium:w-10";
+
   const { activateWarning } = React.useContext(WarningContext);
 
   function copyURI(event: React.MouseEvent<HTMLElement>) {
@@ -24,7 +34,9 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
   return (
     <Tooltip>
       <a
-        className="bg-secondary rounded-full flex items-center justify-center cursor-pointer h-10 w-10 medium:h-16 medium:w-16"
+        className={`bg-secondary rounded-full flex items-center justify-center cursor-pointer h-10 w-10 ${
+          small ? smallClass : "medium:h-16 medium:w-16"
+        }`}
         href={href}
         download={download}
         target={copy ? "" : "_blank"}
@@ -34,7 +46,9 @@ function Icon({ copy = false, download = false, href, name, src }: Icon) {
         <img
           src={src}
           alt={name}
-          className="h-6 w-6 medium:h-auto medium:w-auto"
+          className={`h-6 w-6 ${
+            small ? "h-6 w-6" : "medium:h-auto medium:w-auto"
+          }`}
         />
       </a>
     </Tooltip>

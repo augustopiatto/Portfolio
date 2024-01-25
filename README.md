@@ -55,7 +55,6 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
-- Fonte do tooltip do icone do GitHub dentro do projeto está errada
 - tooltip do icone do GitHub está sendo cortado pelo fim do dialog
 - Padronizar variacoes de fontes, usar menos
 - Fazer a timeline

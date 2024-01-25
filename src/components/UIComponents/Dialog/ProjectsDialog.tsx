@@ -21,6 +21,7 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
             href={info.details.href}
             name={info.name}
             src="/svg/github.svg"
+            small
           />
         </div>
       </div>
