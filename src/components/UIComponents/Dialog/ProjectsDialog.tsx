@@ -33,7 +33,7 @@ function ProjectsDialog({ info }: ProjectsDialogInterface) {
         <p>{info.details.objective}</p>
       </section>
       <FullDivider marginBottom="mb-10" marginTop="mt-5" />
-      <section className="flex flex-col items-center gap-10 text-title font-bebas text-3xl">
+      <section className="flex flex-col items-center gap-10 title-font text-3xl">
         {info.details.moreImages.map((img, index) => (
           <div
             className="flex flex-col items-center gap-2 large:max-w-[80%]"

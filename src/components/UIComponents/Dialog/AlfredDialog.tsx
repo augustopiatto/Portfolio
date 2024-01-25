@@ -8,13 +8,13 @@ function AlfredDialog() {
   return (
     <>
       <div>
-        <h1 className="font-bebas text-4xl text-title uppercase leading-tight">
+        <h1 className="title-font">
           Graduação Sanduíche em Materials Engineering
         </h1>
       </div>
       <FullDivider />
-      <section className="flex flex-col gap-3 mt-7 text-secondary [&>p]:font-chivo [&>p]:text-lg">
-        <p>
+      <section className="flex flex-col gap-3 mt-7 text-secondary">
+        <p className="text-font">
           <a
             href="https://www.alfred.edu/academics/graduate-programs/materials-science-engineering.cfm"
             target="_blank"
@@ -27,14 +27,14 @@ function AlfredDialog() {
           famoso por seus alunos serem direcionados à grande indústria de vidros
           presente em Buffalo, Nova Iorque.
         </p>
-        <p>
+        <p className="text-font">
           Ingressei em agosto de 2015 no curso, com algumas matérias
           equivalentes ao curso de Engenharia de Materiais do Brasil. Me
           inscrevi também em matérias de cerâmicas e vidros, que atraíram minha
           atenção durante meu segundo ano de faculdade no Brasil, além de aulas
           de software de modelagem 3D e inglês.
         </p>
-        <p>
+        <p className="text-font">
           O intercâmbio foi patrocinado pelo programa Ciência sem Fronteiras do
           governo brasileiro e eu concluí o meu ano letivo em maio de 2016, com
           GPA de 3.2, algo similar à média 8.0. Consegui extender o intercâmbio

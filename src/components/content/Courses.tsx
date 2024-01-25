@@ -19,13 +19,13 @@ function Courses() {
                   alt={course.institutionSVG}
                   className="inline"
                 />
-                <h1 className="inline mx-4 font-bebas text-title capitalize align-bottom text-2xl medium:text-4xl">
+                <h1 className="title-font inline mx-4 align-bottom">
                   {course.name} - {course.institution}
                 </h1>
                 <Tooltip>
                   <a
                     href={course.certificateLink}
-                    className="cursor-pointer inline-block h-6 w-7"
+                    className="text-font cursor-pointer inline-block h-6 w-7"
                     target="_blank"
                   >
                     <p>Certificado</p>
