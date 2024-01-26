@@ -62,18 +62,13 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
 
   return (
     <div className="flex">
-      <img
-        src="/svg/search.svg"
-        alt="search"
-        className="bg-secondary px-3 py-[6px] rounded-md border-2 border-black"
-      />
       <div className="w-full relative">
         <input
           id="dropdown-wrapper"
           type="text"
           readOnly
           placeholder={selectedItem ? selectedItem : placeholder}
-          className="w-full h-full max-h-10 px-3 border-r-[1px] border-y-[1px] rounded-r-md border-black"
+          className="input-icon w-full h-10 pl-12 pr-3 border-[1px] rounded-md border-black bg-secondary text-font text-base"
           onClick={toggleDropdown}
         />
         {selectedItem && (
