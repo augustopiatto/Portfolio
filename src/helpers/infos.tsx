@@ -63,7 +63,7 @@ const languages = [
   { id: 3, name: "Espanhol", level: "Intermediário" },
 ];
 
-const timeline = [
+const timelines = [
   {
     id: 1,
     year: 2010,
@@ -394,4 +394,4 @@ const projects = [
   // },
 ];
 
-export { contacts, courses, majors, projects, languages, timeline };
+export { contacts, courses, majors, projects, languages, timelines };

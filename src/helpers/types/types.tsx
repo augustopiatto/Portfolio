@@ -32,8 +32,21 @@ type LanguageType = {
   level: string;
 };
 
+type TimelineType = {
+  id: number;
+  year: number;
+  info: string;
+};
+
 type Dialogs = {
   [key: number]: () => void;
 };
 
-export type { ContactType, CourseType, MajorType, LanguageType, Dialogs };
+export type {
+  ContactType,
+  CourseType,
+  MajorType,
+  LanguageType,
+  TimelineType,
+  Dialogs,
+};
