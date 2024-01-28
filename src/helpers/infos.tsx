@@ -103,6 +103,7 @@ const timelines = [
   {
     id: 5,
     year: 2021,
+    month: "Janeiro",
     info: "Bootcamp de programação na Buser Brasil",
     picture: {
       src: "/images/profile.png",
@@ -112,6 +113,7 @@ const timelines = [
   {
     id: 6,
     year: 2021,
+    month: "Abril",
     info: "Desenvolvedor full stack júnior na Buser Brasil",
     picture: {
       src: "/images/profile.png",

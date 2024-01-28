@@ -40,6 +40,7 @@ type PictureType = {
 type TimelineType = {
   id: number;
   year: number;
+  month?: string;
   info: string;
   picture: PictureType;
 };

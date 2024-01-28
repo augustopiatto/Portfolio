@@ -1,77 +1,68 @@
 import React from "react";
 import { timelines } from "../../../helpers/infos";
 import { TimelineType } from "../../../helpers/types/types";
+import { isScreenSizeSmall } from "../../../helpers/helperFunctions";
 
 export const Timeline = () => {
-  const [currentId, setCurrentId] = React.useState<number>(1);
+  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
   const [visibleDates, setVisibleDates] = React.useState<TimelineType[]>([]);
 
   function changeDate(id: number) {
-    setCurrentId(id);
-  }
-
-  function rearrengeArray(array: TimelineType[], id: number) {
-    const chosenIndex = array.findIndex((item) => item.id === id);
-    const distance = chosenIndex - 2;
-    array = array
-      .slice(distance, array.length)
-      .concat(array.slice(0, distance));
-    return array;
+    const chosenIndex = timelines.findIndex((item) => item.id === id);
+    setCurrentIndex(chosenIndex);
   }
 
   React.useEffect(() => {
-    const totalItems = timelines.length;
-    const divsBeforeAndAfter = 2;
-
-    const startIndex =
-      (currentId - divsBeforeAndAfter + totalItems - 1) % totalItems;
-
-    const visibleIndexes = Array.from(
-      { length: divsBeforeAndAfter * 2 + 1 },
-      (_, i) => ((startIndex + i) % totalItems) + 1
-    );
-    const visibleTimelines = timelines.filter((timeline) =>
-      visibleIndexes.includes(timeline.id)
-    );
-    const rearrangedList = rearrengeArray(visibleTimelines, currentId);
-
-    setVisibleDates(rearrangedList);
-  }, [currentId]);
+    if (currentIndex < 2) {
+      setVisibleDates(timelines.slice(0, 5));
+    } else if (currentIndex > timelines.length - 3) {
+      setVisibleDates(timelines.slice(timelines.length - 5, timelines.length));
+    } else {
+      setVisibleDates(timelines.slice(currentIndex - 2, currentIndex + 3));
+    }
+  }, [currentIndex]);
 
   return (
-    <div className="flex flex-col gap-5">
-      <ul className="timeline-line flex justify-between px-20 relative">
+    <div className="flex flex-col gap-10">
+      <ul className="timeline-line flex justify-between relative px-4 medium:px-20">
         {visibleDates.map((date) => (
           <li
             className="flex flex-col gap-3 items-center text-font"
             key={date.id}
           >
-            <h1 className="title-font text-secondary text-2xl">{date.year}</h1>
+            <h3 className="title-font text-secondary text-lg medium:text-2xl">
+              {String(date.year).slice(0, 2)}
+              <span className="text-xl medium:text-3xl">
+                {String(date.year).slice(-2)}
+              </span>
+              {!!date.month && !isScreenSizeSmall() && (
+                <span> - {date.month}</span>
+              )}
+            </h3>
             <div
               className={`${
-                currentId === date.id ? "selected" : ""
-              } timeline-circle h-10 w-10 rounded-full border-2 border-highlight cursor-pointer`}
+                currentIndex + 1 === date.id ? "selected" : ""
+              } timeline-circle rounded-full border-2 border-highlight cursor-pointer h-8 w-8 medium:h-14 medium:w-14`}
               onClick={() => changeDate(date.id)}
-              key={date.id}
             ></div>
           </li>
         ))}
       </ul>
-      {!!visibleDates.length && visibleDates[2] && (
-        <div className="flex flex-col gap-5 items-center">
-          <p className="text-font text-secondary">{visibleDates[2].info}</p>
-          <div
-            className="timeline-picture rounded-lg shadow-card h-auto w-48 bg-highlight flex justify-center items-end overflow-hidden"
-            key={visibleDates[2].picture.alt}
-          >
-            <img
-              src={visibleDates[2].picture.src}
-              alt={visibleDates[2].picture.alt}
-              className=""
-            />
-          </div>
+      <div className="flex flex-col gap-10 items-center">
+        <p className="text-font text-secondary">
+          {timelines[currentIndex].info}
+        </p>
+        <div
+          className="timeline-picture rounded-lg shadow-card bg-highlight flex justify-center items-end overflow-hidden"
+          key={timelines[currentIndex].picture.alt}
+        >
+          <img
+            src={timelines[currentIndex].picture.src}
+            alt={timelines[currentIndex].picture.alt}
+            className="w-full"
+          />
         </div>
-      )}
+      </div>
     </div>
   );
 };
