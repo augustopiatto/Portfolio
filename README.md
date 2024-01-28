@@ -62,3 +62,4 @@ O projeto possui as seguintes funcionalidades:
 - Montar os testes
 - Melhorar a pipeline de CI/CD
 - Subir na Digital Ocean com nginx, não http-server
+- Ver gerenciamento de estado e hooks para os componentes nao serem renderizados mais de uma vez
