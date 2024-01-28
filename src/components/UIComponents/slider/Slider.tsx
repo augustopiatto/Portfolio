@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../HTMLComponents/button/Button";
 import expansionRightWhite from "/svg/expansion-right-white.svg";
+import { Button } from "../../HTMLComponents";
 
 interface SliderInterface {
   children: React.ReactNode;

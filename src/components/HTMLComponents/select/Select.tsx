@@ -7,7 +7,7 @@ interface SelectInterface {
 }
 
 // Montei select próprio porque o nativo do HTML não deixa controlar tamanho do dropdown
-function Select({ items, placeholder, onChange }: SelectInterface) {
+export const Select = ({ items, placeholder, onChange }: SelectInterface) => {
   const [openedDropdown, setOpenedDropdown] = React.useState<boolean>(false);
   const [selectedItem, setSelectedItem] = React.useState<string>("");
 
@@ -99,6 +99,4 @@ function Select({ items, placeholder, onChange }: SelectInterface) {
       </div>
     </div>
   );
-}
-
-export default Select;
+};

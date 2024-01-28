@@ -5,7 +5,7 @@ interface ButtonInterface {
   onClick: React.MouseEventHandler;
 }
 
-function Button({ children, onClick }: ButtonInterface) {
+export const Button = ({ children, onClick }: ButtonInterface) => {
   return (
     <button
       className="bg-highlight rounded-large shadow-expansion px-32 py-4"
@@ -14,6 +14,4 @@ function Button({ children, onClick }: ButtonInterface) {
       {children}
     </button>
   );
-}
-
-export default Button;
+};
