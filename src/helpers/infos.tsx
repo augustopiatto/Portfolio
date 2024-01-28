@@ -171,30 +171,30 @@ const courses = [
 const projects = [
   {
     id: 1,
-    name: "Liga Magic - Processo Seletivo - Front End Jr",
-    img: "/images/liga-magic-jr.png",
+    name: "Tela de Compra - Cartas",
+    img: "/images/tela-compras-cartas.png",
     description:
       "Uma tela simulando a compra de uma carta, permitindo o usuário escolher as especificações",
     technologies: ["JavaScript", "HTML", "CSS"],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa Liga Magic. O site foi feito usando Vanilla JavaScript (sem framework) e permite ao usuário escolher a edição da carta 'Contramágica', e apresenta um layout com interação, apesar de não apresentar muita lógica, pois o projeto foi desenvolvido a partir de uma tela no Figma sem protótipo ou interações",
-      href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo-FrontJr",
+        "Projeto feito para estudo. O site foi feito usando Vanilla JavaScript (sem framework) e permite ao usuário escolher a edição da carta 'Contramágica', e apresenta um layout com interação, apesar de não apresentar muita lógica, pois o projeto foi desenvolvido a partir de uma tela no Figma sem protótipo ou interações",
+      href: GITHUB_BASE_URL + "Tela-Compras-Cartas",
       moreImages: [
         {
           id: 1,
           name: "Modal",
-          src: "/images/projects-modal/liga-magic-jr-details-1.png",
+          src: "/images/projects-modal/tela-compras-cartas-1.png",
         },
         {
           id: 2,
           name: "Dropdown",
-          src: "/images/projects-modal/liga-magic-jr-details-2.png",
+          src: "/images/projects-modal/tela-compras-cartas-2.png",
         },
         {
           id: 3,
           name: "Warning",
-          src: "/images/projects-modal/liga-magic-jr-details-3.png",
+          src: "/images/projects-modal/tela-compras-cartas-3.png",
         },
       ],
     },
@@ -249,8 +249,8 @@ const projects = [
   },
   {
     id: 3,
-    name: "Azapy - Processo Seletivo",
-    img: "/images/azapy.png",
+    name: "Jornada do Herói",
+    img: "/images/jornada-do-heroi.png",
     description:
       "Tela para definir um combate entre dois personagens de quadrinhos",
     technologies: [
@@ -263,31 +263,31 @@ const projects = [
     ],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa Azapy. O site consome uma API fornecida e exibe os personagens 10 personagens por página. O usuário pode escolher 2 personagens para lutar e a lógica compara os status para ver qual ganharia em uma luta direta. O usuário pode filtrar os heróis que deseja e também pode visualizar em celular, pois é um projeto responsivo",
+        "Projeto feito para estudo. O site consome uma API fornecida e exibe os personagens 10 personagens por página. O usuário pode escolher 2 personagens para lutar e a lógica compara os status para ver qual ganharia em uma luta direta. O usuário pode filtrar os heróis que deseja e também pode visualizar em celular, pois é um projeto responsivo",
       href: GITHUB_BASE_URL + "",
       moreImages: [
         {
           id: 1,
           name: "Filtros",
-          src: "/images/projects-modal/azapy-details-1.png",
+          src: "/images/projects-modal/jornada-do-heroi-details-1.png",
         },
         {
           id: 2,
           name: "Seleção de Batalha",
-          src: "/images/projects-modal/azapy-details-2.png",
+          src: "/images/projects-modal/jornada-do-heroi-details-2.png",
         },
         {
           id: 3,
           name: "Modal",
-          src: "/images/projects-modal/azapy-details-3.png",
+          src: "/images/projects-modal/jornada-do-heroi-details-3.png",
         },
       ],
     },
   },
   {
     id: 4,
-    name: "Inoa - Processo Seletivo",
-    img: "/images/inoa.png",
+    name: "Monitoramento de Ativos Financeiros",
+    img: "/images/monitoramento-ativos-financeiros.png",
     description: "Sistema de controle de ativos financeiros",
     technologies: [
       "React",
@@ -307,26 +307,26 @@ const projects = [
     ],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa Inoa. Neste site é possível que o usuário adicione ativos para sua conta, e o sistema monitora estes ativos no período de tempo estabelecido pelo usuário e o notifica através de e-mail quando o valor dos ativos atingem o especificado",
-      href: GITHUB_BASE_URL + "Inoa-ProcessoSeletivo",
+        "Projeto feito para estudo. Neste site é possível que o usuário adicione ativos para sua conta, e o sistema monitora estes ativos no período de tempo estabelecido pelo usuário e o notifica através de e-mail quando o valor dos ativos atingem o especificado",
+      href: GITHUB_BASE_URL + "Monitoramento-Ativos-Financeiros",
       moreImages: [
         {
           id: 1,
           name: "Modal",
-          src: "/images/projects-modal/inoa-details-1.png",
+          src: "/images/projects-modal/monitoramento-ativos-financeiros-details-1.png",
         },
         {
           id: 2,
           name: "Mensagem de erro",
-          src: "/images/projects-modal/inoa-details-2.png",
+          src: "/images/projects-modal/monitoramento-ativos-financeiros-details-2.png",
         },
       ],
     },
   },
   {
     id: 5,
-    name: "Liga Magic - Processo Seletivo",
-    img: "/images/liga-magic.png",
+    name: "Questionário de Passo a Passo",
+    img: "/images/questionario-passo-a-passo.png",
     description: "Formulário para se cadastrar em um campeonato de Magic",
     technologies: [
       "Vue3",
@@ -339,43 +339,43 @@ const projects = [
     ],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa Liga Magic. Neste site é possível escolher opções de um formulário em um componente passo a passo e validar seus inputs",
-      href: GITHUB_BASE_URL + "LigaMagic-ProcessoSeletivo",
+        "Projeto feito para estudo. Neste site é possível escolher opções de um formulário em um componente passo a passo e validar seus inputs",
+      href: GITHUB_BASE_URL + "Questionario-Passo-a-Passo",
       moreImages: [
         {
           id: 1,
           name: "Validação",
-          src: "/images/projects-modal/liga-magic-details-1.png",
+          src: "/images/projects-modal/questionario-passo-a-passo-details-1.png",
         },
         {
           id: 2,
           name: "Stepper",
-          src: "/images/projects-modal/liga-magic-details-2.png",
+          src: "/images/projects-modal/questionario-passo-a-passo-details-2.png",
         },
         {
           id: 3,
           name: "Warning",
-          src: "/images/projects-modal/liga-magic-details-3.png",
+          src: "/images/projects-modal/questionario-passo-a-passo-details-3.png",
         },
       ],
     },
   },
   {
     id: 6,
-    name: "Beemon - Processo Seletivo",
-    img: "/images/beemon.png",
+    name: "Raspagem de Dados",
+    img: "/images/raspagem-dados.png",
     description:
       "Realiza raspagem de dados no site Quotes to Scrape e faz o devido armazenamento",
     technologies: ["Python", "Scrapy", "Splash", "MongoDB", "Docker"],
     details: {
       objective:
-        "Projeto feito para processo seletivo da empresa Beemon. O projeto vasculha o site Quotes to Scrape, estrutura os dados e os salva em um banco não relacional, e gera provas de consulta",
-      href: GITHUB_BASE_URL + "Beemon-ProcessoSeletivo",
+        "Projeto feito para estudo. O projeto vasculha o site Quotes to Scrape, estrutura os dados e os salva em um banco não relacional, e gera provas de consulta",
+      href: GITHUB_BASE_URL + "Raspagem-Dados",
       moreImages: [
         {
           id: 1,
           name: "Prova de consulta",
-          src: "/images/projects-modal/beemon-details-1.png",
+          src: "/images/projects-modal/raspagem-dados-details-1.png",
         },
       ],
     },
