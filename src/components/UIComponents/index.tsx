@@ -1,6 +1,6 @@
-export { Icon } from "./icon";
-export { Tag } from "./tag";
-export { Timeline } from "./timeline";
-export { Tooltip } from "./tooltip";
-export { Slider } from "./vertical_slider";
-export { Warning } from "./warning";
+export { Icon } from "./icon/Icon";
+export { Tag } from "./tag/Tag";
+export { Timeline } from "./timeline/Timeline";
+export { Tooltip } from "./tooltip/Tooltip";
+export { Slider } from "./slider/Slider";
+export { Warning } from "./warning/Warning";

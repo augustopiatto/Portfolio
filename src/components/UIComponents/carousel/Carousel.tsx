@@ -2,10 +2,10 @@ import React from "react";
 import {
   CarouselHeaderInterface,
   CarouselImageInterface,
-} from "../../../../helpers/interfaces/interfaces";
-import { CarouselStepper } from "../carousel_stepper";
-import { CarouselHeader } from "../carousel_header";
-import { CarouselImages } from "../carousel_images";
+} from "../../../helpers/interfaces/interfaces";
+import { CarouselStepper } from "./carousel_stepper/CarouselStepper";
+import { CarouselHeader } from "./carousel_header/CarouselHeader";
+import { CarouselImages } from "./carousel_images/CarouselHeader";
 
 interface CarouselInterface {
   children: React.ReactNode;

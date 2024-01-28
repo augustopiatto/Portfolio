@@ -3,13 +3,13 @@ import {
   CarouselHeaderInterface,
   CarouselImageInterface,
   ProjectInterface,
-} from "../../../../helpers/interfaces/interfaces";
-import { projects } from "../../../../helpers/infos";
-import Select from "../../../../components/HTMLComponents/Select";
+} from "../../../helpers/interfaces/interfaces";
+import { projects } from "../../../helpers/infos";
+import Select from "../../../components/HTMLComponents/select/Select";
 import {
   Carousel,
   CarouselData,
-} from "../../../../components/UIComponents/carousel_component";
+} from "../../../components/UIComponents/carousel";
 
 export const Projects = () => {
   const [carouselIndex, setCarouselIndex] = React.useState<number>(0);

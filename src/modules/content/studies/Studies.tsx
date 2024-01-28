@@ -1,13 +1,13 @@
 import React from "react";
-import { Dialogs, MajorType } from "../../../../helpers/types/types";
-import { majors } from "../../../../helpers/infos";
+import { Dialogs, MajorType } from "../../../helpers/types/types";
+import { majors } from "../../../helpers/infos";
 import {
   AlfredDialog,
   Dialog,
   UnespDialog,
-} from "../../../../components/UIComponents/dialog";
-import { ExpandableCard } from "../../../../components/cards";
-import { SeparatorDot } from "../../../../components/dividers";
+} from "../../../components/UIComponents/dialog";
+import { ExpandableCard } from "../../../components/cards";
+import { SeparatorDot } from "../../../components/dividers";
 
 export const Studies = () => {
   const [openedUnespDialog, setOpenedUnespDialog] = React.useState(false);

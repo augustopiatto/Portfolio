@@ -1,8 +1,8 @@
 import { contacts } from "../../helpers/infos";
 import { ContactType } from "../../helpers/types/types";
-import { Icon } from "../UIComponents";
+import { Icon } from "../../components/UIComponents";
 
-function Footer() {
+export const Footer = () => {
   return (
     <div className="bg-footer border-t border-secondary flex justify-center">
       <div className="w-10/12 max-w-[1200px] flex flex-col gap-5 py-20 medium:flex-row medium:items-center">
@@ -32,6 +32,4 @@ function Footer() {
       </div>
     </div>
   );
-}
-
-export default Footer;
+};

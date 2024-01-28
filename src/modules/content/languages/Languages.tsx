@@ -1,6 +1,6 @@
-import { Card } from "../../../../components/cards";
-import { languages } from "../../../../helpers/infos";
-import { LanguageType } from "../../../../helpers/types/types";
+import { Card } from "../../../components/cards";
+import { languages } from "../../../helpers/infos";
+import { LanguageType } from "../../../helpers/types/types";
 import LanguageSVG from "/svg/language.svg";
 
 export const Languages = () => {

@@ -1,6 +1,6 @@
 import { scrollToTarget } from "../../helpers/helperFunctions";
 
-function Header() {
+export const Header = () => {
   return (
     <div className="fixed bg-background border-b border-secondary max-h-20 h-20 max-w-inherit w-full z-50 shadow-xl">
       <div className="flex mx-auto w-10/12 max-w-[1200px] justify-between items-center py-4">
@@ -24,6 +24,4 @@ function Header() {
       </div>
     </div>
   );
-}
-
-export default Header;
+};

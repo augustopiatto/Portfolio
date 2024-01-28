@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../HTMLComponents/Button";
+import Button from "../../HTMLComponents/button/Button";
 import expansionRightWhite from "/svg/expansion-right-white.svg";
 
 interface SliderInterface {

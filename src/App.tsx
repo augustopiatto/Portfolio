@@ -1,8 +1,8 @@
-import Header from "./components/header/index.tsx";
 import { WarningStorage } from "./contexts/WarningContext.tsx";
-import { Content } from "./modules/content/index.tsx";
-import { Warning } from "./components/UIComponents/warning/index.tsx";
-import Footer from "./components/footer/index.tsx";
+import { Content } from "./modules/content/Content.tsx";
+import { Warning } from "./components/UIComponents/warning/Warning.tsx";
+import { Footer } from "./modules/footer/Footer.tsx";
+import { Header } from "./modules/header/Header.tsx";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import ExpansionRight from "/svg/expansion-right.svg";
-import { Card } from "../card";
+import { Card } from "../card/Card";
 import { SeparatorLine } from "../../dividers";
 
 interface ExpandableCardInterface {

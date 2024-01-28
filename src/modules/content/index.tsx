@@ -1,24 +1,5 @@
-import { PartialDivider } from "../../components/dividers/index.tsx";
-import { About, Courses, Studies } from "./content_modules/index.tsx";
-import { Languages } from "./content_modules/languages/index.tsx";
-import { Projects } from "./content_modules/projects/index.tsx";
-
-export const Content = () => {
-  return (
-    <div className="flex flex-col">
-      <About />
-      <PartialDivider />
-      <Projects />
-      <PartialDivider />
-      <div className="bg-radial-dark-purple-study py-14 flex flex-col gap-10 mx-auto mb-16 large:flex-row">
-        <div className="flex flex-col gap-12 large:flex-1">
-          <Studies />
-          <Languages />
-        </div>
-        <div className="large:flex-1">
-          <Courses />
-        </div>
-      </div>
-    </div>
-  );
-};
+export { About } from "./about/About";
+export { Courses } from "./courses/Courses";
+export { Languages } from "./languages/Languages";
+export { Projects } from "./projects/Projects";
+export { Studies } from "./studies/Studies";

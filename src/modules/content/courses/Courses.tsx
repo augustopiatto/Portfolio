@@ -1,7 +1,7 @@
-import { Slider, Tag, Tooltip } from "../../../../components/UIComponents";
-import { Card } from "../../../../components/cards";
-import { courses } from "../../../../helpers/infos";
-import { CourseType } from "../../../../helpers/types/types";
+import { Slider, Tag, Tooltip } from "../../../components/UIComponents";
+import { Card } from "../../../components/cards";
+import { courses } from "../../../helpers/infos";
+import { CourseType } from "../../../helpers/types/types";
 import Certificate from "/svg/certificate.svg";
 
 export const Courses = () => {
