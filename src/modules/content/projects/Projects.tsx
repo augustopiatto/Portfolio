@@ -9,7 +9,7 @@ import {
   Carousel,
   CarouselData,
 } from "../../../components/UIComponents/carousel";
-import { Select } from "../../../components/HTMLComponents/index";
+import { Select } from "../../../components/HTMLComponents/select/Select";
 
 export const Projects = () => {
   const [carouselIndex, setCarouselIndex] = React.useState<number>(0);
