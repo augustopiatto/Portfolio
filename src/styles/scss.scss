@@ -224,7 +224,6 @@ li::marker {
 
   @media(max-width: 769px) {
     top: calc(29px + 12px + 16px - 3px); // h3 + gap + circulo/2 - height/2
-
   }
 
 }
@@ -272,5 +271,32 @@ li::marker {
 
   100% {
     opacity: 1;
+  }
+}
+
+.teste1 {
+  transform: perspective(200px) rotate3D(0, 1, 0, -10deg);
+}
+
+.teste2 {
+  transform: perspective(200px) rotate3D(0, 1, 0, 10deg);
+}
+
+.inactive-picture {
+  animation: fade-out 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.active-picture {
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
   }
 }

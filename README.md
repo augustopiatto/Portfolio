@@ -55,9 +55,8 @@ O projeto possui as seguintes funcionalidades:
 
 ## Melhorias futuras
 
-- Fazer a timeline
-- Tooltip do icone do GitHub está sendo cortado pelo fim do dialog
 - Deixar a foto mais descontraida e quando passar mouse por cima, muda a foto e deixa em algum esquema de carta
+- Tooltip do icone do GitHub está sendo cortado pelo fim do dialog
 - https://pagespeed.web.dev/analysis/https-portfolio-augusto-piatto-vercel-app/7xulc4tsxd?form_factor=desktop
 - Montar os testes
 - Melhorar a pipeline de CI/CD
