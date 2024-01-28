@@ -67,39 +67,75 @@ const timelines = [
   {
     id: 1,
     year: 2010,
-    info: "Fiz curso técnico em manutenção automotiva na ETEC e a partir disso decidi ingressar em engenharia para a faculdade",
+    info: "Curso técnico de manutenção automotiva na ETEC",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste1",
+    },
   },
   {
     id: 2,
     year: 2013,
-    info: "Ingressei em Engenharia de Materiais na UNESP em 2013",
+    info: "Curso de Engenharia de Materiais na UNESP",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste2",
+    },
   },
   {
     id: 3,
     year: 2015,
-    info: "Fiz intercâmbio de 1 ano nos Estados Unidos através do programa Ciência sem Fronteiras",
+    info: "Intercâmbio nos Estados Unidos pelo Ciência sem Fronteiras",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste3",
+    },
   },
   {
     id: 4,
     year: 2017,
-    info: "Estagiei na área por um ano, mas mexendo principalmente com Excel e VBA",
+    info: "Estágio em Engenharia",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste4",
+    },
   },
   {
     id: 5,
     year: 2021,
-    info: "Comecei bootcamp de programação na Buser Brasil",
+    info: "Bootcamp de programação na Buser Brasil",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste5",
+    },
   },
   {
     id: 6,
     year: 2021,
-    info: "Entrei como desenvolvedor full stack júnior na Buser Brasil",
+    info: "Desenvolvedor full stack júnior na Buser Brasil",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste6",
+    },
   },
   {
     id: 7,
     year: 2023,
     info: "Saída da Buser Brasil e começo de estudo focado em Front",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste7",
+    },
   },
-  { id: 8, year: 2024, info: "Sua empresa?" },
+  {
+    id: 8,
+    year: 2024,
+    info: "Sua empresa?",
+    picture: {
+      src: "/images/profile.png",
+      alt: "teste8",
+    },
+  },
 ];
 
 const courses = [

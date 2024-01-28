@@ -32,10 +32,16 @@ type LanguageType = {
   level: string;
 };
 
+type PictureType = {
+  src: string;
+  alt: string;
+};
+
 type TimelineType = {
   id: number;
   year: number;
   info: string;
+  picture: PictureType;
 };
 
 type Dialogs = {

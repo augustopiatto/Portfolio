@@ -39,27 +39,39 @@ export const Timeline = () => {
   }, [currentId]);
 
   return (
-    <div className="flex justify-between">
-      {visibleDates.map((date) => (
-        <div
-          className="flex flex-col gap-3 items-center text-secondary text-font"
-          key={date.id}
-        >
-          <h1 className="title-font text-2xl text-secondary">{date.year}</h1>
+    <div className="flex flex-col gap-5">
+      <ul className="timeline-line flex justify-between px-20 relative">
+        {visibleDates.map((date) => (
+          <li
+            className="flex flex-col gap-3 items-center text-font"
+            key={date.id}
+          >
+            <h1 className="title-font text-secondary text-2xl">{date.year}</h1>
+            <div
+              className={`${
+                currentId === date.id ? "selected" : ""
+              } timeline-circle h-10 w-10 rounded-full border-2 border-highlight cursor-pointer`}
+              onClick={() => changeDate(date.id)}
+              key={date.id}
+            ></div>
+          </li>
+        ))}
+      </ul>
+      {!!visibleDates.length && visibleDates[2] && (
+        <div className="flex flex-col gap-5 items-center">
+          <p className="text-font text-secondary">{visibleDates[2].info}</p>
           <div
-            className="timeline-circle h-10 w-10 rounded-full border-2 border-highlight cursor-pointer transition ease-in-out duration-500 hover:scale-125"
-            onClick={() => changeDate(date.id)}
-          ></div>
-          {currentId === date.id && (
-            <div className="flex flex-col flex-wrap gap-3 items-center w-48 text-center">
-              <p>{date.info}</p>
-              <div className="rounded-lg shadow-card h-auto w-48 bg-highlight flex justify-center items-end overflow-hidden">
-                <img src="/images/profile.png" alt="teste" />
-              </div>
-            </div>
-          )}
+            className="timeline-picture rounded-lg shadow-card h-auto w-48 bg-highlight flex justify-center items-end overflow-hidden"
+            key={visibleDates[2].picture.alt}
+          >
+            <img
+              src={visibleDates[2].picture.src}
+              alt={visibleDates[2].picture.alt}
+              className=""
+            />
+          </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };
