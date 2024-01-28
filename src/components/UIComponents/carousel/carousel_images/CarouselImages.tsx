@@ -1,5 +1,5 @@
 import { CarouselImageInterface } from "../../../../helpers/interfaces/interfaces";
-import Button from "../../../HTMLComponents/button/Button";
+import { Button } from "../../../HTMLComponents";
 import ExpansionRightBorded from "/svg/expansion-right-borded.svg";
 
 interface CarouselImagesInterface {

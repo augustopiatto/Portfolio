@@ -5,11 +5,11 @@ import {
   ProjectInterface,
 } from "../../../helpers/interfaces/interfaces";
 import { projects } from "../../../helpers/infos";
-import Select from "../../../components/HTMLComponents/select/Select";
 import {
   Carousel,
   CarouselData,
 } from "../../../components/UIComponents/carousel";
+import { Select } from "../../../components/HTMLComponents";
 
 export const Projects = () => {
   const [carouselIndex, setCarouselIndex] = React.useState<number>(0);

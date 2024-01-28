@@ -12,30 +12,11 @@ export const Timeline = () => {
 
   function rearrengeArray(array: TimelineType[], id: number) {
     const chosenIndex = array.findIndex((item) => item.id === id);
-    let reorderedArray: TimelineType[] = [];
-    if (chosenIndex === 0) {
-      reorderedArray = [...array.slice(-2), array[0], ...array.slice(1, 3)];
-    } else if (chosenIndex === 1) {
-      reorderedArray = [
-        ...array.slice(-1),
-        ...array.slice(0, 1),
-        array[1],
-        ...array.slice(2, 4),
-      ];
-    } else if (chosenIndex === 2) {
-      reorderedArray = array;
-    } else if (chosenIndex === 3) {
-      reorderedArray = [
-        ...array.slice(1, 3),
-        array[3],
-        ...array.slice(4),
-        ...array.slice(0, 1),
-      ];
-    } else if (chosenIndex === 4) {
-      reorderedArray = [...array.slice(2, 4), array[4], ...array.slice(0, 2)];
-    }
-
-    return reorderedArray;
+    const distance = chosenIndex - 2;
+    array = array
+      .slice(distance, array.length)
+      .concat(array.slice(0, distance));
+    return array;
   }
 
   React.useEffect(() => {

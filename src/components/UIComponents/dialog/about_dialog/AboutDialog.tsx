@@ -1,5 +1,4 @@
-// import Timeline from "../Timeline";
-
+// import { Timeline } from "../..";
 import { FullDivider } from "../../../dividers";
 
 export const AboutDialog = () => {

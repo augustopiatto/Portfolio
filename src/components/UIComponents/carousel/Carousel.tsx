@@ -5,7 +5,7 @@ import {
 } from "../../../helpers/interfaces/interfaces";
 import { CarouselStepper } from "./carousel_stepper/CarouselStepper";
 import { CarouselHeader } from "./carousel_header/CarouselHeader";
-import { CarouselImages } from "./carousel_images/CarouselHeader";
+import { CarouselImages } from "./carousel_images/CarouselImages";
 
 interface CarouselInterface {
   children: React.ReactNode;
