@@ -1,3 +1,3 @@
-export { Footer } from "./footer/Footer";
-export { Header } from "./header/Header";
-export { Picture } from "./picture/Picture";
+export { Footer } from "./footer/footer";
+export { Header } from "./header/header";
+export { Picture } from "./picture/picture";

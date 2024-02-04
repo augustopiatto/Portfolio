@@ -1,6 +1,6 @@
 import { Warning } from "./components/UIComponents/index.tsx";
 import { WarningStorage } from "./contexts/WarningContext.tsx";
-import { Content } from "./modules/content/Content.tsx";
+import { Content } from "./modules/content/content.tsx";
 import { Footer, Header } from "./modules/index.tsx";
 
 function App() {

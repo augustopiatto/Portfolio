@@ -2,7 +2,7 @@ import React from "react";
 import Ornament1 from "/svg/ornament-1.svg";
 import { AboutDialog, Dialog } from "../../../components/UIComponents/dialog";
 import { ExpandableCard } from "../../../components/cards";
-import { Picture } from "../../picture/Picture";
+import { Picture } from "../../picture/picture";
 
 export const About = () => {
   const [openedDialog, setOpenedDialog] = React.useState(false);

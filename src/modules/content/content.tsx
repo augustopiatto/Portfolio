@@ -1,7 +1,7 @@
 import { PartialDivider } from "../../components/dividers/index.tsx";
 import { About, Courses, Studies } from "./index.tsx";
-import { Languages } from "./languages/Languages.tsx";
-import { Projects } from "./projects/Projects.tsx";
+import { Languages } from "./languages/languages.tsx";
+import { Projects } from "./projects/projects.tsx";
 
 export const Content = () => {
   return (

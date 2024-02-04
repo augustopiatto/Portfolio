@@ -1,5 +1,5 @@
-export { About } from "./about/About";
-export { Courses } from "./courses/Courses";
-export { Languages } from "./languages/Languages";
-export { Projects } from "./projects/Projects";
-export { Studies } from "./studies/Studies";
+export { About } from "./about/about";
+export { Courses } from "./courses/courses";
+export { Languages } from "./languages/languages";
+export { Projects } from "./projects/projects";
+export { Studies } from "./studies/studies";

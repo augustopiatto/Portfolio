@@ -59,6 +59,7 @@ O projeto possui as seguintes funcionalidades:
 - Tooltip do icone do GitHub está sendo cortado pelo fim do dialog
 - https://pagespeed.web.dev/analysis/https-portfolio-augusto-piatto-vercel-app/7xulc4tsxd?form_factor=desktop
 - Montar os testes
+- Fazer Storybook
 - Melhorar a pipeline de CI/CD
 - Subir na Digital Ocean com nginx, não http-server
 - Ver gerenciamento de estado e hooks para os componentes nao serem renderizados mais de uma vez
