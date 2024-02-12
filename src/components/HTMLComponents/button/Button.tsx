@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface ButtonInterface {
-  children?: ReactNode;
+export interface ButtonInterface {
+  children?: React.ReactNode;
   onClick: React.MouseEventHandler;
 }
 
