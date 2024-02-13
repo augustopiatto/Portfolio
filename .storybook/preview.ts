@@ -1,6 +1,6 @@
 import '../src/styles/scss.scss'
 import '../src/styles/tailwind.css'
-import {themes} from '@storybook/theming'
+import { themes } from '@storybook/theming'
 import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
@@ -14,6 +14,15 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.dark
+    },
+    backgrounds: {
+      default: "default",
+      values: [
+        {
+          name: "default",
+          value: "rgb(13, 5, 30)"
+        }
+      ]
     }
   },
 };

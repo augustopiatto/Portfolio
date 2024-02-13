@@ -1,6 +1,6 @@
 import React from "react";
 
-interface SelectInterface {
+export interface SelectInterface {
   items: string[];
   placeholder: string;
   onChange: (value: string) => void;
